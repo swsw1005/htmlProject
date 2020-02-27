@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title> Insert title here </title>
+</head>
+
+<body>
+	<form method ="post" action = "test.jsp">
+	<!-- 키보드로 입력하는것 -->
+	이름 <input type = "text"><p>
+	비번 <input type = "password"><p>
+	소개 <textarea cols="50" rows="6"></textarea><p>
+	<!-- 마우스로 클릭하는 것 -->
+	성별 <input type="radio" name="sung"> 남자<input type="radio" name="sung"> 여자
+	<p>
+	취미 <input type = "checkbox" name="hobby">낚시
+	 <input type = "checkbox" name="hobby">여행
+	 <input type = "checkbox" name="hobby">오락
+	 <input type = "checkbox" name="hobby">음주
+	 <input type = "checkbox" name="hobby">음악
+	 <p>
+	생년 <select>
+		<option>2020</option>
+		<option>2019</option>
+		<option>2018</option>
+		<option>2017</option>
+		<option>2016</option>
+		<option>2015</option>
+		</select>
+		<p>
+	파일<input type="file">	
+	<!--  버튼의 종류 -->
+	<input type="button" value="확인" onclick="imsi"> <p>
+	<input type="submit" value="전송"> <p>
+	<input type="image" src="a.jpg" width="90"> <p>
+	<input type="reset" value="취소"> <p>
+	<button> 클릭 <img src = "a.jpg" width="40"></button><p>
+	<button type="button"> 클릭2</button>
+	
+	</form>
+	
+	<script>
+	function imsi(){
+		
+		alert("함수가 실행!!")
+	}
+	</script>
+	
+	
+</body>
+
+
+</html>

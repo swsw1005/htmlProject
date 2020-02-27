@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    function imsi()
+	{
+      document.getElementById("aa").style.display="none";
+	}
+  </script>
+  <script   src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+ </head>
+ <body>
+    <font onclick="imsi()" color="blue" size="7" id="aa"> 안녕하세요!! </font> 
+	<p> 하하하!! <p>
+    <b style="font-size:200px;border:1px solid red">  호호호 </b>
+	<table border=1>
+      <tr>
+	   <td> adsf </td>
+	  </tr>
+	</table>
+ </body>
+</html>

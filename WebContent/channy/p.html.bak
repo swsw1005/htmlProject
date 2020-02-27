@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>                 
+     <!-- <p> : 문단바꿈 , <br> 줄바꿈 -->
+	 동해물과 백두산이 마르고 닳도록 <br><br><br><br><br><br><br><br>
+	 하느님이 보우하사 우리나라 만세 <p>
+	 무궁화 삼천리 화려강산 <p><p><p><p><p><p><p><p> <!-- p는 하나만 인식 -->
+	 대한사람 대한으로 길이 보전하세 <p>
+
+	 <p align="center"> 학교종이 땡땡댕 어서모이자 선생님이 우리를 기다리신다  </p>
+	 <!-- 태그뒤에 나오는 것을 속성 align(속성), center(값) -->
+ </body>
+</html>
