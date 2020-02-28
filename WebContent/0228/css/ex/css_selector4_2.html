@@ -1,0 +1,70 @@
+ <meta charset="utf-8">
+ 
+<style>
+    img[src~='a1.jpg'] { /* 속성값 자체 비교 */
+      border:10px solid red;
+	}  /* img태그의 src 속성값이 'a1.jpg' 인 것 */
+
+	img[src|='b1.jpg'] {  /* 속성값 자체 비교 */
+      border:10px solid blue;
+	} /* img태그의 src 속성값이 'b1.jpg' 인 것 */
+
+	img[src$=gif] {  /* 끝나는 값 */
+      border:10px solid green;
+	} /* img태그의 src 속성값이 gif로 끝나는 것 */
+
+	img[alt^='f'] {  /* 시작하는 값 */
+      border-right:10px solid yellow;
+	} /* img태그의 alt 속성값이 f로 시작하는 값 */
+
+	img[src*='4'] {  /* 일부값이 포함되어 있는것 */
+      border-left:10px solid black;
+	} /* img태그의 src 속성값 내에 4라는 값이 있는 것 */
+
+</style>
+ <h1> 문자열 속성 선택자(속성의 특정문자열을 체크) </h1>
+
+ <img src=a1.jpg width=100 alt=first> 
+ <img src=a2.jpg width=100 alt=second> 
+ <img src=a3.jpg width=100 alt=third> 
+ <img src=a4.gif width=100 alt=fourth> <p>
+ <img src=b1.jpg width=100 alt=fifth> 
+ <img src=b2.jpg width=100 alt=sixth> 
+ <img src=b3.jpg width=100 alt=seventh> 
+ <img src=b4.gif width=100 alt=eighth> 
+
+ <hr>
+ <xmp>
+ <style>
+    img[src~='a1.jpg'] { /* 속성값 자체 비교 */
+      border:10px solid red;
+	}  /* img태그의 src 속성값이 'a1.jpg' 인 것 */
+
+	img[src|='b1.jpg'] {  /* 속성값 자체 비교 */
+      border:10px solid blue;
+	} /* img태그의 src 속성값이 'b1.jpg' 인 것 */
+
+	img[src$=gif] {  /* 끝나는 값 */
+      border:10px solid green;
+	} /* img태그의 src 속성값이 gif로 끝나는 것 */
+
+	img[alt^='f'] {  /* 시작하는 값 */
+      border-right:10px solid yellow;
+	} /* img태그의 alt 속성값이 f로 시작하는 값 */
+
+	img[src*='4'] {  /* 일부값이 포함되어 있는것 */
+      border-left:10px solid black;
+	} /* img태그의 src 속성값 내에 4라는 값이 있는 것 */
+
+</style>
+ <h1> 문자열 속성 선택자(속성의 특정문자열을 체크) </h1>
+
+ <img src=a1.jpg width=100 alt=first> 
+ <img src=a2.jpg width=100 alt=second> 
+ <img src=a3.jpg width=100 alt=third> 
+ <img src=a4.gif width=100 alt=fourth> <p>
+ <img src=b1.jpg width=100 alt=fifth> 
+ <img src=b2.jpg width=100 alt=sixth> 
+ <img src=b3.jpg width=100 alt=seventh> 
+ <img src=b4.gif width=100 alt=eighth> 
+ </xmp>

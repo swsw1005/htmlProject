@@ -4,76 +4,19 @@
     <meta charset="UTF-8" />
     <title>insert title here there</title>
   </head>
-  
-  <script>
-  function check()
-  {
-	  alert(document.pkc.sung[0].checked);
-	  alert(document.pkc.jung.value.checked);
-  }
-  
-  function check_hobby()
-  {
-	  alert(document.pkc.hobby[4].value.checked);
-  }
-  
-  function check2()
-  {
-	  alert(document.pkc.jung2.value.checked);
-  }
-  </script>
 
   <body>
-    <form name="pkc" method="post" action="test.jsp">
-    <hr>
-      <input type="text" value="안녕하세요"><p>
-      <input type="password" value="비밀번호" maxlength="10">
-      <hr>
-      <input type="text" placeholder="아이디" maxlength="10"><p>
-      <input type="password" placeholder="비밀번호" disabled>
- 	<hr>
- 		<input type="radio" name="sung" value="0" checked>남자
- 		<input type="radio" name="sung" value="1" >여자
+    <form method="post" action="test.jsp">
+      <input type="text" action="안녕하세요" />
+      <p>
+        <input type="password" value="비밀번호" />
+      </p>
 
-	<input type = "button" value="클릭" onclick="check()">
-	<hr>
-	
-	<input type="checkbox" name="hobby" value="0" checked> 낚시
-	<input type="checkbox" name="hobby" value="1"> 여행
-	<input type="checkbox" name="hobby" value="2"> 축구
-	<input type="checkbox" name="hobby" value="3"> 야구
-	<input type="checkbox" name="hobby" value="4"> 음악
-	
-	<input type = "button" value="클릭" onclick="check_hobby()">
-	<hr>
-	
-	<select name = "jung">
-		<option> 선  택 </option>
-		<option selected> 짜장면 </option>
-		<option> 우 동 </option>
-		<option> 짬 뽕 </option>
-		<option> 탕수육 </option>
-		<option> 유산슬 </option>
-	</select><p>
-	<input type = "button" value="클릭" onclick="check()">
-	<hr>
-	<select name = "jung2">
-		<option> 선  택 </option>
-		<option selected> 짜장면 </option>
-		<option value="우동"> 우 동 </option>
-		<option> 짬 뽕 </option>
-		<option> 탕수육 </option>
-		<option> 유산슬 </option>
-	</select><p>
-	<input type = "button" value="클릭" onclick="check2()">
-    <b>  block 태그 </b>
-    <u> inline 태그 </u>
-    <hr>
-    <span> span 태그 </span>
-	<div> div 태그</div>
-    <!-- span  div 태그의 탄생 -->
-	<!-- css에서 서식 먹이기 위한 공양식 -->    
-    
-    </form>  
+      <hr />
+      <input type="text" placeholder="아이디" />
+      <p>
+        <input type="password" value="비밀번호" disabled />
+      </p>
+    </form>
   </body>
 </html>

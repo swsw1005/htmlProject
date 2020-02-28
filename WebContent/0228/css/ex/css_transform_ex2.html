@@ -1,0 +1,75 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    #main {
+      width:800px;
+	  height:800px;
+	  background:gray;
+ 
+	}
+	.aa {
+	  position:absolute;
+      width:200px;
+	  height:200px;
+	  background:yellow;
+	  border:1px solid black;
+	}
+    #pkc1 {
+	  left:100px;
+	  top:100px;
+      animation-name:pkc1;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+	#pkc2 {
+	  left:400px;
+	  top:100px;
+      animation-name:pkc2;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+	#pkc3 {
+	  left:300px;
+	  top:520px;
+      animation-name:pkc3;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+ 
+    @keyframes pkc1 {
+	  0% { transform:scale(1,1); }
+	  25% { transform:scale(0.5,0.5); }
+	  50% { transform:scale(2,2); }
+	  75% { transform:scale(0.5,0.5); }
+	  100% { transform:scale(1,1); }
+	}
+	@keyframes pkc2 {
+	   0% { transform:rotate(0deg); }
+	  25% { transform:rotate(90deg); }
+	  50% { transform:rotate(180deg); }
+	  75% { transform:rotate(90deg); }
+	  100% { transform:rotate(0deg); }
+	}
+	@keyframes pkc3 {
+	  0% { transform:skewX(0deg); }
+	  25% { transform:skewX(90deg); }
+	  50% { transform:skewX(180deg); }
+	  75% { transform:skewX(90deg); }
+	  100% { transform:skewX(0deg); }
+	}
+ 
+ 
+  </style>
+ </head>
+ <body>
+    <h1> @keyframes 에 %값을 이용 </h1>
+	<div id=main>
+      <div class=aa id=pkc1></div>
+	  <div class=aa id=pkc2></div>
+	  <div class=aa id=pkc3></div>
+	</div>
+	 
+ </body>
+</html>

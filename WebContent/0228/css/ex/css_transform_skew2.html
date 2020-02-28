@@ -1,0 +1,236 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+ 
+	.aa {
+      width:100px;
+	  height:100px;
+	  background:yellow;
+	  border:1px solid black;
+ 	}
+    #pkc1 {
+ 
+	} 
+	#pkc2 {
+      transform:skew(0deg,0deg);
+	  animation-name:kf2;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+	@keyframes kf2 {
+	  from { transform:skew(0deg, 0deg); }
+	  to { transform:skew(10deg, 10deg); }
+	}
+	#pkc3 {
+      transform:skew(0deg,0deg);
+	  animation-name:kf3;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf3 {
+	  from { transform:skew(0deg, 0deg); }
+	  to { transform:skew(20deg, 20deg); }
+	}
+	#pkc4 {
+      transform:skew(0deg,0deg);
+	  animation-name:kf4;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf4 {
+	  from { transform:skew(0deg, 0deg); }
+	  to { transform:skew(30deg, 30deg); }
+	}
+	#pkc5 {
+      transform:skew(0deg,0deg);
+	  animation-name:kf5;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf5 {
+	  from { transform:skew(0deg, 0deg); }
+	  to { transform:skew(40deg, 40deg); }
+	}
+ 
+    #pkc21 {
+      transform:skewX(0deg);
+	  animation-name:kf21;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf21 {
+	  from { transform:skewX(0deg); }
+	  to { transform:skewX(10deg); }
+	}
+	#pkc31 {
+      transform:skewX(0deg);
+	  animation-name:kf31;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf31 {
+	  from { transform:skewX(0deg); }
+	  to { transform:skewX(20deg); }
+	}
+	#pkc41 {
+      transform:skewX(0deg);
+	  animation-name:kf41;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf41 {
+	  from { transform:skewX(0deg); }
+	  to { transform:skewX(30deg); }
+	}
+	#pkc51 {
+      transform:skewX(0deg);
+	  animation-name:kf51;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf51 {
+	  from { transform:skewX(0deg); }
+	  to { transform:skewX(40deg); }
+	}
+
+	#pkc22 {
+      transform:skewY(0deg);
+	  animation-name:kf22;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf22 {
+	  from { transform:skewY(0deg); }
+	  to { transform:skewY(10deg); }
+	}
+	#pkc32 {
+      transform:skewY(0deg);
+	  animation-name:kf32;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf32 {
+	  from { transform:skewY(0deg); }
+	  to { transform:skewY(20deg); }
+	}
+	#pkc42 {
+      transform:skewY(0deg);
+	  animation-name:kf42;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf42 {
+	  from { transform:skewY(0deg); }
+	  to { transform:skewY(30deg); }
+	}
+	#pkc52 {
+      transform:skewY(0deg);
+	  animation-name:kf52;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	@keyframes kf52 {
+	  from { transform:skewY(0deg); }
+	  to { transform:skewY(40deg); }
+	}
+ 
+  </style>
+ </head>
+ <body>
+    <h1> transform:skew() : X축 Y축으로 기울이기 </h1>
+	<table border=1 width=1200 cellspacing=0>
+	 <tr align=center>
+	  <td width=50 rowspan=2> X , Y </td>
+      <td width=230> none </td>
+	  <td width=230> transform:skew(10deg,10deg); </td>
+	  <td width=230> transform:skew(20deg,20deg); </td>
+	  <td width=230> transform:skew(30deg,30deg); </td>
+	  <td width=230> transform:skew(40deg,40deg); </td>
+	 </tr>
+	 <tr align=center height=200>
+	  <td>
+       <div class=aa id=pkc1>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc2>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc3>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc4>
+	   </div>
+      </td>
+	  <td>
+       <div class=aa id=pkc5>
+	   </div> 
+	  </td>
+     </tr>
+	 <tr align=center>
+	  <td width=50 rowspan=2> X </td>
+      <td> none </td>
+	  <td> transform:skewX(10deg;) </td>
+	  <td> transform:skewX(20deg); </td>
+	  <td> transform:skewX(30deg); </td>
+	  <td> transform:skewX(40deg); </td>
+	 </tr>
+	 <tr align=center height=200>
+	  <td>
+       <div class=aa id=pkc1>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc21>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc31>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc41>
+	   </div>
+      </td>
+	  <td>
+       <div class=aa id=pkc51>
+	   </div> 
+	  </td>
+     </tr>
+	 <tr align=center>
+	  <td width=50 rowspan=2> Y </td>
+      <td> none </td>
+	  <td> transform:skewY(10deg); </td>
+	  <td> transform:skewY(20deg); </td>
+	  <td> transform:skewY(30deg); </td>
+	  <td> transform:skewY(40deg); </td>
+	 </tr>
+	 <tr align=center height=200>
+	  <td>
+       <div class=aa id=pkc1>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc22>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc32>
+	   </div>
+	  </td>
+	  <td>
+	   <div class=aa id=pkc42>
+	   </div>
+      </td>
+	  <td>
+       <div class=aa id=pkc52>
+	   </div> 
+	  </td>
+     </tr>
+	</table>
+ </body>
+</html>

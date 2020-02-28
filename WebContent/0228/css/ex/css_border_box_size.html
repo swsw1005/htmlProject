@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<style>
+ 
+ #aa {
+    width:300px;
+		height:100px;
+    box-sizing:content-box;
+		/* 박스의 가로계산 : width + 2x(marign+padding+border-width) */
+		/* 박스의 세로계산 : height + 2x(marign+padding+border-width) */
+	} 
+ #bb {
+    width:300px;
+		height:100px;
+    box-sizing:border-box;
+		/* 박스의 가로계산 : width + 2 x margin  */
+		/* 박스의 세로계산 : height + 2 x marign */
+	} 
+ .aa {
+    border:10px solid blue;
+ }
+ .bb {
+    border:20px solid green;
+ }
+</style>
+ 
+<h1> Box-Sizing </h1>
+ 
+ 
+<div id=aa class=aa> content-box </div>
+<div id=aa class=bb> content-box </div>
+<hr>
+<div id=bb class=aa> border-box</div>
+<div id=bb class=bb> border-box </div>
+ 
+ 
+
+ 
+  

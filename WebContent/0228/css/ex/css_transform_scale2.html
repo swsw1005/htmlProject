@@ -1,0 +1,91 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    #main {
+      width:800px;
+	  height:800px;
+	  background:gray;
+ 
+	}
+	.aa {
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  position:absolute;
+      width:200px;
+	  height:200px;
+	  background:yellow;
+	  border:1px solid black;
+	}
+    #pkc1 {
+      animation-name:pkc1;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+	#pkc2 {
+	  left:250px;
+	  top:200px;
+      animation-name:pkc2;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+	#pkc3 {
+	  left:250px;
+	  top:520px;
+      animation-name:pkc3;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	#pkc4 {
+	  left:570px;
+	  top:200px;
+      animation-name:pkc4;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	} 
+    @keyframes pkc1 {
+	  from { transform:scale(1,1); }
+	  to { transform:scale(0.5,0.5); }
+	}
+	@keyframes pkc2 {
+	  from { transform:scale(1,1); }
+	  to { transform:scale(2,2); }
+	}
+	@keyframes pkc3 {
+	  from { transform:scale(1,1); }
+	  to { transform:scaleX(2); }
+	}
+	@keyframes pkc4 {
+	  from { transform:scale(1,1); }
+	  to { transform:scaleY(2); }
+	}
+	 
+ 
+  </style>
+ </head>
+ <body>
+    <h1> transform:scale() : 내부텍스트도 같은 비율로 커짐 </h1>
+	<div id=main>
+      <div class=aa id=pkc1>
+	     from { transform:scale(1,1); } <br>
+	     to { transform:scale(0.5,0.5); }
+	  </div>
+	  <div class=aa id=pkc2>
+	     from { transform:scale(1,1); } <br>
+	     to { transform:scale(2,2); }
+	  </div>
+	  <div class=aa id=pkc3>
+	     from { transform:scale(1,1); } <br>
+	     to { transform:scaleX(2); }
+	  </div>
+	  <div class=aa id=pkc4>
+	     from { transform:scale(1,1); } <br>
+	     to { transform:scaleY(2); }
+	  </div>
+ 
+	</div>
+	 
+ </body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+     .aa {
+        visibility:visible;
+		 }
+		 .bb {
+        visibility:hidden;
+		 }
+		 .cc {
+        visibility:hidden; /* hidden은 테이블의 내용만 지운다 */
+		 }
+		 .dd {
+        visibility:collapse; /* collapse는 외곽선도 지운다 */
+		 }
+	</style>
+</head>
+<body>
+   <h1> visibility 속성 (visible, hidden, collapse) </h1>
+	 <h2>
+     <p> 1.  visible (내용을 보이게 한다.) => 생략과 동일   <br>
+		   ex) &lt;div&gt; 안녕하세요 &lt;/div&gt; 
+			 <table width=800 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> visibility 속성추가 전 </td>
+					<td> visibility:visible 변경후</td>
+				</tr>
+				<tr align=center style="color:black;font-size:20px">
+          <td>
+             X
+					</td>
+					<td>
+             visibility:visible;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					  <div> 안녕하세요 </div>
+					</td>
+					<td> 
+					  <div class=aa> 안녕하세요 </div>
+					</td>
+				</tr>
+			 </table>
+		   </p>
+			 <p> 2.  hidden (내용을 숨긴다.)     <br>
+		   ex) &lt;div&gt; 안녕하세요 &lt;/div&gt; 
+			 <table width=800 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> visibility 속성추가 전 </td>
+					<td> visibility:hidden 변경후</td>
+				</tr>
+				<tr align=center style="color:black;font-size:20px">
+          <td>
+             X
+					</td>
+					<td>
+             visibility:hidden;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					  <div> 안녕하세요 </div>
+					</td>
+					<td> 
+					  <div class=bb> 안녕하세요 </div>
+					</td>
+				</tr>
+			 </table>
+		   </p>
+			 <p> 3.  collapse (테이블을 숨긴다.)     <br>
+		   ex)  <br>
+			 &lt;table&gt; <br>
+			  &lt;tr&gt; <br>
+         &lt;td&gt; 안녕하세요 </td> <br>
+			  &lt;/tr&gt; <br>
+				&lt;tr&gt; <br>
+         &lt;td&gt; 안녕하세요 </td> <br>
+			  &lt;/tr&gt; <br>
+			 &lt;/table&gt;
+			 <table width=800 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> collapse 속성추가 전 </td>
+					<td> tr태그에 visibility:hidden 변경후</td>
+					<td> tr태그에 visibility:collapse 변경후</td>
+				</tr>
+				<tr align=center style="color:black;font-size:20px">
+          <td>
+             X
+					</td>
+					<td>
+             visibility:hidden;
+					</td>
+					<td>
+             visibility:collapse;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					   <table width=90% border=2 bordercolor=blue cellspacing=0>
+               <tr>
+                 <td> 안녕하세요 </td>
+							 </tr>
+							 <tr>
+                 <td> 안녕하세요 </td>
+							 </tr>
+						 </table>  
+					</td>
+					<td> 
+					   <table width=90% border=2 bordercolor=blue cellspacing=0>
+               <tr class=cc>
+                 <td> 안녕하세요 </td>
+							 </tr>
+							 <tr>
+                 <td> 안녕하세요 </td>
+							 </tr>
+						 </table>
+					</td>
+					<td> 
+					   <table width=90% border=2 bordercolor=blue cellspacing=0>
+               <tr class=dd>
+                 <td> 안녕하세요 </td>
+							 </tr>
+							 <tr>
+                 <td> 안녕하세요 </td>
+							 </tr>
+						 </table>
+					</td>
+				</tr>
+			 </table>
+		   </p>
+	 </h2>
+   
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+	   div {
+       width:300px;
+			 height:300px;
+			 float:left;
+			 border:5px solid black;
+		 }
+		 .bb {
+			width:300px;
+			height:50px;
+			border:5px solid white;
+			font-size:20px;
+			text-align:center;
+		 }
+     #aa1 {
+       background-image:url("aa.png"); 
+			 background-repeat:repeat; /* 생략해도 같은 기능 */
+		 }
+		 #aa2 {
+       background-image:url("aa.png");  
+			 background-repeat:no-repeat;
+		 }
+		 #aa3 {
+       background-image:url("aa.png");  
+			 background-repeat:repeat-x;
+		 }
+		 #aa4 {
+       background-image:url("aa.png");  
+			 background-repeat:repeat-y;
+		 }
+     
+   </style>
+ </head>
+ <body>
+   <h1> css에서 배경그림 반복 조절 1 </h1>
+	 <h2 style="color:red"> background-repeat:값 (브라우저를 크게 보세요)</h2>
+	 <img src=aa.png align=center> <b> 원본그림 </b> <p> 
+   <div id=aa1> </div>
+	 <div id=aa2> </div>
+	 <div id=aa3> </div>
+	 <div id=aa4> </div>
+
+   <h1 style="clear:both"></h1> <!-- 줄바꾸기 위해서 넣은거 -->
+
+	 <div class=bb> background-repeat:repeat; </div>
+	 <div class=bb> background-repeat:no-repeat; </div>
+	 <div class=bb> background-repeat:repeat-x; </div>
+	 <div class=bb> background-repeat:repeat-y; </div>
+ </body>
+</html>
+ 

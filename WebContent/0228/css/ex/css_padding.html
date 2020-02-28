@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+
+<style>
+ #aa {
+   width:300px;
+	 height:100px;
+	 background:red;
+	 float:left;
+	 margin:10px;
+	 border:10px solid blue;
+ }
+ .bb {
+  width:300px;
+	height:100px;
+	background:yellow;
+	font-size:20px;
+	font-weight:900;
+ }
+</style>
+<h1> 박스내의 padding 값 : 빨강박스외곽선과 노랑박스의 공간 </h1>
+<table>
+ <tr>
+  <td> padding:10px </td>
+  <td> padding:10px 20px </td>
+ </tr>
+ <tr>
+  <td> <div id=aa style="padding:10px"> <div class=bb>전체</div> </div> </td>
+  <td> <div id=aa style="padding:10px 20px"> <div class=bb>상하,좌우</div> </div> </td>
+ </tr>
+ <tr>
+  <td> padding:10px 20px 30px </td>
+  <td> padding:10px 20px 30px 40px </td>
+ </tr>
+ <tr>
+  <td> <div id=aa style="padding:10px 20px 30px"> <div class=bb>상,좌우,하</div> </div> </td>
+  <td> <div id=aa style="padding:10px 20px 30px 40px"> <div class=bb>상,우,하,좌</div> </div> </td>
+ </tr>
+</table>
+
+
+

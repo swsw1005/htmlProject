@@ -1,0 +1,61 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+	   div {
+       width:400px;
+			 height:300px;
+			 font-size:20px;
+			 color:yellow;
+			 border:1px solid black;
+			 background:red;
+			 background-repeat:no-repeat;
+			 background-image:url("bb.png");
+		 }
+		 #aa1 {
+			 background-position:bottom; /* 아래에 위치 */
+ 		 }
+		 #aa2 {
+			 background-position:center; /* 정 중앙에 위치 */
+  		 }
+		 #aa3 {
+			 background-position:left;  /* 왼쪽에 위치 */
+ 		 }
+		 #aa4 {
+			 background-position:top;   /* 상단에 위치 */
+ 		 }
+		 #aa5 {
+			 background-position:right; /* 오른쪽에 위치 */
+ 		 }
+		 #aa6 {
+			 background-position:inherit; /* 부모인 body태그의 속성을 따른다 */
+ 		 }
+		 #aa7 {
+			 background-position:initial; /* 초기화 */
+ 		 } 
+		 #aa8 {
+		     background-position:center right;
+		}
+		#aa9 {
+             background-position:100px 50px;
+		}
+		#aa10 {
+             background-position:50% 10%;
+		}
+   </style>
+ </head>
+ <body style="background-position:center">
+     <h1> 배경그림 위치 background-position (배경그림 반복은 no-repeat이어야 된다) </h1>
+		 <h2> 값을 2개를 조합할 수 있다(,없이 연속해서 입력) </h2>
+		 <div id=aa1> background-position:bottom </div>
+		 <div id=aa2> background-position:center </div>
+		 <div id=aa3> background-position:left </div>
+		 <div id=aa4> background-position:top </div>
+		 <div id=aa5> background-position:right </div>
+		 <div id=aa6> background-position:inherit </div>
+		 <div id=aa7> background-position:intial </div>
+		 <div id=aa8> background-position:center right; </div>
+		 <div id=aa9>  background-position:100px 50px; </div>
+		 <div id=aa10> background-position:50% 10%; </div>
+ </body>
+</html>

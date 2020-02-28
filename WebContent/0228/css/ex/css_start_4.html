@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    h1 {color:blue;font-size:25px}
+	h2 {color:red;font-size:25px}
+	h3 {color:red;font-size:20px}
+  </style>
+  <link rel="stylesheet" href="test.css">
+
+ </head>
+ <body style="margin-left:50px;margin-top:50px">
+    <h2> CSS의 사용법 </h2>
+    <hr>
+	<h3> 문서내의 <xmp> <style> ~ </style> </xmp> 내에 사용 </h3>
+    <xmp>
+	  <style>
+         h1 {color:blue;font-size:20px}
+	  </style>
+	  <h1> 오늘은 좋은날 </h1>
+	</xmp>
+     <h1> 오늘은 좋은날 </h1>
+	 <hr>
+
+	<h3> 태그내에 style="속성:값;속성;값" 사용 </h3>
+    <xmp>
+	 <div style="color:#12ff55;font-size:20px"> 내일도 좋은날 </div>
+	</xmp>
+     <div style="color:#12ff55;font-size:20px"> 내일도 좋은날 </div>
+	 <hr>
+
+	 <h3> 외부문서를 등록하여 사용 </h3>
+	 
+	 test.css파일 내용 
+	 <div  style="border:1px solid black;width:400px">
+	 <xmp>
+       .tt {
+         color:darkblue;
+         font-size:30px;
+         text-decoration:underline;
+        }
+	 </xmp>
+	 </div>
+    <xmp>
+	  <link rel="stylesheet" href="test.css">
+
+	  <div class=tt> 모레도 좋은날 </div>
+	</xmp>
+     <div class=tt> 모레도 좋은날 </div>
+    
+	  
+    
+ </body>
+</html>

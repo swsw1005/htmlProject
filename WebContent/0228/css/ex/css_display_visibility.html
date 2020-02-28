@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	  li {
+     border:1px solid blue;
+		}
+    .aa {
+      display:none;   /* 영역자체가 없어짐 */
+		}
+		.bb {
+      visibility:hidden; /* 영역은 존재하며 내용이 없어짐 */
+		}
+	</style>
+</head>
+<body>
+   <h1> visibility 와 display의 차이점 </h1>
+	 <h2 style="color:red"> 속성 사용하기전 </h2>
+	 <ul>
+    <li> 홍길동 </li>
+    <li> 슈퍼맨 </li>
+		<li> 배트맨 </li>
+		<li> 런닝맨 </li>
+		<li> 슈가맨 </li>
+	 </ul>
+	 <hr>
+   <h2 style="color:red"> 배트맨을 display:none 으로 처리 (영역자체가 없어짐) </h2>
+	 <ul>
+    <li> 홍길동 </li>
+    <li> 슈퍼맨 </li>
+		<li class=aa> 배트맨 </li>
+		<li> 런닝맨 </li>
+		<li> 슈가맨 </li>
+	 </ul>
+	 <hr>
+   <h2 style="color:red"> 배트맨을 visibility:hidden 으로 처리 (영역은 존재하며 내용이 숨겨짐) </h2>
+	 <ul>
+    <li> 홍길동 </li>
+    <li> 슈퍼맨 </li>
+		<li class=bb> 배트맨 </li>
+		<li> 런닝맨 </li>
+		<li> 슈가맨 </li>
+	 </ul>
+  <p> 1. display는 본문에 포함된 형태의 메뉴에 활용될 수 있다.
+	   <a href="display_ex.html"> 간단예제 </a>
+	</p>
+	<p> 2. visibility는 레이어와 관련된 부분에서 많이 사용한다. 
+	   <a href="visibility_ex.html"> 간단예제 </a>
+	</p>
+</body>
+</html>

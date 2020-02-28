@@ -1,0 +1,87 @@
+ 
+<html>
+<head>
+	<meta charset="utf-8">
+  <style>
+   #aa1 {
+    position:absolute;
+		left:100px;
+		top:130px;
+		z-index:1;
+	 }
+	 #aa2 {
+    position:absolute;
+		left:130px;
+		top:160px;
+		z-index:2;
+	 }
+	 #aa3 {
+    position:absolute;
+		left:160px;
+		top:190px;
+		z-index:3;
+	 }
+	 #aa4 {
+    position:absolute;
+		left:190px;
+		top:210px;
+		z-index:4;
+	 }
+	 button {
+    background:white;
+		border:none;
+	 }
+	 #table_layer {
+    position:absolute;
+		left:520px;
+		top:200px;
+	 }
+	 input[type=number] {
+    width:30px;
+		text-align:center;
+	 }
+	</style>
+	<script>
+   function change()
+	 {
+		  aa1.style.zIndex=document.lys.num1.value;
+			aa2.style.zIndex=document.lys.num2.value;
+			aa3.style.zIndex=document.lys.num3.value;
+			aa4.style.zIndex=document.lys.num4.value;
+	 }
+	</script>
+</head>
+<body>
+
+ <h1> z-index </h1>
+ <h2 style="color:red"> 
+   z-index는 레이어가 2개 이상이고 겹치는 상황에서 필요 </br>
+	 z-index값이 높으면 위로 나타난다.
+ </h2>
+ <div id=aa1>	<img src=a1.jpg width=300 height=300> </div>
+ <div id=aa2>	<img src=a2.jpg width=300 height=300> </div>
+ <div id=aa3>	<img src=a3.jpg width=300 height=300> </div>
+ <div id=aa4>	<img src=b1.jpg width=300 height=300> </div>
+ 
+ <div id=table_layer>	
+  <form name=lys>
+	<table>
+	 <caption><h3> z-index값을 입력 후 버튼을 클릭!! </h3></caption>
+	 <tr>
+	  <td> <button id=btn1> <img src=a1.jpg width=50> </button> </td>
+	  <td> <button id=btn2> <img src=a2.jpg width=50> </button> </td>
+	  <td> <button id=btn3> <img src=a3.jpg width=50> </button> </td>
+	  <td> <button id=btn4> <img src=b1.jpg width=50> </button> </td>
+		<td rowspan=2> <input type=button onclick=change() value="z-index 바꾸기">
+	 </tr>
+	 <tr align=center>
+    <td> <input type=number name=num1 value=1> </td>
+		<td> <input type=number name=num2 value=1> </td>
+		<td> <input type=number name=num3 value=1> </td>
+		<td> <input type=number name=num4 value=1> </td>
+	 </tr>
+	</table>
+	</form>
+ </div>
+</body>
+</html>

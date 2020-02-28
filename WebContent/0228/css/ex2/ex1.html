@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Document</title>
+  <style>
+    .main {
+      width:200px;
+	  height:25px;
+	  border:1px solid blue;
+	  border-radius:4px;
+	  position:relative;2019-05-03
+	} 
+	.ff {
+      float:left;
+	  margin-left:10px;
+	}
+	.material-icons {
+      float:right;
+	}
+	.sub {
+      position:absolute;
+	  padding-left:0px;
+	  border:1px solid blue;
+	  border-radius:4px;
+	  margin-top:27px;
+	  display:none;
+ 	}
+	.sub li {
+       list-style-type:none;
+	   margin-top:3px;
+       width:190px;
+	   height:25px;
+	   padding-left:10px;
+	}
+	.sub li:hover {
+       background:#eeeeee;
+	}
+  </style>
+  <script>
+    function imsi()
+	{
+       document.all.sub.style.display="block";
+	}
+  </script>
+ </head>
+ <body>
+  <div class=main onclick=imsi()>
+   <div class=menu>
+    <div class=ff> Group </div>
+    <div class=material-icons> arrow_drop_down </div> 
+   </div>
+   <ul class=sub id=sub>
+     <li> Computer </li>
+	 <li> Chicken </li>
+	 <li> Family </li>
+	 <li> Food </li>
+   </ul>
+  </div>
+ </body>
+</html>

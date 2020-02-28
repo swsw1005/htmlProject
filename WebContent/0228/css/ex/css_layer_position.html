@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      width:180px;
+	  height:200px;
+	}
+    #aa1 {
+       position:static;
+	   left:100px;
+	   top:100px;
+	   border:1px solid red;
+	}
+	#aa2 {
+       position:sticky;
+	   left:100px;
+	   top:0px;
+	   border:1px solid red;
+	}
+	#aa3 {
+       position:relative;
+	   left:100px;
+	   top:100px;
+	   border:1px solid red;
+	}
+	#aa4 {
+       position:absolute;
+	   left:200px;
+	   top:200px;
+	   border:1px solid red;
+	}
+	#aa5 {
+       position:fixed;
+	   left:400px;
+	   top:200px;
+	   border:1px solid red;
+	}
+  </style>
+
+ </head>
+ <body>
+   <h1> position(위치) </h1>
+ 
+   <div id=aa1> position:static <p> left,top에 영향을 받지 않고 그냥 순서대로 위치  </div>
+   <div id=aa2> position:sticky </div>
+   <div id=aa3> position:relative </div>
+   <div id=aa4> position:absolute </div>
+   <div id=aa5> position:fixed </div>
+
+ </body>
+</html>

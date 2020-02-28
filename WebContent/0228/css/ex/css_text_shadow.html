@@ -1,0 +1,36 @@
+<html>
+ <meta charset="utf-8">
+ <style>
+    div {
+      font-size:30px;
+			font-weight:bold;
+			line-height:100px;
+		}
+    #aa1 {/* 우측으로 5px이동 아래로 3px 색상은 파랑 (흐림도 생략된 상황) */
+      text-shadow:5px 3px blue; 
+		}
+	#aa2 {/* 좌측으로 5px이동 아래로 3px 색상은 파랑 (흐림도 생략된 상황) */
+      text-shadow:-5px 3px blue; 
+		}
+	#aa3 {/* 우측으로 20px이동 아래로 20px 흐림도 5px 색상은 초록 */
+      text-shadow:20px 20px 5px green;
+		}
+	#aa4 {/* 우측으로 10px이동 위로 20px 흐림도 10px 색상은 빨강 */
+      text-shadow:10px -20px 10px red; 
+		}
+ 	 
+ </style>
+ <body>
+
+   <h1> 글자 그림자 text-shadow:수평값 수직값 흐림도 색상 </h1>
+  
+	 <div> text-shadow:5px 3px blue; <span id=aa1> 안녕하세요 </span> </div>  
+	 <div> text-shadow:-5px 3px blue; <span id=aa2> 안녕하세요 </span> </div>  
+	 <div> text-shadow:20px 20px 5px green; <span id=aa3> 안녕하세요 </span> </div> 
+	 <div> text-shadow:10px -20px 10px red; <span id=aa4> 안녕하세요 </span> </div>  
+ </body>
+</html>
+
+ 
+
+ 

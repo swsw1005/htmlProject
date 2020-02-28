@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+
+<style>
+ #aa {
+   width:300px;
+	 height:300px;
+	 background:red;
+	 float:left;
+	 margin:10px;
+	 border:10px solid blue;
+ }
+ .bb {
+  width:100px;
+	height:100px;
+	background:yellow;
+	float:left;
+	border:1px solid black;
+		font-size:20px;
+	font-weight:900;
+ }
+ .cc {
+  clear:both;
+  width:100px;
+	height:100px;
+	background:yellow;
+ }
+</style>
+<h1> 박스내의 margin : 방향별로 구분가능 </h1>
+
+<table>
+  <tr>
+    <td colspan=2>
+	  <h3> margin:20px </h3>
+	  <div id=aa>
+        <div style="margin:20px" class=bb>전체</div> 
+	    <div class=bb></div> 
+        <div class=cc></div>
+      </div>
+	</td>
+  </tr>
+  <tr>
+    <td>  
+	  <h3> margin-left:20px </h3>
+	  <div id=aa>
+        <div style="margin-left:20px" class=bb>좌</div> 
+	    <div class=bb></div> 
+        <div class=cc></div>
+      </div>
+	</td>
+	<td> 
+	  <h3> margin-right:20px </h3>
+	  <div id=aa>
+        <div style="margin-right:20px" class=bb>우</div> 
+	    <div class=bb></div> 
+        <div class=cc></div>
+      </div>
+	</td>
+  </tr>
+  <tr>
+    <td> 
+	  <h3> margin-top:20px </h3>
+	  <div id=aa>
+        <div style="margin-top:20px" class=bb>상</div> 
+	    <div class=bb></div> 
+        <div class=cc></div>
+      </div>
+	</td>
+	<td> 
+	  <h3> margin-bottom:20px </h3>
+	  <div id=aa>
+        <div style="margin-bottom:20px" class=bb>하</div> 
+	    <div class=bb></div> 
+        <div class=cc></div>
+      </div>
+	</td>
+  </tr>
+</table>
+
+ 

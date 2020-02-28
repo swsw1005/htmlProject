@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	  #lys {
+		  width:300px;
+			height:100px;
+			background:#eeeeee;
+			border:1px solid blue;
+			margin-top:10px;
+		}
+    #lys > div {
+      width:60px;
+			height:20px;
+			background:lightblue;
+			font-size:14px;
+			border:1px solid red;
+		}
+		#bb {
+      float:left;
+		}
+		#cc{
+      float:right;
+		}
+		#dd1, #dd3{
+      float:left;
+		}
+		#dd2, #dd4{
+      float:right;
+		}
+	</style>
+</head>
+<body>
+   <h1> float </h1>
+	 <h2 style="color:red"> </h2>
+   <table>
+	  <tr align=center style="color:blue;font-size:20pt">
+     <td> 속성없음 </td>
+		 <td> 전부 float:left </td>
+		 <td> 전부 float:right </td>
+		 <td> 1,3 float:left 2,4 float:right </td>
+		</tr>
+	  <tr>
+	   <td id=lys>
+       <div id=aa> 한국음식 </div>
+		   <div id=aa> 중국음식 </div>
+		   <div id=aa> 일본음식 </div>
+	   </td>
+		 <td id=lys>
+       <div id=bb> 한국음식 </div>
+		   <div id=bb> 중국음식 </div>
+		   <div id=bb> 일본음식 </div>
+	   </td>
+		 <td id=lys>
+       <div id=cc> 한국음식 </div>
+		   <div id=cc> 중국음식 </div>
+		   <div id=cc> 일본음식 </div>
+	   </td>
+	   <td id=lys>
+       <div id=dd1> 한국음식 </div>
+		   <div id=dd2> 중국음식 </div>
+		   <div id=dd3> 일본음식 </div>
+		   <div id=dd4> 몽골음식 </div>
+	   </td>
+    </tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+    .aa {
+      display:inline;
+		}
+		.bb {
+      display:block;
+		}
+		.cc {
+			width:150px;
+			height:50px;
+			background:yellow;
+			border:1px solid blue;
+		}
+		.dd {
+      display:inline;
+			width:150px;
+			height:50px;
+			background:yellow;
+			border:1px solid blue;
+		}
+		.ee {
+      display:inline-block;
+			width:150px;
+			height:50px;
+			background:yellow;
+			border:1px solid blue;
+		}
+		.ff {
+      display:none;
+		}
+	</style>
+</head>
+<body>
+   <h1> display 속성 (none,inline,block,inline-block) </h1>
+	 <h2 style="color:blue">
+     <p> 1. block : 크기와 관계없이 1라인을 차지  </p>
+		  <div style="color:red"> 안녕하세요 ( div태그 => 1라인 전체 차지 ) </div>
+		 <hr>
+		 <p> 2. inline : 자기자신의 크기만큼 자리를 차지 </p>
+		   <b style="color:red"> 하하하 </b>
+			 <span style="color:red"> 호호호 </span>
+			 <img src=a2.jpg width=60> 
+			 <u style="color:red">( b span img u 태그 => 자신의 크기만 차지 ) </u>
+		 <hr>
+		 <p> 3. block 속성태그 : h1~h6 div ul li hr table 태그등등(네이버참조) </p>
+		 <hr>
+		 <p> 4. block속성를 inline속성으로 <b style="color:red">(div는 block 태그)</b>    <br>
+		   ex) &lt;div&gt; 하하하 &lt;/div&gt; 
+			 &lt;div&gt; 호호호 &lt;/div&gt;
+			 &lt;div&gt; 헤헤헤 &lt;/div&gt;
+			 <table width=800 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> display 속성추가 전 </td>
+					<td> display:inline 변경후</td>
+				</tr>
+				<tr align=center style="color:black;font-size:20px">
+          <td>
+             X
+					</td>
+					<td>
+             display:inline;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					  <div> 하하하 </div> 
+		        <div> 호호호 </div>
+			      <div> 헤헤헤 </div>
+					</td>
+					<td> 
+					  <div class=aa> 하하하 </div> 
+		        <div class=aa> 호호호 </div>
+			      <div class=aa> 헤헤헤 </div>
+					</td>
+				</tr>
+			 </table>
+		   </p>
+		 <hr>
+		 <p> 5. inline속성을 block으로 <b style="color:red">(span는 inline 태그)</b>
+		   <br>
+		   ex) &lt;span&gt; 하하하 &lt;/span&gt; 
+			 &lt;span&gt; 호호호 &lt;/span&gt;
+			 &lt;span&gt; 헤헤헤 &lt;/span&gt;
+			 <table width=800 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> display 속성추가 전 </td>
+					<td> display:block 변경후</td>
+				</tr>
+				<tr align=center style="color:black;font-size:20px">
+          <td>
+             X
+					</td>
+					<td>
+             display:block;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					  <span> 하하하 </span> 
+		        <span> 호호호 </span> 
+			      <span> 헤헤헤 </span> 
+					</td>
+					<td> 
+					  <span class=bb> 하하하 </span> 
+		        <span class=bb> 호호호 </span> 
+			      <span class=bb> 헤헤헤 </span> 
+					</td>
+				</tr>
+			 </table>
+		 </p>
+		 <p> 6. inline-block <b style="color:red">(inline이 되면서 block의 속성을 가짐) </b>
+		   <br>
+		   ex) &lt;div&gt; 하하하 &lt;/div&gt; 
+			 &lt;div&gt; 호호호 &lt;/div&gt;
+			 &lt;div&gt; 헤헤헤 &lt;/div&gt;
+			 <table width=1000 border=1 cellspacing=0>
+        <tr style="color:red;font-size:20px" align=center>
+          <td> display 속성추가 전 </td>
+					<td> display:inline 변경후
+					<td> display:inline-block 변경후</td>
+				</tr>
+				<tr style="color:black;font-size:20px">
+          <td>
+			       width:150px; <br>
+			       height:50px; <br>
+			       background:yellow; <br>
+			       border:1px solid blue;
+					</td>
+					<td>
+             display:inline; <br>
+			       width:150px; <br>
+			       height:50px; <br>
+			       background:yellow; <br>
+			       border:1px solid blue;
+					</td>
+					<td>
+             display:inline-block; <br>
+			       width:150px; <br>
+			       height:50px; <br>
+			       background:yellow; <br>
+			       border:1px solid blue;
+					</td>
+				</tr>
+				<tr align=center>
+          <td> 
+					  <div class=cc> 하하하 </div> 
+		        <div class=cc> 호호호 </div>
+			      <div class=cc> 헤헤헤 </div> 
+					</td>
+					<td> 
+					  <div class=dd> 하하하 </div> 
+		        <div class=dd> 호호호 </div>
+			      <div class=dd> 헤헤헤 </div>
+						<p style="color:black"> width와 height의 속성없음 </p>
+					</td>
+					<td> 
+					  <div class=ee> 하하하 </div> 
+		        <div class=ee> 호호호 </div>
+			      <div class=ee> 헤헤헤 </div>
+						<p style="color:black"> inline이 되지만 width와 height의 속성있음 </p>
+					</td>
+
+				</tr>
+			 </table>
+		 </p>
+		 <p> 7. none <b style="color:red">( 내용을 보이지 않게 한다. ) </b>
+		   <br>
+		   ex) &lt;div&gt; 하하하 &lt;/div&gt; 
+			 &lt;div&gt; 호호호 &lt;/div&gt;
+			 &lt;div&gt; 헤헤헤 &lt;/div&gt; 
+			 <div> 하하하 </div> 
+		   <div class=ff> 호호호 </div>
+			 <div> 헤헤헤 </div>
+			 <p style="color:red"> '호호호' 가 보이지 않는다. </p>
+		 </p>
+	 </h2>
+ 
+</body>
+</html>

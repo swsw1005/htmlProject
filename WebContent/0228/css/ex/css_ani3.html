@@ -1,0 +1,100 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    .pkc1 {
+      width:100px;
+	  height:100px;
+	  position:relative;
+	  animation:lys 5s infinite;
+	  animation-direction: normal;
+	  animation-play-state:paused;
+    }
+	.pkc2 {
+      width:100px;
+	  height:100px;
+	  position:relative;
+	  animation:lys 5s infinite;
+	  animation-direction: reverse;
+	  animation-play-state:paused;
+    }
+	.pkc3 {
+      width:100px;
+	  height:100px;
+	  position:relative;
+	  animation:lys 5s infinite;
+	  animation-direction: alternate;
+	  animation-play-state:paused;
+    }
+	.pkc4 {
+      width:100px;
+	  height:100px;
+	  position:relative;
+	  animation:lys 5s infinite;
+	  animation-direction: alternate-reverse;
+	  animation-play-state:paused;
+    }
+     
+	 @keyframes lys {
+      0%   {background: red; left: 0px; top: 0px;}
+      25%  {background: yellow; left: 200px; top: 0px;}
+      50%  {background: blue; left: 200px; top: 200px;}
+      75%  {background: green; left: 0px; top: 200px;}
+      100% {background: red; left: 0px; top: 0px;}
+	 }
+	 #aa {
+       width:300px;
+	   height:300px;
+       border:1px solid black;
+	 }
+	 div > div {
+       display:flex;
+	   justify-content:center;
+	   align-items:center;
+	   font-size:50px;
+	   color:white;
+	 }
+  </style>
+  <script>
+    function start(n)
+	{
+       pkc[n].style.animationPlayState="running"; 
+	}
+	function stop(n)
+	{
+       pkc[n].style.animationPlayState="paused"; 
+	}
+  </script>
+ </head>
+ <body>
+  <h1> animation-direction : 애니메이션의 진행 방향 </h1>
+ <table>
+  <tr align=center>
+   <td> <button onclick=start(0)> 움직이기 </button> <button onclick=stop(0)> 정지 </button> </td>
+   <td> <button onclick=start(1)> 움직이기 </button> <button onclick=stop(1)> 정지 </button> </td>
+   <td> <button onclick=start(2)> 움직이기 </button> <button onclick=stop(2)> 정지 </button> </td>
+   <td> <button onclick=start(3)> 움직이기 </button> <button onclick=stop(3)> 정지 </button> </td>
+  </tr>
+  <tr align=center>
+   <td> animation-direction: normal; </td>
+   <td> animation-direction: reverse; </td>
+   <td> animation-direction: alternate; </td>
+   <td> animation-direction: alternate-reverse; </td>
+  </tr>
+  <tr align=center>
+   <td>  순서에 따라 이동 </td>
+   <td>  역으로 이동 </td>
+   <td>  순서에 따라 이동하여 번갈아 진행 </td>
+   <td>  역으로 이동하여 번갈아 진행 </td>
+  </tr>
+  <tr>
+   <td> <div id=aa><div id=pkc class=pkc1>1</div></div> </td>
+   <td> <div id=aa><div id=pkc class=pkc2>2</div></div> </td>
+   <td> <div id=aa><div id=pkc class=pkc3>3</div></div> </td>
+   <td> <div id=aa><div id=pkc class=pkc4>4</div></div> </td>
+  </tr>
+ </table>
+
+
+ 

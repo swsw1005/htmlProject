@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+     #aa1 {
+       background-color:red; /* 영문 색상명 */
+		 }
+		 #aa2 {
+       background:blue;    /* -color 는 생략해도 인식됨 */
+		 }
+		 #aa3 {
+       background:rgb(222,60,250);  /* red,green,blue 를 0~255의 수로 표현 */
+		 }
+		 #aa4 {
+       background:#ab12dd;  /* red,green,blue 를 16진수로 표현 */
+		 }
+		 #aa5 {
+       background:rgba(222,60,250,0.5); /* rgb함수에 투명도(0~1)가 추가 */
+		 }
+		 #aa6 {
+       background:hsl(360,100%,50%); /* hsl(hue,saturation,lightness) */
+			 /* hue : 색조  0~360의 값을 가진다 */
+			 /*  360:빨강 , 120:녹색, 240:파랑 */
+			 /* saturation : 채도  0~100% */
+			 /* lightness : 밝기  0~100% */
+		 }
+		 #aa7 {
+       background:hsla(360,100%,50%,0.7); /* hsl함수에 투명도(0~1)가 추가 */
+		 }
+   </style>
+ </head>
+ <body>
+   <h1> css에서 색상단위로 사용할 수 있는 방법 </h1>
+   <div id=aa1> 안녕하세요 </div>
+	 <div id=aa2> 안녕하세요 </div>
+	 <div id=aa3> 안녕하세요 </div>
+	 <div id=aa4> 안녕하세요 </div>
+	 <div id=aa5> 안녕하세요 </div>
+	 <div id=aa6> 안녕하세요 </div>
+	 <div id=aa7> 안녕하세요 </div>
+ </body>
+</html>
+ 

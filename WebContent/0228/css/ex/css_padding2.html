@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+
+<style>
+ #aa {
+   width:300px;
+	 height:100px;
+	 background:red;
+	 float:left;
+	 margin:10px;
+	 border:10px solid blue;
+ }
+ .bb {
+  width:300px;
+	height:100px;
+	background:yellow;
+	font-size:20px;
+	font-weight:900;
+ }
+</style>
+<h1> 박스내의 padding 값 : 방향별 값주기 </h1>
+<table>
+  <tr>
+    <td colspan=2> padding:20px </td>
+  </tr>
+  <tr>
+    <td colspan=2> <div id=aa style="padding:20px"> <div class=bb>전체</div> </div> </td>
+  </tr>
+  <tr>
+    <td> padding-left:20px </td>
+	<td> padding-top:20px </td>
+  </tr>
+  <tr>
+    <td> <div id=aa style="padding-left:20px"> <div class=bb> 좌 </div> </div> </td>
+	<td> <div id=aa style="padding-top:20px"> <div class=bb> 상 </div> </div> </td>
+  </tr>
+  <tr>
+    <td> padding-right:20px </td>
+	<td> padding-bottom:20px </td>
+  </tr>
+  <tr>
+    <td> <div id=aa style="padding-right:20px"> <div class=bb> 우 </div> </div> </td>
+	<td> <div id=aa style="padding-bottom:20px"> <div class=bb> 하 </div> </div> </td>
+  </tr>
+</table>
+
+
+
+
+

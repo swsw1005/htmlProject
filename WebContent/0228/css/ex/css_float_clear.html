@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	  #lys {
+		  width:300px;
+			height:100px;
+			background:#eeeeee;
+			border:1px solid blue;
+			margin-top:10px;
+		}
+    #lys > div {
+      width:60px;
+			height:20px;
+			background:lightblue;
+			font-size:14px;
+			border:1px solid red;
+		}
+		 
+		#aa {
+      float:left;
+		}
+		#bb {
+      float:right;
+		}
+		#cc1 {
+      float:left;
+		}
+		#cc2 {
+      float:right;
+		}
+	</style>
+</head>
+<body>
+   <h1> clear ( left, right, both, none) </h1>
+	 <h2 style="color:red"> float를 해제할때 </h2>
+   <table>
+	  <tr align=center style="color:blue;font-size:20pt">
+		 <td> clear:left => 왼쪽 정지 </td>
+		 <td> clear:right => 오른쪽 정지  </td>
+		 <td> clear:both => 양쪽 정지 </td>
+		</tr>
+	  <tr>
+	   <td id=lys>
+       <div id=aa> 한국음식 </div>
+		   <div id=aa> 중국음식 </div>
+		   <div id=aa style="clear:left"> 일본음식 </div>
+			 <div id=aa> 몽골음식 </div>
+	   </td>
+		 <td id=lys>
+       <div id=bb> 한국음식 </div>
+		   <div id=bb> 중국음식 </div>
+		   <div id=bb style="clear:right"> 일본음식 </div>
+			 <div id=bb> 몽골음식 </div>
+	   </td>
+		 <td id=lys>
+       <div id=cc1> 한국음식 </div>
+		   <div id=cc2> 중국음식 </div>
+		   <div id=cc1 style="clear:both">일본음식 </div>
+			 <div id=cc2> 몽골음식 </div>
+	   </td>
+    </tr>
+	</table>
+</body>
+</html>

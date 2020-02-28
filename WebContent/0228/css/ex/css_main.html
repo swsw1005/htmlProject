@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration:none;
+	  color:black;
+	}
+  	a:hover {
+      text-decoration:underline;
+	  color:red;
+	}
+    li {
+      list-style-type:none;
+	}
+	#submenu {
+      display:none;
+	}
+	#menu {
+      width:100px;
+	  height:20px;
+      display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  background:darkblue;
+	  color:white;
+	  border:1px solid white;
+	  font-size:15px;
+	}
+	
+	#submenu li {
+      padding-left:10px;
+	  font-size:12px;
+	  height:15px;
+	}
+  </style> 
+  <script>
+    var chk=[0,0];
+    function view(n)
+	{ 
+      for(i=0;i<chk.length;i++)
+	    submenu[i].style.display="none";
+
+      if(chk[n]%2 == 0)
+	    submenu[n].style.display="inline";
+	
+	  chk[n]=chk[n]+1;
+	}
+  </script>
+ </head>
+ <body>
+  <center style="color:darkblue;font-size:20px;font-weight:900">스타일 시트</center>
+  <!-- 따로 만드는 문서로 수업과 직접관계가 없음 -->
+  <ul>
+    <li id=menu onclick=view(0)> 선택자 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="css_selector1.html" target=sou> 기본선택자 </a></li>
+		<li> <a href="css_selector2.html" target=sou> 기본선택자(중복) </a></li>
+		<li> <a href="css_selector3.html" target=sou> 기본선택자(명명) </a></li>
+		<li> <a href="css_selector4.html" target=sou> 속성선택자1 </a></li>
+		<li> <a href="css_selector4_1.html" target=sou> 속성선택자2 </a></li>
+		<li> <a href="css_selector4_2.html" target=sou> 문자열 속성선택자 </a></li>
+		<li> <a href="css_selector5.html" target=sou> 자손후손 선택자 </a></li>
+		<li>&nbsp;</li>
+	  </ul>
+    </li> 
+	<li id=menu onclick=view(1)> 함수 </li>
+    <li>
+      <ul id=submenu>
+        <li> 변수의 선언 </li>
+		<li> <a href="js_local_var.html"> 지역변수의 선언 </a></li>
+		<li> 전역변수의 선언1 </li>
+		<li> 전역변수의 선언2 </li>
+		<li>&nbsp;</li>
+	  </ul>
+    </li> 
+  </ul>
+ </body>
+</html>

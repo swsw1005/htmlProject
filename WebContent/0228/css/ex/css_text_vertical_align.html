@@ -1,0 +1,55 @@
+<html>
+ <meta charset="utf-8">
+ <style>
+    div {
+      width:300px;
+	  height:200px;
+	  border:1px solid blue;
+	  display:table-cell;
+	}
+    #aa1 { 
+		  vertical-align:top; 
+	}
+	#aa2 { 
+	   	vertical-align:bottom;
+	}
+	#aa3 { 
+		  vertical-align:middle;
+	}
+   	#bb1 {
+      vertical-align:sub;  /* 아래첨자 */
+ 	}
+	#bb2 {
+      vertical-align:super;  /* 윗첨자 */
+	}
+	#bb3 {
+      vertical-align:text-top; /* 글자 기준 */
+	}
+	#bb4 {
+      vertical-align:text-bottom; /* 글자 기준 */
+	}
+ </style>
+ <body>
+
+   <h1> 수직정렬  </h1>
+  
+	 <div id=aa1> 안녕하세요 => vertical-align:top;  </div>  
+	 <div id=aa2> 안녕하세요 => vertical-align:bottom; </div>  
+	 <div id=aa3> 안녕하세요 => vertical-align:middle; </div>  
+	 <hr>
+	 <p> H2O </p>
+	 <p> H<span id=bb1>2</span>O (vertical-align:sub; 아래첨자)</p>
+	 <p> 232 * 312 </p>
+	 <p> 2<span id=bb2>32</span> * 3<span id=bb2>12</span> (vertical-align:super; 윗첨자)</p>
+	 <p> 학교종이 <img src=a1.jpg width=9 height=9 id=bb3> 땡땡땡 
+	     <img src=a1.jpg width=9 height=9 id=bb4> 어서모이자 
+		 (첫번째 그림 : vertical-align:text-top;  두번째 그림 : vertical-align:text-bottom;)
+		 </p>
+
+ 
+ </body>
+</html>
+
+ 
+
+ 

@@ -1,0 +1,40 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+	   
+		 #aa1 {
+       width:600px;
+			 height:600px;
+			 background:yellow;
+			 background-image:url("bb.png");  
+			 background-repeat:repeat-x; /* 부모의 반복속성 */
+		 }
+		 #aa2 {
+		   width:400px;
+			 height:400px;
+			 position:relative;
+			 top:150px;
+			 left:150px;
+			 background:green;
+       background-image:url("aa.png");  
+			 background-repeat:initial; /* 초기화 속성 */
+		 }
+     
+   </style>
+ </head>
+ <body>
+   <h1> css에서 배경그림 반복 조절 4 </h1>
+	 <h2 style="color:red">
+	    background-repeat:initial <br>
+			부모 div의 반복이 repeat-x 이지만 자손div는 초기값으로 바뀐다.	 
+	 </h2>
+ 
+   <div id=aa1> 
+	    <div id=aa2> </div>
+	 </div>
+	 
+ 
+
+ </body>
+</html>

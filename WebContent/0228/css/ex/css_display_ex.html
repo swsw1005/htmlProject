@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <style>
+    li {
+      list-style-type:none;
+			width:70px;
+			height:25px;
+		}
+    .menu {
+      background:darkblue;
+			color:white;
+			border:1px solid white;
+		}
+		#food {
+      display:none;
+		}
+		#food1 {
+      visibility:hidden;
+		}
+	</style>
+	<script>
+	 var ch=-1;
+   function view(n)
+	 {
+      for(i=0;i<9;i++)
+			   food[i].style.display="none";
+			
+			if(ch!=n)
+				for(i=n;i<n+3;i++)
+			   food[i].style.display="block";
+			ch=n;
+	 }
+	 var ch1=-1;
+   function view1(n)
+	 {
+      for(i=0;i<9;i++)
+			   food1[i].style.visibility="hidden";
+			
+			if(ch1!=n)
+				for(i=n;i<n+3;i++)
+			   food1[i].style.visibility="visible";
+			ch=n;
+	 }
+	</script>
+</head>
+<body>
+	<h1> 간단한 메뉴 만들기 </h1>
+	<table width=400 border=1>
+	 <tr align=center>
+	  <td>
+      <ul>
+       <li class=menu onclick=view(0)> 한국음식 </li>
+	  	 <li id=food> 비빔밥 </li>
+	  	 <li id=food> 구절판 </li>
+	  	 <li id=food> 설렁탕 </li>
+	  	 <li class=menu onclick=view(3)> 중국음식 </li>
+	  	 <li id=food> 짜장면 </li>
+	  	 <li id=food> 탕수육 </li>
+	  	 <li id=food> 팔보채 </li>
+	  	 <li class=menu onclick=view(6)> 일본음식 </li>
+	  	 <li id=food> 덴푸라 </li>
+	  	 <li id=food> 라 멘 </li>
+	  	 <li id=food> 스키야키 </li>
+	    </ul> 
+	  </td>
+		<td style="color:red;font-size:20px"> display 사용 </td>
+	 </tr>
+	 <tr align=center>
+		<td>
+      <ul>
+       <li class=menu onclick=view1(0)> 한국음식 </li>
+	  	 <li id=food1> 비빔밥 </li>
+	  	 <li id=food1> 구절판 </li>
+	  	 <li id=food1> 설렁탕 </li>
+	  	 <li class=menu onclick=view1(3)> 중국음식 </li>
+	  	 <li id=food1> 짜장면 </li>
+	  	 <li id=food1> 탕수육 </li>
+	  	 <li id=food1> 팔보채 </li>
+	  	 <li class=menu onclick=view1(6)> 일본음식 </li>
+	  	 <li id=food1> 덴푸라 </li>
+	  	 <li id=food1> 라 멘 </li>
+	  	 <li id=food1> 스키야키 </li>
+	    </ul> 
+	  </td>
+		<td style="color:red;font-size:20px"> visibility 사용 </td>
+	 </tr>
+	</table>
+
+</body>
+</html>

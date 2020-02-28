@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+
+<style>
+  #aa {
+    width:300px;
+		height:100px;
+		background:yellow;
+		float:left;
+		border:1px solid black;
+	}
+	.aa1 {
+		display:flex;
+		align-items:flex-start;
+		justify-content:flex-start;
+	}
+	.aa2 {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+	.aa3 {
+		display:flex;
+		align-items:flex-end;
+		justify-content:flex-end;
+	}
+	#bb {
+    width:300px;
+		height:100px;
+		background:pink;
+		text-align:center;
+		display:table-cell; /* vertical-align을 사용할수 있게 해줌 */
+		vertical-align:middle;
+		border:1px solid black;
+  }
+ 
+	#cc {
+    width:300px;
+		height:100px;
+		background:lightblue;
+		float:left; /* 이것을 사용하면 vertical-align이 작동이 안됨 */
+		border:1px solid black;
+	}
+	.cc1 {  
+	  text-align:center; /* 작동 */
+		display:table-cell;    
+		vertical-align:middle; /* 작동 안됨 */
+	}
+	.cc2 {  
+	  text-align:center;
+		display:flex; /* 이것을 사용하면 text-align이 작동 안됨 */
+		align-items:center;
+	}
+	.cc3 {  
+		display:flex; /* text-align,vertical-align 이 안될때는 이방법 */
+		align-items:center;
+		justify-content:center;
+	}
+</style>
+<h1> &lt;li&gt 태그 </h1>
+<h2> flex를 이용하는 방법 </h2>
+<ul>
+ <li id=aa class=aa1> 안녕하세요 </li>
+ <li id=aa class=aa2> 안녕하세요 </li>
+ <li id=aa class=aa3> 안녕하세요 </li>
+</ul>
+<div style="clear:both"></div>
+
+<h2> text-align,vertical-align 를 이용하는 방법 </h2>
+<ul>
+ <li id=bb> 안녕하세요 </li>
+</ul>
+
+<h2> float:left로 인해 작동이 안되는 내용 </h2>
+<ul>
+ <li id=cc class=cc1> 안녕하세요 </li>
+ <li id=cc class=cc2> 안녕하세요 </li>
+ <li id=cc class=cc3> 안녕하세요 </li>
+</ul>

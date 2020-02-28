@@ -1,0 +1,68 @@
+<meta charset="utf-8">
+
+<style>
+ #aa {
+   width:300px;
+	 height:300px;
+	 background:red;
+	 float:left;
+	 margin:10px;
+	 border:10px solid blue;
+ }
+ .bb {
+  width:100px;
+	height:100px;
+	background:yellow;
+	float:left;
+	font-size:16px;
+	font-weight:900;
+ }
+ .cc {
+  clear:both;
+  width:100px;
+	height:100px;
+	background:yellow;
+ }
+</style>
+<h1> 박스내의 margin :  노란박스의 4방향 간격 </h1>
+
+<table>
+ <tr>
+  <td> 
+     <h3> margin:10px </h3>
+     <div id=aa> 
+      <div style="margin:10px" class=bb>전체 </div> 
+	  <div class=bb></div> 
+      <div class=cc></div>
+	 </div>
+  </td>
+  <td> 
+     <h3> margin:10px 20px</h3>
+     <div id=aa> 
+      <div style="margin:10px 20px" class=bb>상하, 좌우 </div> 
+	  <div class=bb></div> 
+      <div class=cc></div>
+	 </div>
+  </td>
+ </tr>
+ <tr>
+  <td> 
+     <h3> margin:10px 20px 30px </h3>
+     <div id=aa> 
+      <div style="margin:10px 20px 30px" class=bb>상, 좌우, 하 </div> 
+	  <div class=bb></div> 
+      <div class=cc></div>
+	 </div>
+  </td>
+  <td> 
+     <h3> margin:10px 20px 30px 40px </h3>
+     <div id=aa> 
+      <div style="margin:10px 20px 30px 40px" class=bb>상, 우, 하, 좌 </div> 
+	  <div class=bb></div> 
+      <div class=cc></div>
+	 </div>
+  </td>
+ </tr>
+</table>
+
+ 

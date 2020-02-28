@@ -1,0 +1,58 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+	   div {
+       width:300px;
+			 height:300px;
+			 float:left;
+			 border:5px solid black;
+		 }
+		  .bb {
+			width:300px;
+			height:50px;
+			border:5px solid white;
+			font-size:20px;
+			text-align:center;
+		 }
+     #aa1 {
+       background-image:url("a1.jpg");  
+			 background-repeat:no-repeat;
+			 background-size:100px;  /* 가로크기를 100px로 세로는 비율에 맞게 자동 */
+		 }
+		 #aa2 {
+       background-image:url("a1.jpg");  
+			 background-repeat:no-repeat;
+			 background-size:100%;   /* 가로크기를 100%로 세로는 비율에 맞게 자동 */
+		 }
+		 #aa3 {
+       background-image:url("a1.jpg");  
+			 background-repeat:no-repeat;
+			 background-size:100px 100px; /* 가로 100px, 세로 100px */
+		 }
+		 #aa4 {
+       background-image:url("a1.jpg");  
+			 background-repeat:no-repeat;
+			 background-size:100% 100%;  /* 가로 100%, 세로 100% */
+		 }
+     
+   </style>
+ </head>
+ <body>
+   <h1> css에서 배경그림 크기 조절 </h1>
+	 <h2 style="color:red"> background-size:값 (브라우저를 크게 보세요) </h2>
+	 <img src=a1.jpg align=center> <b> 원본그림 </b> <p> 
+   <div id=aa1> </div>
+	 <div id=aa2> </div>
+	 <div id=aa3> </div>
+	 <div id=aa4> </div>
+
+   <h1 style="clear:both"></h1> <!-- 줄바꾸기 위해서 넣은거 -->
+
+	 <div class=bb> background-size:100px; </div>
+	 <div class=bb> background-size:100%; </div>
+	 <div class=bb> background-size:100px 100px; </div>
+	 <div class=bb> background-size:100% 100%; </div>
+ </body>
+</html>
+ 

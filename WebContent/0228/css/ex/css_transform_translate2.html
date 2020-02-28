@@ -1,0 +1,78 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    #main {
+      width:800px;
+	  height:800px;
+	  background:gray;
+	}
+	.aa {
+      position:absolute;
+	  font-size:12px;
+      width:220px;
+	  height:50px;
+	  background:yellow;
+	}
+    #pkc1 {
+	  animation-name:pkc1;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	#pkc2 {
+	  animation-name:pkc2;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	#pkc3 {
+	  animation-name:pkc3;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	#pkc4 {
+	  animation-name:pkc4;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+ 
+	@keyframes pkc1 {
+	  from { transform:translate(0px,0px); }
+	  to { transform:translate(300px,300px); }
+	}
+	@keyframes pkc2 {
+	  from { transform:translateX(0px); }
+	  to { transform:translateX(300px); }
+	}
+	@keyframes pkc3 {
+	  from { transform:translateY(0px); }
+	  to { transform:translateY(300px); }
+	}
+	@keyframes pkc4 {
+	  0% { transform:translate(0px,0px); }
+	  100% { transform:translate(200px,400px); }
+	}
+  </style>
+ </head>
+ <body>
+    <h1> transform:translate(); (from ~ to를 이용한 동작) </h1>
+	<div id=main>
+      <div class=aa id=pkc1>
+	    from { transform:translate(0px,0px); } <br>
+	    to { transform:translate(300px,300px); }
+	  </div>
+	  <div class=aa id=pkc2>
+	    from { transform:translateX(0px); } <br>
+	    to { transform:translateX(300px); }
+	  </div>
+	  <div class=aa id=pkc3>
+	    from { transform:translateY(0px); } <br>
+	    to { transform:translateY(300px); }
+	  </div>
+	  <div class=aa id=pkc4>
+	    0% { transform:translate(0px,0px); } <br>
+	  100% { transform:translate(200px,400px);}
+	  </div>
+	</div>
+ </body>
+</html>

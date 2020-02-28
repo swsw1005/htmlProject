@@ -1,0 +1,66 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <style>
+	   div {
+       width:300px;
+			 height:300px;
+			 float:left;
+			 border:5px solid black;
+		 }
+		 .bb {
+			width:300px;
+			height:50px;
+			border:5px solid white;
+			font-size:15px;
+			text-align:center;
+		 }
+     #aa1 {
+       background-image:url("bb.png"); 
+			 background-repeat:round; 
+		 }
+		 #aa2 {
+       background-image:url("bb.png");  
+			 background-repeat:space;
+		 }
+		 #aa3 {
+       background-image:url("bb.png");  
+			 background-repeat:initial; /* 초기값 */
+		 }
+		 #aa4 {
+       background-image:url("bb.png");  
+			 background-repeat:inherit; /* 부모의 값 */
+		 }
+     
+   </style>
+ </head>
+ <body style="background-repeat:repeat-x">
+   <h1> css에서 배경그림 반복 조절 2 </h1>
+	 <h2 style="color:red"> background-repeat:값 (브라우저를 크게 보세요)</h2>
+	 <img src=bb.png align=center> <b> 원본그림 </b> <p> 
+   <div id=aa1> </div>
+	 <div id=aa2> </div>
+	 <div id=aa3> </div>
+	 <div id=aa4> </div>
+
+   <h1 style="clear:both"></h1> <!-- 줄바꾸기 위해서 넣은거 -->
+
+	 <div class=bb> 
+	   background-repeat:round; <br>
+		 배경을 꽉채우고 변형이 생김(여백 X)
+	 </div>
+	 <div class=bb>
+	   background-repeat:space; <br>
+		 배경을 최대한 넣는다 (여백 O)
+	 </div>
+	 <div class=bb> 
+	   background-repeat:initial; <br>
+		 초기값으로 설정
+	 </div>
+	 <div class=bb>
+	   background-repeat:inherit; <br>
+		 부모의 설정을 가져온다.
+	 </div>
+ </body>
+</html>
+ 

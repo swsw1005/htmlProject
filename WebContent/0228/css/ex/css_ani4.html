@@ -1,0 +1,96 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    .red {
+      color:red;
+	} 
+	.blue {
+      color:blue;
+	} 
+    div[id|="aa"] {
+	  width:300px;
+	  height:20px;
+	  border:1px solid red;
+   	  overflow:hidden;
+	  position:relative;
+	}
+	#aa div {
+	  position:absolute;
+      animation-name:move;
+	  animation-duration:5s;
+      animation-iteration-count:infinite;
+	}
+
+	.aa {
+	  animation-timing-function:ease;
+	}
+	.bb {
+	  animation-timing-function:linear;
+	}
+	.cc {
+	  animation-timing-function:ease-in;
+	}
+	.dd {
+	  animation-timing-function:ease-out;
+	}
+	.ee {
+	  animation-timing-function:ease-in-out;
+	}
+
+
+	@keyframes move {
+	  
+	  0% {
+         left:0px;top:0px;
+	  }
+	  50% {
+         left:-300px;top:0px;
+	  } 
+	  100% {
+        left:-0px;top:0px;
+	  }
+	}
+   
+	
+  </style>
+ </head>
+ <body>
+  <h1> animation-timing-function : 애니메이션의 속도를 지정 </h1>
+  <div id=aa> 
+    <div class=aa> 
+	  a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q  r s t u v w x y z 
+	</div>
+  </div>
+  <div> <b class=blue>animation-timing-function</b>:<b class=red>ease</b>;    느리게시작 -> 빠르게 -> 느리게종료 </div>
+  <hr>
+  <div id=aa> 
+    <div class=bb> 
+	  a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q  r s t u v w x y z 
+	</div>
+  </div>
+  <div> <b class=blue>animation-timing-function</b>:<b class=red>linear</b>;    동일한 속도 </div>
+  <hr>
+  <div id=aa> 
+     <div class=cc> 
+	  a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q  r s t u v w x y z 
+	</div>
+  </div>
+  <div> <b class=blue>animation-timing-function</b>:<b class=red>ease-in</b>;    느린시작 -> 빠르게 진행 </div>
+  <hr>
+  <div id=aa> 
+    <div class=dd> 
+	  a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q  r s t u v w x y z 
+	</div>
+  </div>
+  <div> <b class=blue>animation-timing-function</b>:<b class=red>ease-out</b>;    빠르게시작 -> 느리게종료 </div>
+  <hr>
+  <div id=aa> 
+    <div class=ee> 
+	  a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q  r s t u v w x y z 
+	</div>
+  </div>
+  <div> <b class=blue>animation-timing-function</b>:<b class=red>ease-in-out</b>;    느리게시작 -> 조금 빠르게 -> 느리게종료 </div>
+ </body>
+</html>

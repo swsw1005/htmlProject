@@ -1,0 +1,77 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    div {
+      width:100px;
+	  height:100px;
+	  background:black;
+	}
+    #aa1 {
+      animation-name:test1;
+	  animation-duration:3s;
+	  animation-fill-mode:none;
+	}
+	#aa2 {
+	  animation-name:test2;
+	  animation-duration:3s;
+	  animation-fill-mode:forwards;
+	}
+	#aa3 {
+      animation-name:test3;
+	  animation-duration:3s;
+	  animation-fill-mode:backwards;
+	}
+	#aa4 {
+	  animation-name:test4;
+	  animation-duration:3s;
+	  animation-fill-mode:both;
+    }
+    @keyframes test1 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+	@keyframes test2 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+   @keyframes test3 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+	@keyframes test4 {
+	   0% { background:red; }
+	   100% { background:blue;}
+	}
+
+  
+ 
+  </style>
+ </head>
+ <body>
+  <table width=1000>
+   <caption><h1>애니메이션 fill-mode  </h1> </caption>
+    <tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+    <tr align=center>
+      <td> animation-fill-mode:none; </td>
+	  <td> animation-fill-mode:forwards; </td>
+	  <td> animation-fill-mode:backwards; </td>
+	  <td> animation-fill-mode:both; </td>
+	</tr>
+	<tr align=center>
+      <td> <div id=aa1></div> </td>
+	  <td> <div id=aa2></div> </td>
+	  <td> <div id=aa3></div> </td>
+	  <td> <div id=aa4></div> </td>
+	</tr>
+	<tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+  </table>
+ 
+ 
+ </body>
+</html>

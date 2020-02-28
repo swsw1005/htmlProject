@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<style>
+body {
+  counter-reset: main;
+}
+
+h1 {
+  counter-reset: sub;
+}
+
+h2 {
+  counter-reset: sub1;
+}
+
+h1::before {
+  counter-increment: main;
+  content: "Team " counter(main) ". ";
+}
+
+h2::before {
+  counter-increment: sub;
+  content: counter(main) "." counter(sub) " ";
+}
+</style>
+</head>
+<body>
+  <div style="font-size:30px;font-weight:900"> 태그 요소에 숫자를 복수 부여 </div>
+
+<table>
+ <tr>
+  <td valign=top>
+<h1>우리학교</h1>
+<h2>홍길동</h2>
+<h2>뿡뿡이</h2>
+<h2>차 탄</h2>
+
+<h1>너희학교</h1>
+<h2>슈퍼맨</h2>
+<h2>배트맨</h2>
+<h2>원더우먼</h2>
+
+<h1>그쪽학교</h1>
+<h2>차돌이</h2>
+<h2>우뢰매</h2>
+  </td>
+  <td style="padding-left:30px">
+   <xmp>
+<style>
+body {
+  counter-reset: main;
+}
+
+h1 {
+  counter-reset: sub;
+}
+
+h1::before {
+  counter-increment: main;
+  content: "Team " counter(main) ". ";
+}
+
+h2::before {
+  counter-increment: sub;
+  content: counter(main) "." counter(sub) " ";
+}
+</style>
+</head>
+<body>
+ <div style="font-size:30px;font-weight:900"> 태그 요소에 숫자를 복수 부여 </div>
+
+<table>
+ <tr>
+  <td>
+<h1>우리학교</h1>
+<h2>홍길동</h2>
+<h2>뿡뿡이</h2>
+<h2>차 탄</h2>
+
+<h1>너희학교</h1>
+<h2>슈퍼맨</h2>
+<h2>배트맨</h2>
+<h2>원더우먼</h2 
+
+<h1>그쪽학교</h1>
+<h2>차돌이</h2>
+<h2>우뢰매</h2>
+   </xmp>
+  </td>
+ </tr>
+</table>
+ 
+</body>
+</html>

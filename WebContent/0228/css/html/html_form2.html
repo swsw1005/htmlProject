@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+ <h1> 폼태그 관련 속성들 </h1>
+ <hr>
+<form>
+<h2> 
+   placeholder : 사용자에게 현재 폼의 입력을 설명 
+  <br> 브라우저 버전에 따라 작동이 틀림!! (추가문서 만들께요!!)
+	<br> &amp#13; , &amp#10; placeholder내에서 줄바꾸기(둘중에 하나만 쓰면 됨)
+</h2>
+ <input type=text placeholder="아이디"> <p>
+ <input type=password placeholder=비밀번호> <p>
+ <textarea cols=30 rows=5 placeholder="안녕하세요 &#10; 하하하"></textarea> <p> 
+
+<hr>
+<h2> disabled : 폼태그의 사용중지 </h2>
+ <input type=text disabled> <p>
+ <input type=password disabled> <p>
+ <input type=checkbox disabled> <p>
+ <input type=radio disabled> <p>
+ <input type=button value=버튼 disabled> <p>
+ 
+<hr>
+<h2> required : submit 할때 값이 입력이 안되어 있으면 자동체크 </h2>
+<form>
+ <input type=text required> <p>
+ <input type=password required> <p>
+ <input type=checkbox required> <p>
+ <input type=radio required> 크롬에서 안되는 듯 <p>
+ <input type=submit value=전송> 
+</form> <p>
+
+<hr>
+<h2> number,range => min,max,step 
+<br> (number 태그의 step은 크롬에서 버튼으로 할때만)</h2>
+number : <input type=number min=0 max=100 step=2>  <p>
+range : <input type=range min=0 max=100 step=2> 크롬과익스플로러 모양이 다름  
+<hr>
+<h2> checked : 미리 체크하기</h2>
+<input type=checkbox checked>
+<input type=radio checked>
+
+<hr>
+<h2> selected </h2>
+<select>
+ <option> 010 </option>
+ <option> 011 </option>
+ <option selected> 02 </option>
+ <option> 031 </option>
+</select>
+</form>
+
+<hr> 
+<h2> autofocus : 문서로딩시 입력칸으로 이동 </h2>
+<form>
+  <input type=text> <p>
+	<input type=text autofocus> <p>
+	<input type=text> <p>
+</form>
+ 

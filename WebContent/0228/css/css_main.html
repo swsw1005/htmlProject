@@ -1,0 +1,291 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration:none;
+	  color:black;
+	}
+  	a:hover {
+      text-decoration:underline;
+	  color:red;
+	}
+    li {
+      list-style-type:none;
+	}
+	#submenu {
+      display:none;
+	}
+	#menu {
+      width:100px;
+	  height:20px;
+      display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  background:darkblue;
+	  color:white;
+	  border:1px solid white;
+	  font-size:15px;
+	}
+	
+	#submenu li {
+      padding-left:10px;
+	  font-size:12px;
+	  height:15px;
+	}
+  </style> 
+  <script>
+    var chk=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    function view(n)
+	{ 
+      for(i=0;i<chk.length;i++)
+	    submenu[i].style.display="none";
+
+      if(chk[n]%2 == 0)
+	    submenu[n].style.display="inline";
+	
+	  chk[n]=chk[n]+1;
+	}
+  </script>
+ </head>
+ <body>
+  <center style="color:darkblue;font-size:20px;font-weight:900">CSS</center>
+  <!-- 따로 만드는 문서로 수업과 직접관계가 없음 -->
+  <ul>
+    <li id=menu onclick=view(0)> css시작 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_start_1.html" target=sou> CSS란? </a></li>
+		<li> <a href="ex/css_start_2.html" target=sou> CSS 구조 </a></li>
+		<li> <a href="ex/css_start_3.html" target=sou> CSS 주석</a></li>
+		<li> <a href="ex/css_start_4.html" target=sou> CSS 사용법 </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+    <li id=menu onclick=view(1)> 폰트관련 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_font_color.html" target=sou> color </a></li>
+		<li> <a href="ex/css_font_family.html" target=sou> font-family</a></li>
+		<li> <a href="ex/css_font_style.html" target=sou> font-style</a></li>
+		<li> <a href="ex/css_font_varient.html" target=sou> font-varient </a></li>
+		<li> <a href="ex/css_font_weight1.html" target=sou> font-weight 1 </a></li>
+		<li> <a href="ex/css_font_weight2.html" target=sou> font-weight 2 </a></li>
+		<li> <a href="ex/css_font_size1.html" target=sou> font-size 1 </a></li>
+		<li> <a href="ex/css_font_size2.html" target=sou> font-size 2 </a></li>
+		<li> <a href="ex/css_font_size3.html" target=sou> font-size 3 </a></li>
+		<li> <a href="ex/css_font_size4.html" target=sou> font-size 4 </a></li>
+		<li> <a href="ex/css_font_size5.html" target=sou> font-size 5 </a></li>
+		<li> <a href="ex/css_font_size6.html" target=sou> font-size 6 </a></li>
+		<li> <a href="ex/css_font_opacity.html" target=sou> opacity </a></li>
+		 
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(2)> 배경이미지 </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_backimg0.html" target=sou> backgound-color </a></li>
+        <li> <a href="ex/css_backimg1.html" target=sou> backgound-image </a></li>
+		<li> <a href="ex/css_backimg2.html" target=sou> background-size </a></li>
+		<li> <a href="ex/css_backimg3.html" target=sou> background-repeat 1</a></li>
+		<li> <a href="ex/css_backimg3_1.html" target=sou> background-repeat 2</a></li>
+		<li> <a href="ex/css_backimg3_2.html" target=sou> background-repeat 3</a></li>
+		<li> <a href="ex/css_backimg3_3.html" target=sou> background-repeat 4</a></li>
+		<li> <a href="ex/css_backimg4.html" target=sou> background-attachment </a></li>
+		<li> <a href="ex/css_backimg5.html" target=sou> background-position </a></li>
+		<li> <a href="ex/css_backimg6.html" target=sou> background-position(shorthand) </a></li>
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(3)> 텍스트 관련 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_text_align.html" target=sou> text-align </a></li>
+		<li> <a href="ex/css_text_decoration.html" target=sou> text-decoration </a></li>
+		<li> <a href="ex/css_text_direction.html" target=sou> text-direction </a></li>
+		<li> <a href="ex/css_text_indent.html" target=sou> text-indent </a></li>
+		<li> <a href="ex/css_text_letter_spacing.html" target=sou> letter-spacing </a></li>
+		<li> <a href="ex/css_text_word_spacing.html" target=sou> word-spacing </a></li>
+		<li> <a href="ex/css_text_line_height.html" target=sou> line-height </a></li>
+		<li> <a href="ex/css_text_shadow.html" target=sou> text-shadow </a></li>
+		<li> <a href="ex/css_text_sort.html" target=sou> 텍스트정렬 1</a></li>
+		<li> <a href="ex/css_text_sort2.html" target=sou> 텍스트정렬 2</a></li>
+		<li> <a href="ex/css_text_sort3.html" target=sou> 텍스트정렬 3</a></li>
+        <li> <a href="ex/css_text_transform.html" target=sou> text-transform </a></li>
+		<li> <a href="ex/css_text_vertical_align.html" target=sou> vertical-align </a></li>
+		<li> <a href="ex/css_text_overflow.html" target=sou> overflow </a></li>
+		<li> <a href="ex/css_text_overflow2.html" target=sou> text-overflow </a></li>
+        <li> <a href="ex/css_text_white_space.html" target=sou> white-space </a></li>
+		<li> <a href="ex/css_text_word_wrap.html" target=sou> word-wrap </a></li>
+		<li> <a href="ex/css_text_word_break.html" target=sou> word_break </a></li>
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(4)> 테이블관련 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_table_caption_side.html" target=sou> caption-side </a></li>
+		<li> <a href="ex/css_table_empty_cell.html" target=sou> empty-cell </a></li>
+		<li> <a href="ex/css_table_layout.html" target=sou> layout </a></li> 
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(5)> border </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_border_color.html" target=sou> border-color </a></li>
+		<li> <a href="ex/css_border_style.html" target=sou> border-style </a></li>
+		<li> <a href="ex/css_border_width.html" target=sou> border-width </a></li>
+		<li> <a href="ex/css_border_short.html" target=sou> border(shorthand) </a></li>
+		<li> <a href="ex/css_border_radius.html" target=sou> border-radius </a></li>
+		<li> <a href="ex/css_border_spacing.html" target=sou> border-spacing </a></li>
+		<li> <a href="ex/css_border_outline.html" target=sou> border-outline </a></li>
+		<li> <a href="ex/css_border_collapse.html" target=sou> border-collapse </a></li>
+		<li> <a href="ex/css_border_cal.html" target=sou> border 계산 </a></li>
+		 
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(6)> list </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_list_style.html" target=sou> list-style </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(7)> float </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_float.html" target=sou> float </a></li>
+        <li> <a href="ex/css_float_clear.html" target=sou> clear </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(8)> display </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="ex/css_display.html" target=sou> display </a></li>
+		<li> <a href="ex/css_visibility.html" target=sou> visibility </a></li>
+        <li> <a href="ex/css_display_visibility.html" target=sou> display , visibility  </a></li>
+		<li> <a href="ex/css_display_ex.html" target=sou> display , visibility ex</a></li>
+		<li> <a href="ex/css_visibility_ex.html" target=sou> visibility ex </a></li>
+		<li> <a href="ex/css_zindex.html" target=sou> z-index </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(9)> margin </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_margin_padding.html" target=sou> margin,padding </a></li>
+        <li> <a href="ex/css_margin.html" target=sou> margin 1</a></li>
+        <li> <a href="ex/css_margin2.html" target=sou> margin 2 </a></li>
+		<li> <a href="ex/css_padding.html" target=sou> padding 1</a></li>
+        <li> <a href="ex/css_padding2.html" target=sou> padding 2 </a></li>
+		
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(10)> transform </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_transform_rotate1.html" target=sou> rotate 1 </a></li>
+        <li> <a href="ex/css_transform_rotate2.html" target=sou> rotate 2 </a></li>
+        <li> <a href="ex/css_transform_scale1.html" target=sou> scale 1 </a></li>
+		<li> <a href="ex/css_transform_scale2.html" target=sou> scale 2 </a></li>
+        <li> <a href="ex/css_transform_translate1.html" target=sou> translate 1 </a></li>
+		<li> <a href="ex/css_transform_translate2.html" target=sou> translate 2 </a></li>
+		<li> <a href="ex/css_transform_skew1.html" target=sou> skew1 </a></li>
+		<li> <a href="ex/css_transform_skew2.html" target=sou> skew2 </a></li>
+		<li> <a href="ex/css_transform_ex2.html" target=sou> 단계별변형 </a></li>
+
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(11)> animation </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_ani1.html" target=sou> animation 1 </a></li>
+		<li> <a href="ex/css_ani2.html" target=sou> animation 2 </a></li>
+		<li> <a href="ex/css_ani3.html" target=sou> animation 3 </a></li>
+		<li> <a href="ex/css_ani4.html" target=sou> animation 4 </a></li>
+		<li> <a href="ex/css_ani5.html" target=sou> animation 5 </a></li>
+       
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(12)> selector </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_selector1.html" target=sou> 기본선택자 </a></li>
+		<li> <a href="ex/css_selector2.html" target=sou> 복수선택자 </a></li> 
+        <li> <a href="ex/css_selector3.html" target=sou> id,class </a></li>
+		<li> <a href="ex/css_selector4.html" target=sou> 속성선택자1 </a></li>
+		<li> <a href="ex/css_selector4_.html" target=sou> 속성선택자2 </a></li>
+		<li> <a href="ex/css_selector4_1.html" target=sou> 속성선택자3 </a></li>
+		<li> <a href="ex/css_selector4_2.html" target=sou> 문자열 속성선택자 </a></li>
+		<li> <a href="ex/css_selector5.html" target=sou> 자손후손 선택자1 </a></li>
+		<li> <a href="ex/css_selector5_1.html" target=sou> 자손후손 선택자2 </a></li>
+		<li> <a href="ex/css_selector6.html" target=sou> 동위선택자 </a></li>
+		<li> <a href="ex/css_selector7.html" target=sou> 반응선택자 </a></li>
+		<li> <a href="ex/css_selector8.html" target=sou> 상태선택자 </a></li>
+		<li> <a href="ex/css_selector9.html" target=sou> 구조선택자 </a></li>
+		<li> <a href="ex/css_selector10.html" target=sou> 가상선택자1 </a></li>
+		<li> <a href="ex/css_selector10_1.html" target=sou> 가상선택자2 </a></li>
+		<li> <a href="ex/css_selector11.html" target=sou> 가상선택자3 </a></li>
+		<li> <a href="ex/css_selector12.html" target=sou> 부정선택자 </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(13)> counter </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_counter1.html" target=sou> counter1 </a></li>
+		<li> <a href="ex/css_counter2.html" target=sou> counter2 </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(14)> column </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_column_count.html" target=sou> column-count1</a></li>
+		<li> <a href="ex/css_column_count2.html" target=sou> column-count2</a></li>
+		<li> <a href="ex/css_column_span.html" target=sou> column-span</a></li>
+		<li> <a href="ex/css_columns.html" target=sou> columns</a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(15)> 그 외!! </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_resize.html" target=sou> resize </a></li>
+		<li> <a href="ex/css_box_sizing.html" target=sou> box-sizing </a></li>
+		<li> <a href="ex/css_nav_index.html" target=sou> nav-index </a></li>
+		<li> <a href="ex/css_outline_offset.html" target=sou> outline-offset </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(16)> 메뉴 </li>
+    <li>
+      <ul id=submenu>
+	    <li> <a href="ex/css_menu1.html" target=sou> 첫번째메뉴 </a></li>
+		<li> <a href="ex/css_menu1_1.html" target=sou> 첫번째메뉴2 </a></li>
+   	    <li> <a href="ex/css_menu2.html" target=sou> 두번째메뉴 </a></li>
+		<li> <a href="ex/css_menu2_1.html" target=sou> 두번째메뉴2 </a></li>
+		<li> <a href="ex/css_menu3.html" target=sou> 세번째메뉴 </a></li>
+		<li> <a href="ex/css_menu3_1.html" target=sou> 세번째메뉴2 </a></li>
+		<li> <a href="ex/css_menu4.html" target=sou> 네번째메뉴 </a></li>
+		<li> <a href="ex/css_menu4_1.html" target=sou> 네번째메뉴2 </a></li>
+		<li> <a href="ex/css_menu5.html" target=sou> 다섯번째메뉴 </a></li>
+		<li> <a href="ex/css_menu5_1.html" target=sou> 다섯번째메뉴2 </a></li>
+ 	  </ul>
+    </li> 
+  </ul>
+ </body>
+</html>

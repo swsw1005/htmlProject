@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <style>
+	 button {
+     background:red;
+		 color:white;
+ 		 border:none;
+	 }
+   #gongji1 {
+     position:absolute;
+		 left:200px;
+		 top:100px;
+		 width:300px;
+		 height:200px;
+		 background:pink;
+	 }
+	 #gongji2 {
+     position:absolute; /* 절대좌표 */
+		 left:200px;        /* 브라우저 좌측부터 200px 위치 */
+		 top:350px;         /* 브라우저 상단부터 350px 위치 */
+		 width:300px;       /*  레이어 가로 */
+		 height:200px;      /*  레이어 세로 */
+		 background:green;
+	 }
+	</style>
+   
+	<script>
+	 function hide(n)
+	 {
+		 if(n==0)
+      gongji1.style.visibility="hidden";
+		 else
+			gongji2.style.visibility="hidden";
+	 }
+	</script>
+</head>
+<body>
+   <h1> 광고 레이어 만들기 </h1>
+   <h2 style="color:red;font-size:17px">
+	  position:absolute를 이용한 레이어는 본문과는 다른영역이므로 <br>
+	  visibility를 사용해도 무방하다( display도 사용가능 )
+	 </h2>
+   <div id=gongji1>
+      <h2> 광고내용!! </h2>
+			<p align=center> 11월 특가!! </p>
+			<p align=center> 11월 특가!! </p>
+			<p align=center> 11월 특가!! </p>
+			<p align=right> <button onclick=hide(0)> X 닫기 </button> </p>
+ 
+	 </div>
+	 <div id=gongji2>
+      <h2> 광고내용!! </h2>
+			<p align=center> 놀러가자!! </p>
+			<p align=center> 놀러가자!! </p>
+			<p align=center> 놀러가자!! </p>
+			<p align=right> <button onclick=hide(1)> X 닫기 </button> </p>
+ 
+	 </div>
+
+</body>
+</html>

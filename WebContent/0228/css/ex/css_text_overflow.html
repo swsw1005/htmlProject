@@ -1,0 +1,111 @@
+ 
+<html>
+<head>
+	<meta charset="utf-8">
+  <style>
+	 div {
+     width:100px;
+		 height:60px;
+		 border:1px solid blue;
+	 }
+   #aa1 {
+     overflow:auto;
+	 }
+	 #aa2 {
+     overflow:hidden;
+	 }
+	 #aa3 {
+     overflow:scroll;
+	 } 
+	 #aa4 {
+     overflow-y:scroll;
+	 overflow-x:hidden;
+	 }
+ 
+	</style>
+ 
+</head>
+<body>
+
+ <h1> overflow (생략, auto, hidden, scroll) </h1>
+ <h2 style="color:red"> 
+   박스의 크기를 가로 100px 세로 60px로 셋팅
+ </h2>
+ <table width=900 border=1 cellspacing=0>
+	 <caption><h3>  </h3></caption>
+	 <tr align=center style="color:white;background:darkblue;font-size:20px">
+	   <td> 구분 </td>
+	   <td> 생략 </td>
+	   <td> auto </td>
+	   <td> hidden </td>
+	   <td> scroll </td>
+	   <td> overflow-x,overflow-y</td>
+	 </tr>
+	 <tr align=center height=200>
+	   <td> 텍스트 </td>
+	   <td>  
+		  <div> 
+         동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+			</div>
+		</td>
+    <td>  
+		  <div id=aa1> 
+         동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+			</div>
+		</td>
+		<td> 
+	    <div id=aa2> 
+         동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+			</div>
+		</td>
+		<td> 
+      <div id=aa3> 
+         동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+			</div>
+		</td>
+		<td> 
+      <div id=aa4> 
+         동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+			</div>
+		</td>
+	 </tr>
+	 <tr align=center height=200>
+	   <td> 그림 </td>
+	   <td>  
+		  <div> 
+         <img src=b3.jpg width=150>
+			</div>
+		</td>
+    <td>  
+		  <div id=aa1> 
+         <img src=b3.jpg width=150>
+			</div>
+		</td>
+		<td> 
+	    <div id=aa2> 
+         <img src=b3.jpg width=150>
+			</div>
+		</td>
+		<td> 
+      <div id=aa3> 
+        <img src=b3.jpg width=150>
+			</div>
+		</td>
+		<td> 
+      <div id=aa4> 
+        <img src=b3.jpg width=150>
+			</div>
+		</td>
+	 </tr>
+	 <tr align=center>
+	  <td> &nbsp; </td>
+      <td>  영역을 넘어서 출력 </td>
+	  <td>  넘치는 부분을 브라우저가 자동으로 </td>
+	  <td>  넘치는 부분을 숨긴다. </td>
+	  <td>  넘치는 부분을 스크롤 </td>
+	  <td>  x,y를 따로 조절 </td>
+	 </tr>
+	</table>
+
+</body>
+</html>

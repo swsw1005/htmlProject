@@ -1,0 +1,323 @@
+<!doctype html5>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8">
+  <title>0503-gui.html</title>
+ <link href="https://fonts.googleapis.com/css?family=Hind|Ubuntu" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- 추가 -->
+  <script>
+    var chk=0;
+    function imsi()
+   {
+	   if(chk%2 == 0)
+         document.all.sub.style.display="block";
+	   else
+	     document.all.sub.style.display="none";
+		
+	   chk++;
+   }
+  </script>
+  <style>
+  *{
+   font-family: 'Ubuntu', 'Cute Font'; 
+    }
+   /*영어 한글 순서대로*/
+   /*레이아웃*/
+   body{
+     min-width:1024px;
+     margin:0 200px;
+   }
+   #txtTitle{
+   font-family:Arial;
+   font-size:43pt;
+   }
+   #layout{
+   width:600px;
+   height:420px;
+   border:1px solid #fff;
+   }
+   /*클래스*/
+   .HanTxt{
+   font-family:'Cute Font';
+   }
+   .txtLink a{
+   color:#106e66;
+   font-weight:bold;
+   text-decoration:none;
+   }
+   .txtLink a:hover{
+   color:#106e66;
+   font-weight:bold;
+   text-decoration:underline;
+   }
+   .btnArea1>input[type="button"], .btnArea1>button{
+   height:26px;
+   border-radius:8px;
+   border:1px;
+   outline:0px; /*버튼의 테두리 없애기*/
+   cursor:pointer;/*커서*/
+   }
+   .btnArea2>input[type="button"], .btnArea2>button{
+   height:26px;
+   border-radius:8px;
+   outline:0px; /*버튼의 테두리 없애기*/
+   cursor:pointer;/*커서*/
+   }
+   .btnS{
+   width:100px;
+   }
+   .btnL{
+   width:120px;
+   }
+   .btn1{
+    background-color:#558ed5;
+    color:#fff;
+    border:0px;
+    border-bottom-color:#558ed5;
+    /*box-shadow:inset 0px 0px 0px 0px #558ed5;*/
+   }
+  .btn2{
+    background-color:#558ed5;
+    color:#fff;
+    /*box-shadow:inset 0px 0px 0px 0px #558ed5;*/
+   }
+   .btnImg{
+   vertical-align:middle;
+   }
+   .btn3{
+    background:linear-gradient(to right,#558ed5,#80ace4);
+    color:#fff;
+    /*box-shadow:inset 0px 0px 0px 0px #558ed5;*/
+   }
+   .btn4{
+     color:#fff;
+    background:linear-gradient(to right,#558ed5,#80ace4);
+   }
+   .btn5{
+    background:linear-gradient(to right,#55ded3,#9cefe9);
+    color:#fff;
+   }
+   .btn6{
+    background:linear-gradient(to right,#55ded3,#9cefe9);
+    color:#fff;
+   }
+   .btn7, .btn8{
+     border:1px solid #106e66;
+    background-color:#fff;
+    color:#106e66;
+   }
+   .btn9, .btn10{
+     border:1px solid #106e66;
+    background-color:#106e66;
+    color:#fff;
+   }
+   .btn11, .btn12{
+     border:1px solid #558ed5;
+    background-color:#d3e5fb;
+    color:#106e66;
+   }
+   /*폼 스타일 */
+   .lfLeft{
+   font-size:30pt;
+   float:left;
+   width:300px;
+   }
+
+   .lfLeft>input[type="text"]{
+   width:285px;
+   height:50px;
+   padding-left:30px;
+   border-radius:8px;
+   
+   }
+   .lfRight{
+   font-size:30pt;
+   float:left;
+   width:300px;
+   }
+   .lfRight>select{
+   width:285px;
+   height:50px;
+   padding-left:30px;
+   border-radius:8px;
+   outline:0px;
+   color:#000;
+   }
+   .txtNormal{
+   color:#d7d7d7;
+    border:1px solid #55ded3;
+   }
+   .txtActive{
+    color:#2a3131;
+    border:1px solid #acf5f0;
+   }
+   .txtAlert{
+    color:#8023a8;
+    border:1px solid #8023a8;
+   }
+   .check{
+    font-size:30pt;
+   }
+   input[type="checkbox"]{
+   width: 2rem !important;
+    height: 2rem !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    outline: none;
+    box-shadow: none;
+    /*background: url()no-repeat;*/
+   vertical-align:middle;
+   }
+   input[type="checkbox"]:checked{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    box-shadow: none;
+    /*background: url() no-repeat;*/
+}
+   .chk1{
+    border:1px solid #d7d7d7;
+   }
+   .chk2{
+    border:1px solid #55ded3;
+   }
+   .chk3{
+    border:1px solid #55ded3;
+    background:#55ded3;
+   }
+   .chk4{
+    border:1px solid #d7d7d7;
+   }
+
+   /*select*/
+   .main {
+      width:200px;
+     height:25px;
+     border:1px solid blue;
+     border-radius:4px;
+     position:relative;2019-05-03
+   } 
+   .ff {
+      float:left;
+     margin-left:10px;
+	 font-size:15px;
+   }
+   .material-icons {
+      float:right;
+   }
+   .sub {
+      position:absolute;
+     padding-left:0px;
+     border:1px solid blue;
+     border-radius:4px;
+     margin-top:27px;
+     display:none;
+    }
+   .sub > li {
+       list-style-type:none;
+      margin-top:3px;
+       width:190px;
+      height:25px;
+      padding-left:10px;
+	  font-size:15px;
+   }
+   .sub li:hover {
+       background:#eeeeee;
+   }
+  </style>
+ </head>
+ <body>
+<span id="txtTitle">■ Text Style</span>
+<div id="layout">
+   <h1>H1 Heading</h1>
+   <h2>H2 Heading</h2>
+   <h3>H3 Heading</h3>
+   <h4>H4 Heading</h4>
+   <h5>H5 Heading</h5>
+   <h6>H6 Heading</h6>
+
+   <div class="HanTxt">
+      몸길이 약 46cm, 날개길이 34~39cm의 중형 갈매기이다.<br/> 
+      머리와 가슴·배는 흰색이고 날개와 등은 잿빛이다. <br/>
+      꽁지깃 끝에 검은 띠가 있어서 다른 갈매기류와 구별된다.<br/><br/>
+   </div>
+
+   <div class="txtLink">
+      <a href="#">Link Style</a><br/>
+      <a href="#">링크 스타일</a>
+   </div>
+</div>
+
+
+<span id="txtTitle">■ Button Style</span>
+<div id="layout">
+<div class="btnArea1">
+  <input type="button" value="button" class="btnS btn1"/>&nbsp;&nbsp;
+  <button class="btnL btn2"><img src="img/btnIcon_Setting.gif" class="btnImg"> Button</button><p></p>
+
+  <input type="button" value="button" class="btnS btn3"/>&nbsp;&nbsp;
+  <button class="btnL btn4"><img src="img/btnIcon_Setting.gif" class="btnImg">Button</button><p></p>
+
+  <input type="button" value="button" class="btnS btn5"/>&nbsp;&nbsp;
+  <button class="btnL btn6">&nbsp;</button><p></p>
+ </div>
+ <div class="btnArea2">
+  <input type="button" value="button" class="btnS btn7"/>&nbsp;&nbsp;
+  <button class="btnL btn8">button</button><p></p>
+
+  <input type="button" value="button" class="btnS btn9"/>&nbsp;&nbsp;
+  <button class="btnL btn10">button</button><p></p>
+
+  <input type="button" value="HOVER" class="btnS btn11"/>&nbsp;&nbsp;
+  <button class="btnL btn12">HOVER</button><p></p>
+ </div>
+</div>
+
+
+<span id="txtTitle">■ Form Style</span>
+<div id="layout">
+    <div class="lfLeft">INPUT<p></p>
+      <input type="text" value="Normal" class="txtNormal"/><p></p>
+      <input type="text" value="Active" class="txtActive"/><p></p>
+      <input type="text" value="Alert" class="txtAlert"/>
+   </div>
+   <div class="lfRight">SELECT<p></p>
+      <select>
+         <option>Normal</option>
+      </select><p></p>
+      <select>
+         <option>Hover</option>
+      </select><p></p>
+      <div class=main onclick=imsi()>
+            <div class=menu>
+              <div class=ff> Group </div>
+              <div class=material-icons> arrow_drop_down </div> 
+            </div>
+            <ul class=sub id=sub>
+             <li> Computer </li>
+             <li> Chicken </li>
+             <li> Family </li>
+             <li> Food </li>
+            </ul>
+       </div>
+   </div>
+   <div id="layout">
+   <span class="check">CHECKBOX<br/>@RADIO BUTTON</span><p></p>
+      <input type="checkbox" class="chk1"/>Unchecked option<p></p>
+      <input type="checkbox" class="chk2"/>Hover option<p></p>
+      <input type="checkbox" class="chk3" checked/>Checked<p></p>
+      <input type="checkbox" class="chk4"/>Disabled item<p></p><br/><br/>
+
+      <input type="radio"/>Statc<p></p>
+      <input type="radio"/>Hover<p></p>
+      <input type="radio"/>Checked<p></p>
+      <input type="radio"/>Disabled<p></p>
+   </div>
+   
+</div>
+ </body>
+</html>

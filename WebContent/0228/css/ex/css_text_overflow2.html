@@ -1,0 +1,53 @@
+ 
+<html>
+<head>
+	<meta charset="utf-8">
+  <style>
+    div#aa1 {
+	   white-space: nowrap; 
+       width:100px;
+	   height:20px;
+	   border:1px solid red;
+	   overflow:hidden;
+	   text-overflow:clip;
+	}
+	div#aa2 {
+	   white-space: nowrap; 
+       width:100px;
+	   height:20px;
+	   border:1px solid red;
+	   overflow:hidden;
+	   text-overflow:ellipsis;
+	}
+	div#aa3 {
+       white-space: nowrap; 
+       width:100px;
+	   height:20px;
+	   border:1px solid red;
+	   overflow:hidden;
+	   text-overflow:"???";
+	}
+  </style>
+ 
+</head>
+<body>
+
+ <h1> text-overflow (clip[생략], ellipsis, "사용자입력값" ) </h1>
+ <h3> white-space:nowrap;overflow:hidden; 을 추가해야 됨 </h3>
+ <table border=1 width=700>
+   <tr align=center>
+     <td> text-overflow:clip; </td>
+	 <td> text-overflow:ellipsis; </td>
+	 <td> text-overflow:"???"; (Firefox에서만)</td>
+   </tr>
+   <tr align=center>
+     <td> <div id=aa1> 학교종이 땡땡땡 어서 모이자  </div> </td>
+	 <td> <div id=aa2> 학교종이 땡땡땡 어서 모이자 </div> </td>
+	 <td> <div id=aa3> 학교종이 땡땡땡 어서 모이자 </div> </td>
+   </tr> 
+ </table>
+ <hr>
+ <p> Firefox 에서 실행된 내용 </p>
+ <img src="firefox.png">
+</body>
+</html>

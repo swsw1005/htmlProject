@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+ 
+<style>
+    /* n값은 0부터 시작하는것으로 하면 됨 */
+	/* li태그의 순서는 1부터 계산함 */
+
+    li:first-child { /* li 태그중에 첫번째 */
+      background:blue;
+	}
+	li:last-child { /* li 태그중에 마지막 */
+      background:red;
+	}
+	li:nth-child(2n) { /* li태그 앞에서 부터 2n=> 2,4,6,8,10 */
+      font-size:20px;
+	}
+	li:nth-last-child(2n) { /* li태그 뒤에서 부터 2n=> 2,4,6,8,10 */
+      color:green;
+	}
+	li:nth-child(3n) {  /* li태그 앞에서 부터 3n=> 3,6,9 */
+      text-decoration:underline;
+	}
+	li:nth-child(4n+1) { /* li태그 앞에서 부터 4n+1=> 1,5,9 */
+      font-family:궁서체;
+	}
+</style>
+<h1> 구조 선택자 </h1>
+<table>
+ <tr>
+  <td valign=top>
+<ul>
+    <li>1번 첫번째 문단입니다 </li>
+	<li>2번 두번째 문단입니다</li>
+	<li>3번 세번째 문단입니다</li>
+	<li>4번 네번째 문단입니다</li>
+	<li>5번 다섯번째 문단입니다</li>
+	<li>6번 여섯번째 문단입니다</li>
+	<li>7번 일곱번째 문단입니다</li>
+	<li>8번 여덟번째 문단입니다</li>
+	<li>9번 아홉번째 문단입니다</li>
+	<li>10번 열번째 문단입니다</li>
+</ul>
+  </td>
+  <td style="padding-left:30px;">
+   <xmp>
+<style>
+    /* n값은 0부터 시작하는것으로 하면 됨 */
+	/* li태그의 순서는 1부터 계산함 */
+
+    li:first-child { /* li 태그중에 첫번째 */
+      background:blue;
+	}
+	li:last-child { /* li 태그중에 마지막 */
+      background:red;
+	}
+	li:nth-child(2n) { /* li태그 앞에서 부터 2n=> 2,4,6,8,10 */
+      font-size:20px;
+	}
+	li:nth-last-child(2n) { /* li태그 뒤에서 부터 2n=> 2,4,6,8,10 */
+      color:green;
+	}
+	li:nth-child(3n) {  /* li태그 앞에서 부터 3n=> 3,6,9 */
+      text-decoration:underline;
+	}
+	li:nth-child(4n+1) { /* li태그 앞에서 부터 4n+1=> 1,5,9 */
+      font-family:궁서체;
+	}
+</style>
+<h1> 구조 선택자 </h1>
+ 
+<ul>
+    <li>1번 첫번째 문단입니다 </li>
+	<li>2번 두번째 문단입니다</li>
+	<li>3번 세번째 문단입니다</li>
+	<li>4번 네번째 문단입니다</li>
+	<li>5번 다섯번째 문단입니다</li>
+	<li>6번 여섯번째 문단입니다</li>
+	<li>7번 일곱번째 문단입니다</li>
+	<li>8번 여덟번째 문단입니다</li>
+	<li>9번 아홉번째 문단입니다</li>
+	<li>10번 열번째 문단입니다</li>
+</ul>
+   </xmp>
+  </td>
+ </tr>
+</table>

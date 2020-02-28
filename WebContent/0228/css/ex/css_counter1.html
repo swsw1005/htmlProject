@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<style>
+body {
+  counter-reset: bunho;
+}
+li {
+  list-style-type:none;
+  font-size:30px;
+}
+li::before {
+  counter-increment:bunho;
+  content:counter(bunho);
+}
+</style>
+</head>
+<body>
+ <h1> 태그 요소에 숫자를 부여 </h1>
+ <table>
+  <tr>
+   <td valign=top>
+ <ul>
+   <li> 홍길동 </li>
+   <li> 슈퍼맨 </li>
+   <li> 배트맨 </li>
+   <li> 뿡뿡이 </li>
+   <li> 카 봇 </li>
+   <li> 뽀로로 </li>
+   <li> 마징가 </li>
+   <li> 차돌이 </li>
+   <li> 우뢰매 </li>
+ </ul>
+   </td>
+   <td style="padding-left:30px">
+    <xmp>
+<style>
+body {
+  counter-reset: aa;
+}
+li {
+  list-style-type:none;
+  font-size:30px;
+}
+li::before {
+  counter-increment: aa;
+  content:counter(aa);
+}
+</style>
+</head>
+<body>
+ <h1> 태그 요소에 숫자를 부여 </h1>
+ 
+ <ul>
+   <li> 홍길동 </li>
+   <li> 슈퍼맨 </li>
+   <li> 배트맨 </li>
+   <li> 뿡뿡이 </li>
+   <li> 카 봇 </li>
+   <li> 뽀로로 </li>
+   <li> 마징가 </li>
+   <li> 차돌이 </li>
+   <li> 우뢰매 </li>
+ </ul>
+	</xmp>
+   </td>
+  </tr>
+ </table>
+</body>
+</html>

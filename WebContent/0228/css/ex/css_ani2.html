@@ -1,0 +1,171 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    div {
+      width:100px;
+	  height:100px;
+	}
+    #aa1 {
+      animation-name:test1;
+	  animation-duration:1s;
+	}
+	#aa2 {
+	  animation-name:test2;
+	  animation-duration:3s;
+	}
+	#aa3 {
+      animation-name:test3;
+	  animation-duration:6s;
+	}
+	#aa4 {
+	  animation-name:test4;
+	  animation-duration:10s;
+    }
+	#bb1 {
+      animation-name:test1;
+	  animation-duration:3s;
+	  animation-delay:1s;
+	}
+	#bb2 {
+	  animation-name:test2;
+	  animation-duration:3s;
+	  animation-delay:3s;
+	}
+	#bb3 {
+      animation-name:test3;
+	  animation-duration:3s;
+	  animation-delay:6s;
+	}
+	#bb4 {
+	  animation-name:test4;
+	  animation-duration:3s;
+	  animation-delay:10s;
+    }	
+	#cc1 {
+      animation-name:test1;
+	  animation-duration:2s;
+	  animation-iteration-count:1;
+	}
+	#cc2 {
+	  animation-name:test2;
+	  animation-duration:2s;
+	  animation-iteration-count:3;
+	}
+	#cc3 {
+      animation-name:test3;
+	  animation-duration:2s;
+	  animation-iteration-count:6;
+	}
+	#cc4 {
+	  animation-name:test4;
+	  animation-duration:2s;
+	  animation-iteration-count:infinite;
+    }	
+	#d1d {
+      animation-name:test1;
+	  animation-duration:2s;
+	  animation-play-state:paused;
+	}
+	#dd2 {
+	  animation-name:test2;
+	  animation-duration:2s;
+	  animation-play-state:running;
+	}
+	#dd3 {
+      animation-name:test3;
+	  animation-duration:2s;
+	  animation-play-state:paused;
+	}
+	#dd3:hover {
+      animation-play-state:running;
+	}
+    @keyframes test1 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+	@keyframes test2 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+   @keyframes test3 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+	@keyframes test4 {
+	   0% { background:red; }
+	   100% { background:blue; }
+	}
+
+  
+ 
+  </style>
+ </head>
+ <body>
+  <table width=1000>
+   <caption><h1>애니메이션 duration , delay, iteration-count , play-state  </h1> </caption>
+    <tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+    <tr align=center>
+      <td> animation-duration:1s; </td>
+	  <td> animation-duration:3s;</td>
+	  <td> animation-duration:6s; </td>
+	  <td> animation-duration:10s; </td>
+	</tr>
+	<tr align=center>
+      <td> <div id=aa1></div> </td>
+	  <td> <div id=aa2></div> </td>
+	  <td> <div id=aa3></div> </td>
+	  <td> <div id=aa4></div> </td>
+	</tr>
+	<tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+	<tr align=center>
+      <td> animation-delay:1s; </td>
+	  <td> animation-delay:3s; </td>
+	  <td> animation-delay:6s; </td>
+	  <td> animation-delay:10s; </td>
+	</tr>
+	<tr align=center>
+      <td> <div id=bb1></div> </td>
+	  <td> <div id=bb2></div> </td>
+	  <td> <div id=bb3></div> </td>
+	  <td> <div id=bb4></div> </td>
+	</tr>
+	<tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+	<tr align=center>
+      <td> animation-iteration-count:1; </td>
+	  <td> animation-iteration-count:3; </td>
+	  <td> animation-iteration-count:6; </td>
+	  <td> animation-iteration-count:infinite; </td>
+	</tr>
+	<tr align=center>
+      <td> <div id=cc1></div> </td>
+	  <td> <div id=cc2></div> </td>
+	  <td> <div id=cc3></div> </td>
+	  <td> <div id=cc4></div> </td>
+	</tr>
+	<tr>
+      <td colspan=4 bgcolor=purple height=3>   </td>
+	</tr>
+    <tr align=center>
+      <td> animation-play-state:paused; </td>
+	  <td> animation-play-state:running; </td>
+	  <td colspan=2> paused상태에서 div:hover {animation-play-state:running;} </td>
+	   
+	</tr>
+	<tr align=center>
+      <td> <div id=dd1></div> </td>
+	  <td> <div id=dd2></div> </td>
+	  <td colspan=2> <div id=dd3></div> </td>
+	</tr>
+  </table>
+ 
+ 
+ </body>
+</html>

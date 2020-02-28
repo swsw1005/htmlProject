@@ -1,0 +1,109 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    #main {
+      width:800px;
+	  height:800px;
+	  background:gray;
+ 
+	}
+	.aa {
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  position:absolute;
+      width:250px;
+	  height:250px;
+	  background:yellow;
+	  border:1px solid black;
+	  border-radius:125px;
+	  animation-name:pkc1;
+	  animation-duration:5s;
+	  left:400px;
+	}
+	.bb {
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  position:absolute;
+      width:250px;
+	  height:250px;
+	  background:yellow;
+	  border:1px solid black;
+	  animation-name:pkc2;
+	  animation-duration:5s;
+	}
+	.cc {
+	  position:absolute;
+      width:150px;
+	  height:150px;
+	  border-radius:100px;
+	  animation-name:pkc1;
+	  animation-duration:5s;
+	  left:460px;
+	  top:450px;
+	}
+	.dd {
+	  position:absolute;
+      width:150px;
+	  height:150px;
+	  animation-name:pkc2;
+	  animation-duration:5s;
+	  left:60px;
+	  top:450px;
+	}
+	.ee {
+	  position:absolute;
+      width:150px;
+	  height:150px;
+	  border-radius:100px;
+	  animation-name:pkc1;
+	  animation-duration:5s;
+      transform-origin:right;
+	  left:460px;
+	  top:650px;
+	}
+	.ff {
+	  position:absolute;
+      width:150px;
+	  height:150px;
+	  animation-name:pkc2;
+	  animation-duration:5s;
+	  transform-origin:left;
+	  left:60px;
+	  top:650px;
+	}
+    @keyframes pkc1 {
+      from { transform:rotate(0deg) }
+	  to   { transform:rotate(360deg) }
+	}
+	@keyframes pkc2 {
+      from { transform:rotate(0deg) }
+	  to   { transform:rotate(360deg) }
+	}
+  </style>
+ </head>
+ <body>
+
+    <h1> transform:rotate(각도); deg단위 </h1>
+	<h2> transform-origin:방향; -> 방향이 기준점이 되어 회전 </h2>
+	<h3> 밑에 그림 왼쪽은 transform-origin:left; 오른쪽은 transform-origin:right </h3>
+	<div id=main>
+ 	  <div class=aa>
+	     from { transform:rotate(0deg) } <br>
+	     to   { transform:rotate(360deg) }
+	  </div>
+	  <div class=bb>
+	     from { transform:rotate(0deg) } <br>
+	     to   { transform:rotate(360deg) }
+	  </div>
+	   <img class=cc src=a1.jpg>
+	   <img class=dd src=a2.jpg>
+	   <img class=ee src=a1.jpg>
+	   <img class=ff src=a2.jpg>
+ 	</div>
+	 
+ </body>
+</html>

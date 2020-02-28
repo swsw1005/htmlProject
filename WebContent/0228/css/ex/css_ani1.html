@@ -1,0 +1,167 @@
+ <html>
+ <head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    div {
+      width:100px;
+	  height:100px;
+	}
+    #aa1 {
+      animation-name:test1;
+	  animation-duration: 4s;
+	}
+	#aa2 {
+	  animation-name:test2;
+	  animation-duration: 4s;
+	}
+	#aa3 {
+      animation-name:test3;
+	  animation-duration: 4s;
+	}
+	#aa4 {
+	  animation-name:test4;
+	  animation-duration: 4s;
+    }	
+	#bb1 {
+	  animation-name:test5;
+	  animation-duration: 4s;
+    }	
+	#bb2 {
+	  animation-name:test6;
+	  animation-duration: 4s;
+    }
+	#bb3 {
+	  animation-name:test7;
+	  animation-duration: 4s;
+    }	
+	#bb4 {
+	  animation-name:test8;
+	  animation-duration: 4s;
+    }	
+
+   
+	@keyframes test1 {
+      from {
+         background:red;
+	  }
+	  to {
+         background:blue;
+	  } 
+	 
+	}
+	@keyframes test2 {
+	  0% {
+         background:red;
+	  }
+	 100% {
+         background:blue;
+	  }
+	}
+   @keyframes test3 {
+	  0% {
+         background:red;
+	  }
+	  50% {
+         background:yellow;
+	  }
+	 100% {
+         background:blue;
+	  }
+	}
+	@keyframes test4 {
+	  0% {
+         background:red;
+	  }
+	  30% {
+         background:yellow;
+ 	  }
+      70% {
+         background:green;
+	  }
+	  100% {
+         background:blue;
+	  }
+	}
+
+   @keyframes test5 {
+      from {
+         color:red;
+	  }
+	  to {
+         color:blue;
+	  } 
+	}
+	@keyframes test6 {
+	  0% {
+         color:red;
+	  }
+	 100% {
+         color:blue;
+	  }
+	}
+	 @keyframes test7 {
+     0% {
+         color:red;
+	  }
+	  50% {
+         color:yellow;
+	  }
+	 100% {
+         color:blue;
+	  }
+	 
+	}
+	@keyframes test8 {
+	  0% {
+         color:red;
+	  }
+	  30% {
+         color:yellow;
+ 	  }
+      70% {
+         color:green;
+	  }
+	  100% {
+         color:blue;
+	  }
+	}
+	}	 
+ 
+  </style>
+ </head>
+ <body>
+  <table width=1000>
+   <caption><h1>애니메이션 from~to , 0% ~ 100% (from,0 : 시작   to,100% : 종료) </h1> </caption>
+    <tr align=center>
+      <td> from { background:red } <br> to { background:blue } </td>
+	  <td> 0% { background:red } <br> 100% { background:blue } </td>
+	  <td> 0% { background:red }  <br> 50% { background:yellow } <br> 100% { background:blue } </td>
+	  <td> 0% { background:red }  <br> 30% { background:yellow }  <br> 70% { background:green } <br> 100% { background:blue } </td>
+	</tr>
+	<tr align=center>
+      <td> <div id=aa1></div> </td>
+	  <td> <div id=aa2></div> </td>
+	  <td> <div id=aa3></div> </td>
+	  <td> <div id=aa4></div> </td>
+	</tr>
+	<tr>
+      <td colspan=2> &nbsp; </td>
+	</tr>
+	<tr align=center>
+      <td> from { color:red } <br> to { color:blue } </td>
+	  <td> 0% { color:red } <br> 100% { color:blue } </td>
+	  <td> 0% { color:red }  <br> 50% { color:yellow } <br> 100% { color:blue } </td>
+	  <td> 0% { color:red }  <br> 30% { color:yellow }  <br> 70% { color:green } <br> 100% { color:blue } </td>
+	</tr>
+	<tr align=center>
+      <td> <h1 id=bb1> 안녕하세요 </hi> </td>
+	  <td> <h1 id=bb2> 안녕하세요 </h1> </td>
+	  <td> <h1 id=bb3> 안녕하세요 </hi> </td>
+	  <td> <h1 id=bb4> 안녕하세요 </h1> </td>
+	</tr>
+  </table>
+ 
+ 
+ </body>
+</html>
