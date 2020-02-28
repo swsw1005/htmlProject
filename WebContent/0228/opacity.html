@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <style>   
+   #aa {
+      opacity:0.5;
+   }
+   #bb {
+      opacity:0.1;
+   }
+ </style>
+ <script>
+
+   var chk=1;
+   function change()
+   {
+	   chk=chk-0.1;
+	   document.getElementById("cc").style.opacity=chk;
+	   if(chk>0)
+		   setTimeout(change,100);
+   }
+ </script>
+</head>
+<body>  
+  <button onclick="change()">클릭 </button>
+    <div id="cc"> 감사합니다!! </div><p>
+    <div id="aa"> 안녕하세요!!  </div> <p>
+    <div id="bb"> 학교종이 땡땡땡 어서모이자 선생님이 우리를 기다리신다.. </div>
+</body>
+</html>
+

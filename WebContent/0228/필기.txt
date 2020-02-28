@@ -1,0 +1,21 @@
+/*   flex-start    center   flex-end  */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+display: flex;
+    >> flex로 시작한다.
+
+align-items: center;
+    >>     위          중앙      아래
+    >> flex-start    center   flex-end
+
+justify-content: center;
+    >>     좌          중앙      우
+    >> flex-start    center   flex-end
+
+
+
