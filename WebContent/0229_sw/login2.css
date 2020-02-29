@@ -1,0 +1,70 @@
+/* 濡쒓렇�씤 李�  css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: black;
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  text-align: center;
+}
+
+.box h1 {
+  color: red;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: none;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  border-bottom: 3px solid green;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: yellow;
+  transition: 0.25s;
+  /* 二쇱꽍*/
+  cursor: pointer;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  border-width: 3px;
+  border-radius: 5px;
+  border-color: crimson;
+}
+
+.box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid blueviolet;
+  padding: 14px 10px;
+  width: 100px;
+  outline: none;
+  color: burlywood;
+  border-radius: 12px;
+  transition: 0.35s;
+  /* 二쇱꽍*/
+  cursor: pointer;
+}
+
+/*   */
