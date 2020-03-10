@@ -11,7 +11,7 @@ body {
   width: 300px;
   padding: 40px;
   position: absolute;
-  top: 20%;
+  top: 180px;
   left: 50%;
   transform: translate(-50%, -50%);
   background: none;
@@ -39,14 +39,11 @@ body {
   outline: none;
   color: yellow;
   transition: 0.25s;
-  /* 二쇱꽍*/
-  cursor: pointer;
 }
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
   border-width: 3px;
-  border-radius: 5px;
   border-color: crimson;
 }
 
@@ -63,8 +60,6 @@ body {
   color: burlywood;
   border-radius: 12px;
   transition: 0.35s;
-  /* 二쇱꽍*/
-  cursor: pointer;
 }
 
 /*   */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login2.css" />
+    <title>skew 예제</title>
+    <style>
+        /* 스타일  */
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            margin: 100px;
+            transition: 1s;
+        }
+
+        #aa:hover {
+            transform: skew(30deg, 30deg);
+            background: red;
+        }
+
+        #bb:hover {
+            transform: skewx(30deg);
+            background: red;
+        }
+
+        #cc:hover {
+            transform: skewy(30deg);
+            background: red;
+        }
+    </style>
+</head>
+<!--///-->
+
+<body>
+    <!--내용-->
+    <p></p>
+    <div id="aa">aa</div>
+    <p></p>
+    <div id="bb">bb</div>
+    <p></p>
+    <div id="cc">cc</div>
+    <p></p>
+
+</body>
+
+</html>
+<!--///-->

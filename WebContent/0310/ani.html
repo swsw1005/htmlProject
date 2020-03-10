@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ani 예제</title>
+    <style>
+        /* 스타일  */
+
+        #bo {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #box {
+            flex: 20%;
+            max-width: 200px;
+            align-items: center;
+            flex: 25%;
+        }
+
+        a {
+            width: 100px;
+            height: 100px;
+            border: 2px soild greenyellow;
+            align-items: center;
+            background: yellow;
+            margin: 30px;
+            transition: 2s;
+        }
+
+        #aa:hover {
+            transform: rotate(88deg);
+        }
+
+        #bb:hover {
+            transform: rotate(720deg);
+        }
+
+        #cc:hover {
+            transform-origin: left;
+            transform: rotate(255deg);
+        }
+
+        #dd:hover {
+            animation-name: ani2;
+            animation-duration: 1s;
+        }
+
+        #ee:hover {
+            animation-name: ani2;
+            animation-duration: 3s;
+        }
+
+        #ff:hover {
+            animation-name: ani2;
+            animation-delay: 5s;
+            animation-duration: 1s;
+        }
+
+
+
+
+        @keyframes ani1 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+                background: green;
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                left: 0px
+            }
+
+            20% {
+                left: 5px
+            }
+
+            50% {
+                left: 30px
+            }
+
+            80% {
+                left: 10px
+            }
+
+            100% {
+                left: 0px
+            }
+        }
+    </style>
+</head>
+<!--///-->
+
+<body>
+    <!--내용-->
+
+    <div id="bo">
+        <div id="box">
+            <a id="aa">aa</a>
+        </div>
+
+        <div id="box">
+
+            <a id="bb">bb</a>
+        </div>
+
+        <div id="box">
+            <a id="cc">cc</a>
+        </div>
+
+        <div id="box">
+            <a id="dd">dd</a>
+        </div>
+
+        <div id="box">
+            <a id="dd">ee</a>
+        </div>
+
+        <div id="box">
+            <a id="dd">ff</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<!--///-->

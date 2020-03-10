@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login2.css" />
+    <title>visibility</title>
+    <style>
+      /* 스타일  */
+      div {
+        width: 250px;
+        height: auto;
+        border: 3px solid red;
+        align-self: center;
+        margin: 15px;
+      }
+      #v_h {
+        visibility: hidden;
+      }
+
+      #d_n {
+        display: none;
+      }
+      bb {
+        border: 4px solid green;
+        width: 100px;
+      }
+    </style>
+    <script>
+      function view1() {
+        document.getElementById("v_h").style.visibility = "visible";
+      }
+
+      function hide1() {
+        document.getElementById("v_h").style.visibility = "hidden";
+      }
+
+      function view2() {
+        document.getElementById("d_n").style.display = "inline";
+      }
+
+      function hide2() {
+        document.getElementById("d_n").style.display = "none";
+      }
+    </script>
+  </head>
+  <!--///-->
+  <body>
+    <!--내용-->
+    <button id="bb" onclick="view1()">visible</button>
+    <button id="bb" onclick="hide1()">hidden</button>
+    <button id="bb" onclick="view2()">inline</button>
+    <button id="bb" onclick="hide2()">none</button>
+
+    <div>visibility : hidden</div>
+    <div id="v_h">짜장면</div>
+    <div>display : hidden</div>
+    <div id="d_n">탕수육</div>
+    <div>------</div>
+
+    <p></p>
+    visible hidden 공간 그대로 내용만 안보임
+    <p></p>
+    display none 공간도 사라짐
+    <p></p>
+  </body>
+</html>
+<!--///-->
