@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login2.css" />
+    <title>제목</title>
+    <style>
+      /* 스타일  */
+
+      input:enabled {
+        border: 4px solid green;
+      }
+
+      input:disabled {
+        background: red;
+        border: 4px solid grey;
+      }
+
+      input:checked {
+        background: cyan;
+      }
+
+      input:focus {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <!--///-->
+  <body>
+    <!--내용-->
+    <form>
+      <a>이름</a>
+      <input type="text" name="name" />
+      <p></p>
+      <a>비번</a>
+      <input type="password" name="pwd" />
+      <p></p>
+      <a>전화</a>
+      <input type="text" name="phone" disabled />
+      <p></p>
+      <a>성별</a>
+      <input type="radio" name="sung" />남자
+      <input type="radio" name="sung" />여자
+      <p></p>
+    </form>
+  </body>
+</html>
+<!--///-->
