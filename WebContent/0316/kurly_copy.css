@@ -1,0 +1,161 @@
+body {
+  margin: 0px;
+}
+
+/* 1층 -------------------------------------- */
+
+#first {
+  height: 35px;
+  background: purple;
+  color: white;
+  margin: auto;
+  display: flex;
+}
+
+#first #left {
+  margin: auto;
+  width: auto;
+  left: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first #right {
+  margin: auto;
+  width: 30px;
+  height: 35px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2층 -------------------------------------- */
+.header_menu {
+  max-width: 1100px;
+  min-height: 50px;
+  background: yellow;
+  margin: auto;
+}
+
+/* 3층 -------------------------------------- */
+.catedory_bar {
+  max-width: 1100px;
+  min-height: 50px;
+  background: blue;
+  margin: auto;
+}
+
+.searchbox {
+  border: none;
+  width: 280px;
+  height: 30px;
+  display: flex;
+}
+
+a i {
+  width: 20px;
+}
+
+/* 4층 -------------------------------------- */
+.slide_show {
+  max-width: 1100px;
+  min-height: 50px;
+  background: yellow;
+  margin: auto;
+}
+
+/* 5층 -------------------------------------- */
+.how_this_product {
+  max-width: 1100px;
+  min-height: 50px;
+  background: pink;
+  margin: auto;
+}
+
+/* 6층 -------------------------------------- */
+.event {
+  max-width: 1100px;
+  min-height: 50px;
+  background: green;
+  margin: auto;
+}
+
+/* 바닥 -------------------------------------- */
+.bottom_menu {
+  max-width: 1100px;
+  min-height: 50px;
+  background: yellow;
+  margin: auto;
+}
+
+/* 드롭다운 스타일 from w3css---------------------------- */
+/* Dropdown Button */
+.dropbtn {
+  background-color: whitesmoke;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  /* display: flex; */
+  /* display: inline-block; */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  color: purple;
+}
+
+/* 기본 중앙 좌 우 정렬 클래스 ----------------------------*/
+
+.text_center {
+  text-align: center;
+  /* -------------dev option---------------- */
+  /* background: green; */
+}
+
+.text_left {
+  float: left;
+  /* -------------dev option---------------- */
+  /* background: green; */
+}
+
+.text_right {
+  float: right;
+  /* -------------dev option---------------- */
+  /* background: green; */
+}
