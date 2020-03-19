@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js 입문</title>
+    <style>
+      * {
+        font-size: 20px;
+      }
+      div {
+        width: 100px;
+        height: 1.5em;
+        background: gray;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function f1() {
+        //   지난시간 복습
+        // 각각 id값으로 조회해서, 스타일 속성 변경
+        document.getElementById("aa").style.color = "red";
+        document.getElementById("bb").style.color = "blue";
+        document.getElementById("cc").style.textAlign = "right";
+      }
+
+      function f2() {
+        //   alert창으로 입력받아서, alert로 출력
+        var sung = prompt("점수를 입력하세요", 0);
+        alert("sung!  " + sung);
+      }
+    </script>
+    <button onclick="f1()">절대 누르지 마세요</button>
+    <button onclick="f2()">하지마세요</button>
+    <div id="aa">aa</div>
+    <div id="bb">bb</div>
+    <div id="cc">cc</div>
+  </body>
+</html>

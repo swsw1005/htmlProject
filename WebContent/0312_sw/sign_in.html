@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="sign_in.css" />
-    <title>회원가입</title>
-    <style>
-      /* 스타일  */
-    </style>
-  </head>
-  <!--///-->
-  <body>
-    <!--내용-->
 
-    <div class="header">
-      <a href="#">회원가입</a>
-      <a href="#">로그인</a>
-      <a href="#">질문</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="sign_in.css" />
+  <title>회원가입</title>
+  <style>
+    /* 스타일  */
+  </style>
+</head>
+<!--///-->
+
+<body>
+  <!--내용-->
+
+  <div class="header">
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+    <a href="#">질문</a>
+  </div>
+
+  <div class="text_center">
+    <div class="head_label">
+      <h1>회원가입</h1>
+    </div>
+  </div>
+  <script type="text/javascript" src="../0318/form01.js"></script>
+
+  <form name="form11" class="form" action="aa.jsp" method="POST" onsubmit="return submit_check()">
+    <div class="flex_out_box1">
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">이름</div>
+        <div class="text_center">
+          <input type="text" name="hw_name" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">이메일</div>
+        <div class="text_center">
+          <input type="email" name="hw_email" placeholder="예) kildong@gmail.com" />
+        </div>
+        <div class=" text_right">
+          <input type="button" name="hw_email_check" value="Check!" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">비밀번호</div>
+        <div class="text_center">
+          <input type="password" name="hw_pw" value="" />
+        </div>
+        <div class="label">confirm 비밀번호</div>
+        <div class="text_center">
+          <input type="password" name="hw_pw_confirm" value="" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">주소</div>
+        <div class="text_center">
+          <input type="text" name="hw_post_num" value="" />
+        </div>
+        <div class="text_center">
+          <input type="text" name="hw_address" value="" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">전화번호</div>
+
+        <div class="text_center">
+          <select class="select_num" name="hw_tel_1">
+            <option value="0">010</option>
+            <option value="1">011</option>
+            <option value="2">016</option>
+            <option value="3">017</option>
+            <option value="4">019</option>
+          </select>
+          <input type="num" name="hw_tel_2" value="" />
+          <input type="num" name="hw_tel_3" value="" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+    </div>
+    <!-- ----------------- -->
+    <!-- ----------------- -->
+
+    <div class="flex_out_box1">
+      <div class="bar"></div>
+      <div class="flex_box">
+        <div class="text_center">
+          <input type="submit" name="hw_join" value="JOIN" />
+          <input type="button" name="hw_LogIn" value="Log In" />
+        </div>
+      </div>
     </div>
 
-    <div class="text_center">
-      <div class="head_label">
-        <h1>회원가입</h1>
-      </div>
-    </div>
+    <!-- ----------------- -->
+  </form>
+</body>
 
-    <form class="form">
-      <div class="flex_out_box1">
-        <!-- ----------------- -->
-        <div class="flex_box">
-          <div class="label">이름</div>
-          <div class="text_center">
-            <input type="text" name="hw_name" />
-          </div>
-        </div>
-        <!-- ----------------- -->
-        <div class="flex_box">
-          <div class="label">이메일</div>
-          <div class="text_center">
-            <input
-              type="email"
-              name="hw_email"
-              placeholder="예) kildong@gmail.com"
-            />
-          </div>
-          <div class=" text_right">
-            <input type="submit" name="hw_email_check" value="Check!" />
-          </div>
-        </div>
-        <!-- ----------------- -->
-        <div class="flex_box">
-          <div class="label">비밀번호</div>
-          <div class="text_center">
-            <input type="password" name="hw_pw" value="" />
-          </div>
-          <div class="label">confirm 비밀번호</div>
-          <div class="text_center">
-            <input type="password" name="hw_pw_confirm" value="" />
-          </div>
-        </div>
-        <!-- ----------------- -->
-        <div class="flex_box">
-          <div class="label">주소</div>
-          <div class="text_center">
-            <input type="text" name="hw_post_num" value="" />
-          </div>
-          <div class="text_center">
-            <input type="text" name="hw_address" value="" />
-          </div>
-        </div>
-        <!-- ----------------- -->
-        <div class="flex_box">
-          <div class="label">전화번호</div>
-
-          <div class="text_center">
-            <select class="select_num" name="hw_tel_1">
-              <option value="1">010</option>
-              <option value="2">011</option>
-              <option value="3">016</option>
-              <option value="4">017</option>
-              <option value="5">019</option>
-            </select>
-            <input type="num" name="hw_tel_2" value="" />
-            <input type="num" name="hw_tel_3" value="" />
-          </div>
-        </div>
-        <!-- ----------------- -->
-      </div>
-      <!-- ----------------- -->
-      <!-- ----------------- -->
-
-      <div class="flex_out_box1">
-        <div class="bar"></div>
-        <div class="flex_box">
-          <div class="text_center">
-            <input type="submit" name="hw_join" value="JOIN" />
-            <input type="submit" name="hw_cancle" value="CANCLE" />
-          </div>
-        </div>
-      </div>
-
-      <!-- ----------------- -->
-    </form>
-  </body>
 </html>
 <!--///-->

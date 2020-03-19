@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>func1.html</title>
+
+    <script>
+      function view_a() {
+        document.getElementById("a").innerText = "안녕?";
+      }
+      function view_b() {
+        document.getElementById("b").innerText = "안녕?";
+      }
+      function alert_test() {
+        alert("함수 호출!");
+      }
+    </script>
+    <style>
+      #a,
+      #b,
+      #c {
+        margin: 5px;
+        padding: 5px;
+        border: 3px solid red;
+        background: grey;
+        color: yellow;
+        width: max-content;
+        transition: 0.5s;
+      }
+      button,
+      input {
+        margin: 5px;
+        padding: 5px;
+        width: max-content;
+        min-width: 100px;
+        height: 35px;
+      }
+
+      #a:hover,
+      #b:hover,
+      #c:hover {
+        background: black;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="a">나는 원래 a태그 내용이다.</div>
+    <div id="a">나는 원래 a태그 내용이다.</div>
+    <div id="a">나는 원래 a태그 내용이다.</div>
+    <hr />
+    <div id="b">나는 원래 b태그 내용이다.</div>
+    <div id="b">나는 원래 b태그 내용이다.</div>
+    <div id="b">나는 원래 b태그 내용이다.</div>
+    <button onclick="view_a()">a태그 바꾸기</button>
+    <button onclick="view_b()">b태그 바꾸기</button>
+    <hr />
+
+    <input type="button" value="click" onclick="alert_test()" />
+    <div id="c" onclick="alert_test()">div 눌러줘</div>
+    <span id="c" onclick="alert_test()">span 눌러줘</span>
+    <a id="c" onclick="alert_test()">a 눌러줘</a>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function f1() {
+        var birth_value = document.aa.birth.value; // birth의 값
+        var birth_selected_index = document.aa.birth.selectedIndex; // birth 선택된 index
+        var birth_selected_value = document.aa.birth[birth_selected_index].text; // birth 선택된 인덱스로 찾아낸 값
+
+        alert(birth_value + " " + birth_selected_value);
+      }
+    </script>
+    <form name="aa" method="POST" action="tt.jsp">
+      <div
+        style="width: 100px; 
+        text-align: center;
+        border: 2px solid red; 
+        border-radius: 5px;"
+      >
+        태어난 년도
+      </div>
+      <hr />
+      <select name="birth">
+        <option value="0">선택</option>
+        <option value="1">2019</option>
+        <option value="2">2018</option>
+        <option value="3">2017</option>
+        <option value="4">2016</option>
+        <option value="5">2015</option>
+        <option value="6">2014</option>
+        <option value="7">2013</option>
+      </select>
+      <hr />
+      <input type="button" onclick="f1()" value="send" />
+    </form>
+  </body>
+</html>

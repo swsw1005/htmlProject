@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // 전역변수
+      var cnt = 1;
+      // 함수 구역-------------------
+      function test1() {
+        document.getElementById("aa").type = "password";
+      }
+      function test2() {
+        document.getElementById("bb").checked = false;
+      }
+      function test3() {
+        document.getElementById("cc").src = "b.jpg";
+      }
+
+      function test33() {
+        var img_cc = document.getElementById("cc");
+
+        if (cnt % 2 == 1) {
+          img_cc.src = "a.jpg";
+        } else {
+          img_cc.src = "b.jpg";
+        }
+        cnt = cnt + 1;
+      } //test33() end
+    </script>
+  </head>
+  <body>
+    <button onclick="test1()">type=text를 password로</button>
+    <button onclick="test2()">체크박스 해제</button>
+    <button onclick="test33()">그림바꾸기</button>
+
+    <hr />
+    <input type="text" id="aa" />
+    <hr />
+    <input type="checkbox" checked id="bb" />
+    <hr />
+    <img id="cc" src="a.jpg" />
+  </body>
+</html>

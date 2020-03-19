@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .aa {
+        width: 100px;
+        border: 2px solid red;
+        border-radius: 5px;
+      }
+
+      .bb {
+        width: 350px;
+        height: 200px;
+        overflow: visible;
+        border: 2px solid red;
+        border-radius: 5px;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      function check11() {
+        // var form_pkc = document.form["pkc"];
+        // var sogae = document.aa.user_introduce.value;
+
+        if (document.pkc.user_id.value.length < 8) {
+          alert("id 8 more");
+          document.pkc.user_id.focus();
+          return false;
+        }
+        if (document.pkc.user_pw.value.length < 4) {
+          alert("pw 4 more");
+          document.pkc.user_pw.focus();
+          return false;
+        }
+        if (document.pkc.user_introduce.value.length < 40) {
+          alert("introduce more");
+          document.pkc.user_introduce.focus();
+          return false;
+        }
+
+        // var form11 = document.forms["form11"];
+
+        // if (form11["hw_name"].value.length < 3) {
+        //   alert("hw_name 입력 경고");
+        //   return false;
+        // }
+
+        return true;
+      }
+    </script>
+
+    <form name="pkc" method="POST" action="aa.jsp" onsubmit="return check11()">
+      * 아이디
+      <input type="text" class="aa" name="user_id" />
+      <p></p>
+      * 비번
+      <input type="password" class="aa" name="user_pw" />
+      <p></p>
+      * 소개
+      <!-- <input type="text" class="bb" name="user_introduce" /> -->
+      <textarea name="user_introduce" cols="40" rows="10"></textarea>
+      <p></p>
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>

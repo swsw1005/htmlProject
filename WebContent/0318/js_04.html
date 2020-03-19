@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form
+      name="aa"
+      method="post"
+      action="js_03.html"
+      onsubmit="return null_check()"
+    >
+      <!-- 함수의 리턴값  true일때만 함수실행   false일때는 실행X -->
+      <div>username</div>
+      <input type="text" name="username" />
+      <p></p>
+      <div>userid</div>
+      <input type="text" name="userid" />
+      <p></p>
+      <input type="submit" value="로그인 submit" />
+      <!-- <button onclick="null_check()" value="로그인 button">
+        로그인 button
+    </button> -->
+
+      <!-- // form에서  submit  vs  button 차이? -->
+      <!-- // 기능은 동일하나, button쪽이 css유리하다. -->
+      <!-- // 웹표준 지향 > button을 이용하자 -->
+    </form>
+
+    <script>
+      // 빈칸으로 보내려고하면 서버가 쓸데없이 일한다
+      // 브라우저단에서 미리 체크하면 어떨까?
+      function null_check() {
+        var aa_form = document.forms["aa"];
+
+        if (aa_form["username"].value.length < 3) {
+          alert("username 입력 경고");
+          return false;
+        }
+        if (aa_form["userid"].value.length < 3) {
+          alert("userid 입력 경고");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <hr />
+    <form name="myform" onsubmit="return mysubmit()">
+      아이디: <input type="text" name="id" /> 패스워드:
+      <input type="text" name="pw" />
+      <input type="submit" value="로그인" />
+    </form>
+
+    <script>
+      function mysubmit() {
+        var myform = document.forms["myform"];
+        if (myform["id"].value.length < 1) {
+          alert("아이디를 입력하세요.");
+          return false;
+        }
+        if (myform["pw"].value.length < 1) {
+          alert("패스워드를 입력하세요.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function t1() {
+        document.getElementById("aa").style.color = "red";
+      }
+      function t2() {
+        document.getElementById("bb").style.background = "yellow";
+      }
+      function t3() {
+        document.getElementById("cc").style.border = "3px solid red";
+      }
+      function t4() {
+        document.getElementById("dd").style.textDecorationLine = "underline";
+      }
+      function t5() {
+        // document.getElementById("cc").style.visibility = "hidden";
+        document.getElementById("cc").style.display = "none";
+      }
+      function t6() {
+        // document.getElementById("cc").style.visibility = "visible";
+        document.getElementById("cc").style.display = "block";
+      }
+
+      function t_reset() {
+        document.getElementsByClassName("t").style.color = "black";
+        document.getElementsByClassName("t").style.background = "none";
+        document.getElementsByClassName("t").style.border = "none";
+        document.getElementsByClassName("t").style.textDecorationLine = "none";
+        document.getElementsByClassName("t").style.visibility = "visible";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="t1()">id=aa 글자색 => 빨강</button>
+    <button onclick="t2()">id=bb 배경색 => 노랑</button>
+    <button onclick="t3()">id=cc 외곽선 만들기</button>
+    <button onclick="t4()">id=dd 밑줄만들기</button>
+    <button onclick="t5()">id=cc 숨기기</button>
+    <button onclick="t6()">id=cc 보이기</button>
+    <!-- <button onclick="t_reset()">~~리셋~~</button> -->
+    <hr />
+    <div id="aa">aa</div>
+    <hr />
+    <div id="bb">bb</div>
+    <hr />
+    <div id="cc">cc</div>
+    <hr />
+    <div id="dd">dd</div>
+    <hr />
+  </body>
+</html>

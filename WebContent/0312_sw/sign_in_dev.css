@@ -73,6 +73,7 @@ input {
   border: 2px solid gray;
 }
 
+input[type="button"]:hover,
 input[type="submit"]:hover {
   border: 2px solid yellow;
   background: black;
@@ -121,6 +122,7 @@ input[type="num"]:focus {
   width: 150px;
   height: 40px;
   top: 50%;
+  margin-left: 15px;
   font-size: large;
   transition: 0.3s;
   font-weight: 500;
@@ -131,10 +133,12 @@ input[type="num"]:focus {
   background: black;
 }
 .flex_box input[type="num"] {
-  width: 70px;
+  min-width: 70px;
+  width: 30%;
 }
 
-.flex_box input[type="submit"] {
+.flex_box input[type="submit"],
+.flex_box input[type="button"] {
   width: 130px;
   border: 2px solid gray;
   border-radius: 24px;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check() {
+            // 아이디 입력칸 값 가져와서, 값이 있는지 체크
+            // 1. name 이 userid인 값 가져오기
+            var uid = document.pkc.userid.value;
+            // 2. uid 변수의 값 비었는지 체크
+            if (uid == "") {
+                alert("userid is null");
+                return false;
+            } else if (uid.length < 6) {
+                alert("아이디는 6자 이상 입력하세요");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+    </script>
+
+    <form name="pkc" method="POST" action="aa.jsp" onsubmit="return check()">
+        <input type="text" name="userid">
+        <p></p>
+        <input type="submit" value="전송">
+    </form>
+
+</body>
+
+</html>

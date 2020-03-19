@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function test_a() {
+        // 함수에서 body내에 있는 요소 속성 변경하기
+        document.getElementById("a").style.color = "yellow";
+        document.getElementById("b").style.color = "yellow";
+        document.getElementById("a").style.background = "black";
+        document.getElementById("b").style.background = "black";
+      }
+
+      function test_b() {
+        // 함수에서 body내에 있는 요소 속성 변경하기
+        document.getElementById("a").style.color = "black";
+        document.getElementById("b").style.color = "black";
+        document.getElementById("a").style.background = "none";
+        document.getElementById("b").style.background = "none";
+      }
+    </script>
+    <style>
+      #a,
+      #b {
+        width: max-content;
+        min-width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="a">a 감사합니다</div>
+    <div id="b">b 감사합니다</div>
+    <hr />
+    <button onclick="test_a()">고대비 테마</button>
+    <button onclick="test_b()">원래대로</button>
+  </body>
+</html>

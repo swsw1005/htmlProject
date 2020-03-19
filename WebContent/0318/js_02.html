@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스</title>
+  </head>
+  <body>
+    <form name="aa" method="POST" action="tt.jsp">
+      <input type="radio" name="soju" value="0" />1병 미만<br />
+      <input type="radio" name="soju" value="1" />1~2병<br />
+      <input type="radio" name="soju" value="2" />2~4병<br />
+      <input type="radio" name="soju" value="3" />4병 초과<br />
+      <input type="button" onclick="check()" value="확인" />
+    </form>
+    <hr />
+    <form name="bb" method="post" action="tt.jsp">
+      <input type="checkbox" name="anju" value="삼겹살" /> 삼겹살<br />
+      <input type="checkbox" name="anju" value="치킨" /> 치킨<br />
+      <input type="checkbox" name="anju" value="방어" /> 방어<br />
+      <input type="checkbox" name="anju" value="파전" /> 파전<br />
+      <input type="button" onclick="f1()" value="ccc" />
+    </form>
+
+    <script>
+      function check() {
+        var str = "";
+
+        switch (document.aa.soju.value) {
+          case "0":
+            str = "술 거의 안마셔요";
+            break;
+          case "1":
+            str = "적당히 마셔요";
+            break;
+          case "2":
+            str = "꽤 마셔요";
+            break;
+          case "3":
+            str = "디오니소스 그 자체";
+            break;
+          default:
+            break;
+        } //switch end
+
+        if (str != "") {
+          alert(str);
+        }
+      } // check() end
+
+      function f1() {
+        var str = "";
+
+        var index_length = document.bb.anju.length;
+
+        for (let i = 0; i < index_length; i++) {
+          if (document.bb.anju[i].checked) {
+            str = str + document.bb.anju[i].value + " ";
+          }
+        }
+
+        if (str == "") {
+          alert(index_length);
+        } else {
+          alert(str);
+        }
+      }
+    </script>
+  </body>
+</html>

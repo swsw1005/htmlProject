@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check() {
+
+            var bb_form = document.forms["bb-form"];
+            if (bb_form["bb"].value.length < 3) {
+                return false;
+            } else {
+                return true;
+            }
+
+        }
+        function check2() {
+            var cc_form = document.forms["cc-form"];
+            if (cc_form["cc"].value.length < 5) {
+                alert("false");
+            } else {
+                alert("true");
+            }
+        }
+    </script>
+
+    <!-- 기본 submit.. 누르면 해당 페이지로 전송 -->
+    <form name="aa-form" method="POST" action="aa.jsp">
+        <input type="text" name="aa">
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <!-- aa.jsp로 전송되기 전에 유효성 검사 -->
+    <!-- 이상 있으면 return false (취소)  없으면 return true (전송)  -->
+    <form name="bb-form" method="POST" action="aa.jsp" onsubmit="return check()">
+        <input type="text" name="bb">
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <!-- 버튼을 눌러 유효성검사...  전송되지 않는다. 그냥 검사만 -->
+    <!-- ex) id중복 등 -->
+    <form name="cc-form" method="POST" action="aa.jsp">
+        <input type="text" name="cc">
+        <input type="button" onclick="check2()" value="버어튼">
+    </form>
+    <hr>
+
+</body>
+
+</html>
