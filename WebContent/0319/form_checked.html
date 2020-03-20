@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check() {
+        var chk = 0;
+
+        var t1 = document.pkc.age.length;
+        // alert(t1);
+        for (i = 0; i < t1; i++) {
+          if (document.pkc.age[i].checked) chk = 1;
+        }
+        if (chk == 0) {
+          alert("연령을 체크하세요");
+          return false;
+        } else return true;
+      }
+
+      function test() {
+        var tt = document.pkc.age.length;
+        alert(tt);
+      }
+    </script>
+
+    <form name="pkc" method="POST" action="aa.jsp" onsubmit="return check()">
+      연령대
+      <p></p>
+      <input type="radio" name="age" value="0" />10대
+      <p></p>
+      <input type="radio" name="age" value="1" />20대
+      <p></p>
+      <input type="radio" name="age" value="2" />30대
+      <p></p>
+      <input type="radio" name="age" value="3" />40대
+      <p></p>
+      <input type="radio" name="age" value="4" />50대
+      <p></p>
+      <input type="radio" name="age" value="5" />60대
+      <p></p>
+      <input type="submit" value="전송" />
+      <hr />
+      <input type="button" value="테스트" onclick="test()" />
+    </form>
+  </body>
+</html>

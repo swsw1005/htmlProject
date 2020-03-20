@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check() {
+        var chk = 0;
+
+        var max = document.pkc.hobby.length;
+
+        for (i = 0; i < max; i++) {
+          if (document.pkc.hobby[i].checked) {
+            chk++;
+          }
+        } // for end
+
+        if (chk == 0) {
+          alert("하나라도 골라라");
+          return false;
+        }
+        alert("체크한 갯수는 " + chk + "개 입니다.");
+      } // check() end
+    </script>
+
+    <form name="pkc" method="post" action="aa.jsp" onsubmit="return check()">
+      취미
+      <p></p>
+      <input type="checkbox" name="hobby" value="0" /> 낚시<br />
+      <input type="checkbox" name="hobby" value="1" /> 독서<br />
+      <input type="checkbox" name="hobby" value="2" /> 축구<br />
+      <input type="checkbox" name="hobby" value="3" /> 헬스<br />
+      <input type="checkbox" name="hobby" value="4" /> 음주<br />
+      <input type="checkbox" name="hobby" value="5" /> 가무<br />
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>

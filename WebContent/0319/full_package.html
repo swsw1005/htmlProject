@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aa {
+        margin: 2px;
+        padding: 2px;
+        border: 2px solid blue;
+        box-shadow: 5px black;
+        max-width: 300px;
+      }
+
+      input:focus {
+        background: black;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //   ...
+      function check() {
+        // 1. 아이디 8~12자
+        // 2. 비번 4자만
+        // 3. 소개 30자 이내
+        // 4. 성별체크 필수
+        // 5. 음식 2가지 이상 체크
+        // 6. 사는지역 체크 필수
+
+        // 1. 아이디 8~12자
+        var id_length = document.pkc.userid.value.length;
+
+        if (id_length > 12 || id_length < 8) {
+          alert("userid ERROR");
+          document.pkc.userid.focus();
+          return false;
+        }
+        // 2. 비번 4자만
+        if (document.pkc.pwd.value.length != 4) {
+          alert("pwd  4 word");
+          document.pkc.pwd.focus();
+          return false;
+        }
+        // 3. 소개 30자 이내
+        if (document.pkc.sogae.value.length == 0) {
+          alert("please sogae");
+          document.pkc.sogae.focus();
+          return false;
+        }
+        if (document.pkc.sogae.value.length > 30) {
+          alert("sogae too long");
+          document.pkc.sogae.focus();
+          return false;
+        }
+        // 4. 성별체크 필수
+
+        var sung_value = document.pkc.sung.value;
+
+        if (!(sung_value == 1 || sung_value == 2)) {
+          alert("choose sung");
+          return false;
+        }
+        // var sung_cnt = 0;
+        // for (j = 0; j < 2; j++) {
+        //   if (document.pkc.sung[j].checked) {
+        //     chk = 1;
+        //   }
+        // }
+        // if (sung_cnt == 0) {
+        //   alert("choose sung");
+        //   //   document.pkc.sung.focus();
+        //   return false;
+        // }
+
+        // 5. 음식 2가지 이상 체크
+        var food_cnt = 0; // 선택음식 cnt
+        var food_length = document.pkc.food.length;
+        for (i = 0; i < food_length; i++) {
+          if (document.pkc.food[i].checked) {
+            food_cnt++;
+          }
+        }
+        if (food_cnt < 2) {
+          alert("choose more then 2 foods");
+          //   document.pkc.food.focus();
+          return false;
+        }
+        // 6. 사는지역 체크 필수
+        if (document.pkc.addr.selectedIndex == 0) {
+          alert("choose addr");
+          document.pkc.addr.focus();
+          return false;
+        }
+        // 7. 이도저도 아니면
+        return true;
+      } //check() end
+    </script>
+    <!-- .. -->
+    <form name="pkc" method="POST" action="aa.jsp" onsubmit="return check()">
+      <!-- .. -->
+
+      <div class="aa">
+        아이디<br />
+        <input type="text" name="userid" />
+      </div>
+      <div class="aa">비밀번호 <br /><input type="password" name="pwd" /></div>
+      <div class="aa">
+        소개 <br /><textarea name="sogae" cols="30" rows="3"></textarea>
+      </div>
+      <div class="aa">
+        성별<br />
+        <input type="radio" name="sung" value="1" />남자
+        <p></p>
+        <input type="radio" name="sung" value="2" />여자
+        <p></p>
+      </div>
+      <div class="aa">
+        좋아하는 음식<br />
+        <input type="checkbox" name="food" value="0" />삼겹살<br />
+        <input type="checkbox" name="food" value="1" />라면<br />
+        <input type="checkbox" name="food" value="2" />김치찌개<br />
+        <input type="checkbox" name="food" value="3" />파전<br />
+        <input type="checkbox" name="food" value="4" />닭갈비<br />
+        <input type="checkbox" name="food" value="5" />마라탕<br />
+      </div>
+      <div class="aa">
+        거주지역<br />
+        <select name="addr">
+          <option>사는 지역 선택</option>
+          <option value="1">서울</option>
+          <option value="2">경기</option>
+          <option value="3">강원</option>
+          <option value="4">충북</option>
+          <option value="5">충남</option>
+          <option value="6">전북</option>
+          <option value="7">전남</option>
+          <option value="8">경북</option>
+          <option value="9">경남</option>
+          <option value="10">강원</option>
+          <option value="11">제주</option>
+        </select>
+      </div>
+      <div class="aa" style="text-align: center;">
+        <input type="submit" value="send" />
+      </div>
+    </form>
+  </body>
+</html>

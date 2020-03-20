@@ -44,13 +44,11 @@
           document.pkc.user_introduce.focus();
           return false;
         }
-
-        // var form11 = document.forms["form11"];
-
-        // if (form11["hw_name"].value.length < 3) {
-        //   alert("hw_name 입력 경고");
-        //   return false;
-        // }
+        if (document.pkc.user_introduce.value.length > 100) {
+          alert("introduce less");
+          document.pkc.user_introduce.focus();
+          return false;
+        }
 
         return true;
       }
@@ -66,6 +64,8 @@
       * 소개
       <!-- <input type="text" class="bb" name="user_introduce" /> -->
       <textarea name="user_introduce" cols="40" rows="10"></textarea>
+      <p></p>
+
       <p></p>
       <input type="submit" value="전송" />
     </form>
