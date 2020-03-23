@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function db_data() {
+        var age =document.pkc.setage.value;
+
+        var max = 6;
+
+        if(age>max){
+          document.pkc.setage.value =0;
+          document.pkc.age[0].checked=true
+        }
+        if(age<0){
+          document.pkc.setage.value =max;
+          document.pkc.age[max].checked=true
+        }
+
+        document.pkc.age[age].checked=true
+      }
+
+
+
+    </script>
+  </head>
+  <!-- <body onload="db_data()"> -->
+  <body >
+    <form name="pkc">
+
+      <input type="number" name="setage" onchange="db_data()" > 
+        연령<p></p>
+        <input type="radio" name="age">10대<p>
+        <input type="radio" name="age">20대<p>
+        <input type="radio" name="age">30대<p>
+        <input type="radio" name="age">40대<p>
+        <input type="radio" name="age">50대<p>
+        <input type="radio" name="age">60대<p>
+          <input type="button" value="체크" onclick="db_data()">
+    </form>
+  </body>
+</html>

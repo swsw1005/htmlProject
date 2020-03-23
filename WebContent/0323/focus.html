@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    function check() {
+      if (
+        document.pkc.name.value.trim == "" ||
+        document.pkc.name.value == "이 름"
+      ) {
+        document.pkc.name.value = "";
+        // 이 름  칸에 커서 들어오면  값 지우기
+      }
+    }
+    function focus_out() {
+      // value 공백인데 focus out(onblur)... "이 름" 되돌리기
+      if (document.pkc.name.value.trim() == "") {
+        document.pkc.name.value = "이 름";
+      }
+    }
+    function check2() {
+      document.pkc.pwd.type = "password";
+
+      if (
+        document.pkc.pwd.value.trim == "" ||
+        document.pkc.pwd.value == "비 밀 번 호"
+      ) {
+        document.pkc.pwd.value = "";
+        // 이 름  칸에 커서 들어오면  값 지우기
+      }
+
+
+
+
+    }
+
+    function focus_out2() {
+      if (document.pkc.pwd.value.trim() == "") {
+        document.pkc.pwd.value = "비 밀 번 호";
+        document.pkc.pwd.type == "password";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="pkc">
+    <input name="name" type="text" onfocus="check()" onblur="focus_out()" value="이 름" />
+    <p></p>
+    <input name="pwd" type="text" onfocus="check2()" onblur="focus_out2()" value="비 밀 번 호" />
+    <p></p>
+    <textarea cols="30" rows="5"></textarea>
+  </form>
+</body>
+
+</html>

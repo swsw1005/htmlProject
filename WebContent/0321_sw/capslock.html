@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .capslock_warning2 {
+        width: 70%;
+        max-width: 200px;
+        margin: 3px;
+        padding: 5px;
+        background: salmon;
+        border: 2px solid red;
+        color: crimson;
+        visibility: hidden;
+      }
+      .capslock_warning3 {
+        width: 70%;
+        max-width: 200px;
+        margin: 3px;
+        padding: 5px;
+        background: salmon;
+        border: 2px solid red;
+        color: crimson;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ////////////////////////////////// -->
+    <script>
+      function capslock(event) {
+        var keyCode = 0;
+        var shirftKey = false;
+
+        keyCode = event.keyCode;
+        shiftKey = event.shiftKey;
+        /*jslint devel: true */
+
+        if (
+          (keyCode >= 65 && keyCode < 90 && !shiftKey) ||
+          (keyCode >= 97 && keyCode <= 112 && shiftKey)
+        ) {
+          event("#capslockMsg").css("display", "block");
+        } else {
+          event("#capslockMsg").css("display", "none");
+        }
+        // 1. 키코드가 65~90이고(대문자) 쉬프트 !눌림
+        // or
+        // 2. 키코드가 97~122이고(소문자) 쉬프트 눌림
+        // >> 캡스락 켜져있네
+      }
+    </script>
+
+    1번
+    <input
+      type="text"
+      id="userid"
+      name="userid"
+      onkeydown="javascript:capslock(this);"
+    />
+
+    <hr />
+    <a>demo1 </a>
+    <hr />
+    <a id="capslockMsg">demo1 : capslock on</a>
+    <hr />
+
+    <!-- ////////////////////////////////// -->
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function db_data() {
+        // 페이지 로딩 끝나면 바로 실행
+        var getname = "홍길동";
+        var getage = 44;
+        var getsogae = "안녕하세요";
+
+        document.pkc.name.value = getname;
+        document.pkc.age.value = getage;
+        document.pkc.sogae.value = getsogae;
+      }
+      window.onload = function db_data2() {
+        var getname = "홍길동";
+        var getage = 44;
+        var getsogae = "안녕하세요";
+
+        document.pkc.name.value = getname;
+        document.pkc.age.value = getage;
+        document.pkc.sogae.value = getsogae;
+      };
+    </script>
+  </head>
+  <body onload="db_data()">
+    <!-- 페이지 로딩 끝나면 바로 실행 -->
+    <form name="pkc">
+      <p>이름</p>
+      <input type="text" name="name" /> <br />
+      <p>나이</p>
+      <input type="text" name="age" /> <br />
+      <p>소개</p>
+      <textarea name="sogae" cols="30" rows="5"></textarea> <br />
+      <input type="button" value="버튼" />
+    </form>
+  </body>
+</html>

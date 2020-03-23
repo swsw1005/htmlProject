@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .capslock_warning2 {
+        width: 70%;
+        max-width: 200px;
+        margin: 3px;
+        padding: 5px;
+        background: salmon;
+        border: 2px solid red;
+        color: crimson;
+        visibility: hidden;
+        transition: 0.7s;
+      }
+      .capslock_warning3 {
+        width: 70%;
+        max-width: 200px;
+        margin: 3px;
+        padding: 5px;
+        background: salmon;
+        border: 2px solid red;
+        color: crimson;
+        display: none;
+        transition: 0.7s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ////////////////////////////////// -->
+
+    <div onmouseover="myFunction(event)">
+      <!-- ////////////////////////////////// -->
+      <script>
+        function capslock(e) {
+          var keyCode = 0;
+          var shirftKey = false;
+
+          keyCode = e.keyCode;
+          shiftKey = e.shiftKey;
+
+          if (
+            (keyCode >= 65 && keyCode < 90 && !shiftKey) ||
+            (keyCode >= 97 && keyCode <= 112 && shiftKey)
+          ) {
+            e("#capslockMsg").css("display", "block");
+          } else {
+            e("#capslockMsg").css("display", "none");
+          }
+          // 1. 키코드가 65~90이고(대문자) 쉬프트 !눌림
+          // or
+          // 2. 키코드가 97~122이고(소문자) 쉬프트 눌림
+          // >> 캡스락 켜져있네
+        }
+      </script>
+
+      1번
+      <input
+        type="text"
+        id="userid"
+        name="userid"
+        onkeydown="javascript:capslock(this);"
+      />
+
+      <p></p>
+
+      <!-- ////////////////////////////////// -->
+
+      2번
+      <input
+        type="text"
+        size="40"
+        onmousedown="myFunction(event)"
+        onkeyup="myFunction(event)"
+      />
+      <!-- Note: The getModifierState() method is not supported in Safari 10 or IE 8
+  and earlier versions. -->
+
+      <hr />
+      <a>demo1 </a>
+      <hr />
+      <a id="demo1">demo1</a>
+      <hr />
+      <a>demo2 : visibility hidden</a>
+      <hr />
+      <div id="demo2" class="capslock_warning2">
+        <strong>Warning</strong>
+        <hr />
+        CapsLock Activated
+      </div>
+      <hr />
+      <a>demo3 : display none</a>
+      <hr />
+      <div id="demo3" class="capslock_warning3">
+        <strong>Warning</strong>
+        <hr />
+        CapsLock Activated
+      </div>
+      <hr />
+      visibility 반박자 느리다
+
+      <script>
+        function myFunction(event) {
+          var x = event.getModifierState("CapsLock");
+          document.getElementById("demo1").innerHTML =
+            "Caps Lock activated: " + x;
+          document.getElementById("demo2").style.visibility = "hidden";
+
+          if (x) {
+            document.getElementById("demo2").style.visibility = "visible";
+            document.getElementById("demo3").style.display = "block";
+          } else {
+            document.getElementById("demo2").style.visibility = "hidden";
+            document.getElementById("demo3").style.display = "none";
+          }
+        }
+      </script>
+      <!-- ////////////////////////////////// -->
+    </div>
+    <!-- ////////////////////////////////// -->
+  </body>
+</html>

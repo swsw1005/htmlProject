@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function check(aaa) {
+        console.log("change");
+        location = aaa.value;
+      }
+
+      function go_naver() {
+        location = "http://www.naver.com";
+      }
+    </script>
+    <style>
+      .bu {
+        width: 90px;
+        display: flex;
+        border: 2px solid red;
+        transition: 0.7s;
+        text-decoration-style: none;
+        margin: 3px;
+        padding: 3px;
+      }
+
+      .bu:hover {
+        background: black;
+        color: yellow;
+        transition: 0.1s;
+        font-size: large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <select onchange="check(this)">
+      <option>패밀리 사이트</option>
+      <option value="http://www.naver.com">네이버</option>
+      <option value="http://www.daum.net">다음</option>
+      <option value="http://www.kbs.co.kr">kbs</option>
+      <option value="http://www.imbc.com">mbc</option>
+    </select>
+    <hr />
+    <a class="bu" href="http://www.coupang.com">쿠팡</a>
+    <hr />
+    <div class="bu" onclick="go_naver()">네이버</div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function db_data() {
+            var mon=7;
+            document.pkc.mon.selectedIndex=mon;
+            document.pkc.mon.value=mon;
+            //둘 다 가능
+        }
+
+    </script>
+</head>
+<body onload="db_data()">
+    <form name="pkc">
+        <p>몇월?</p>
+<select name="mon">
+    <option>선택</option>
+    <option value="1">1월</option>
+    <option value="2">2월</option>
+    <option value="3">3월</option>
+    <option value="4">4월</option>
+    <option value="5">5월</option>
+    <option value="6">6월</option>
+    <option value="7">7월</option>
+    <option value="8">8월</option>
+    <option value="9">9월</option>
+    <option value="10">10월</option>
+    <option value="11">11월</option>
+    <option value="12">12월</option>
+</select>
+
+    </form>
+    
+</body>
+</html>

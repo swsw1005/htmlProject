@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function f1() {
+        document.getElementById("aaa").style.display = "block";
+      }
+      function f2() {
+        document.getElementById("aaa").style.display = "none";
+      }
+      function t1() {
+        document.getElementById("t1").style.background = "yellow";
+        setTimeout(t1_0, 1000);
+      }
+      function t2() {
+        document.getElementById("t2").style.background = "yellow";
+        setTimeout(t2_0, 1000);
+      }
+      function t3() {
+        document.getElementById("t3").style.background = "yellow";
+        setTimeout(t3_0, 1000);
+      }
+
+      function t1_0() {
+        document.getElementById("t1").style.background = "none";
+      }
+      function t2_0() {
+        document.getElementById("t2").style.background = "none";
+      }
+      function t3_0() {
+        document.getElementById("t3").style.background = "none";
+      }
+    </script>
+    <style>
+      .aa {
+        width: 100px;
+        height: 30px;
+        border: 2px solid red;
+        margin: 2px;
+        padding: 3px;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aa" onclick="f1()">onclick</div>
+    <div class="aa" onmouseover="f1()" onmouseout="f2()">onmouseover</div>
+    <ul id="aaa" style="display: none; transition: 3ms;">
+      <li>삼겹살</li>
+      <li>닭갈비</li>
+      <li>감자탕</li>
+    </ul>
+    <br />
+    <input type="text" onkeydown="t1()" onkeypress="t2()" onkeyup="t3()" />
+    <div id="t1" class="aa">onkeydown</div>
+    <div id="t2" class="aa">onkeypress</div>
+    <div id="t3" class="aa">onkeyup</div>
+
+    <!-- 입력되기전에 뭔가 작업....onkeydown -->
+
+    <!-- 입력된 값으로 뭔가 작업....onkeyup ex) 회원가입양식 > 비밀번호 글자 입력마다 점검 -->
+
+    
+  </body>
+</html>

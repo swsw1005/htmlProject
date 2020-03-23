@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function check() {
+            var card1 = document.pkc.card01.value;
+            if (card1.length == 4) {
+                document.pkc.card02.focus();
+            }
+        }
+        function checkall(n) {
+            var card_index = document.pkc2.card[n].value;
+            if (card_index.length == 4) {
+                document.pkc2.card[n + 1].focus();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    각4칸 max...
+    <p></p>
+    앞칸 꽉차면 뒷칸으로 자동 이동
+    <p></p>
+    <form name="pkc">
+        <input type="text" name="card01" size="5" maxlength="4" onkeyup="check()" />-
+        <input type="text" name="card02" size="5" maxlength="4" />
+    </form>
+    <hr />
+    카드번호는 4칸. focus 이동 함수 3개 필요
+    <p></p>
+    따로 짜야하나?
+    <p></p>
+    배열을 이용해서 하나로 짜보자
+    <p></p>
+    <form name="pkc2">
+        <input type="text" name="card" size="5" maxlength="4" onkeyup="checkall(0)" />-
+        <input type="text" name="card" size="5" maxlength="4" onkeyup="checkall(1)" />-
+        <input type="text" name="card" size="5" maxlength="4" onkeyup="checkall(2)" />-
+        <input type="text" name="card" size="5" maxlength="4" />
+    </form>
+</body>
+
+</html>
