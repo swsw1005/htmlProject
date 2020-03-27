@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function hap() {
+            for (i = 1; i <= 5; i++) {
+
+                var temp = eval("document.pkc.sung" + i + ".value");
+                alert(temp);
+
+                document.getElementsByTagName("a")[i - 1].innerText = temp
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="pkc">
+        <input type="text" name="sung1" /><br />
+        <input type="text" name="sung2" /><br />
+        <input type="text" name="sung3" /><br />
+        <input type="text" name="sung4" /><br />
+        <input type="text" name="sung5" /><br />
+        <input type="button" onclick="hap()" value="click to cal" />
+    </form>
+
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</body>
+
+</html>

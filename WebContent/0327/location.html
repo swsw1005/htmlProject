@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function move() {
+            location = document.pkc.juso.value;
+        }
+
+        function view() {
+            var a = location.href;
+            var b = location.pathname;
+            var c = location.protocol;
+
+            alert(a);
+            alert(b);
+            alert(c);
+        }
+    </script>
+</head>
+
+<body>
+    <form name="pkc">
+        <input type="button" value="location" onclick="view()" />
+        <p></p>
+        <input type="text" name="juso" />
+        <input type="button" value="이동" onclick="move()" />
+    </form>
+
+    <div id="aa"></div>
+    <div id="bb"></div>
+    <div id="cc"></div>
+</body>
+
+</html>

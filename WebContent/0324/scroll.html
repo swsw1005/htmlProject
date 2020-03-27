@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #pkc {
+            position: absolute;
+            width: 70px;
+            height: 30px;
+            background: yellow;
+            text-align: center;
+            vertical-align: middle;
+            left: 500px;
+            top: 300px;
+        }
+    </style>
+    <script>
+        function scroll_move() {
+            var s = document.documentElement.scrollTop;
+
+            document.getElementById("aa").innerText = s;
+            document.getElementById("pkc").style.top = (300 + s) + "px";
+        }
+        document.onscroll = scroll_move;
+
+        function top_move() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="pkc">나야나<span id="aa"></span>
+        <h5 onclick="top_move()"> top</h5>
+    </div>
+
+    <p>화면 스크롤하면 따라 움직이는 top 버튼</p>
+
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+    <p>하하하</p>
+</body>
+
+</html>

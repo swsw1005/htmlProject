@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 40px;
+        }
+    </style>
+
+    <script>
+        function resize_win() {
+            document.getElementById("aa").innerText = innerWidth;
+            document.getElementById("bb").innerText = innerHeight;
+
+            document.getElementsByTagName("body")[0].style.fontSize = (innerWidth / 15) + "px";
+
+            document.getElementsByTagName("img")[0].width = (innerWidth / 2);
+        }
+        window.onresize = resize_win;
+    </script>
+</head>
+
+<body>
+    <div style="font-size: 20px;">화면크기 따라 변하는 글자크기</div>
+    <div class="pkc" style="font-size: 1em;">안녕하세요
+        <div id="aa" style="font-size: 0.5em;"></div>
+        <div id="bb" style="font-size: 0.5em;"></div>
+    </div>
+
+    <img src="../a.jpg" alt="">
+</body>
+
+</html>

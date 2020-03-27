@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+
+            var leng = document.pkc.name.length;
+            var num = Math.floor(Math.random() * leng);
+
+            document.pkc.dang.value = document.pkc.name[num].value;
+
+
+        }
+
+        function check22() {
+            var arr = { 홍길동, 김철수, 김영희, 이재용, 슈퍼맨, 배트맨, 박찬호, 신사임당, 아이언맨, 헐크 };
+
+            for (index = 0; index < 10; index++) {
+                document.pkc.name[index].value = arr[index];
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="pkc">
+
+        <input type="text" name="dang">
+        <p></p>
+        <button type="button" onclick="check()">클릭</button>
+        <p></p>
+        <button type="button" onclick="check22()">입력</button>
+        <p></p>
+        1번 <input type="text" name="name">
+        <p></p>
+        2번 <input type="text" name="name">
+        <p></p>
+        3번 <input type="text" name="name">
+        <p></p>
+        4번 <input type="text" name="name">
+        <p></p>
+        5번 <input type="text" name="name">
+        <p></p>
+        6번 <input type="text" name="name">
+        <p></p>
+        7번 <input type="text" name="name">
+        <p></p>
+        8번 <input type="text" name="name">
+        <p></p>
+        9번 <input type="text" name="name">
+        <p></p>
+        10번 <input type="text" name="name">
+        <p></p>
+
+    </form>
+
+</body>
+
+</html>

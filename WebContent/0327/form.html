@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function calcul() {
+            var a = parseInt(document.getElementsByName("kor")[0].value);
+            var b = parseInt(document.getElementsByName("eng")[0].value);
+            var c = parseInt(document.getElementsByName("mat")[0].value);
+
+            var sum = a + b + c;
+            var avg = sum / 3;
+            avg = Math.round(avg * 100);
+            avg = avg / 100;
+
+
+            document.getElementsByName("sum")[0].value = sum;
+            document.getElementsByName("avg")[0].value = avg;
+        }
+    </script>
+</head>
+
+<body>
+    <a>국어</a> <input type="text" name="kor" />
+    <p></p>
+    <a>영어</a> <input type="text" name="eng" />
+    <p></p>
+    <a>수학</a> <input type="text" name="mat" />
+    <p></p>
+    <hr />
+    <input type="button" onclick="calcul()" value="calcul" />
+    <p></p>
+    <a>합계</a> <input type="text" name="sum" />
+    <p></p>
+    <a>평균</a> <input type="text" name="avg" />
+    <p></p>
+</body>
+
+</html>

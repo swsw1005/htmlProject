@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <script>
+    // .....
+    function test() {
+      alert("1");
+    }
+
+    //익명 함수 - 온로드 - 로딩완료시점에서 실행
+    window.onload = function () {
+      alert("window.onload=function()!! ");
+    };
+
+    //기명 함수 - 온로드 - 로딩완료시점에서 실행
+    function test2() {
+      alert("2");
+    }
+    test2();
+
+    //   기명함수 익명함수 동시 실행??
+    //   기명함수 먼저
+
+    // 클릭하면 실행
+    document.onclick = function () {
+      alert("클릭?");
+    };
+
+      // .....
+  </script>
+</head>
+
+<body>
+  <!-- ...... -->
+  <div id="aa">안녕</div>
+  <div id="bb">안녕</div>
+  <div id="cc">안녕</div>
+
+  <!-- ...... -->
+</body>
+
+</html>

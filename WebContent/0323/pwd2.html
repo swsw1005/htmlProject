@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function check(my) {
+      if (document.pkc.pwd.value != my.value) {
+        document.getElementById("aa").innerText = "비밀번호가 틀려요";
+        document.getElementById("aa").style.color = "red";
+      } else {
+        document.getElementById("aa").innerText = "비밀번호가 같아요";
+        document.getElementById("aa").style.color = "green";
+      }
+    }
+  </script>
+  <p>비밀번호 같은지 유효성 검사</p>
+  <form name="pkc">
+    <input type="password" name="pwd" />
+    <input type="password" onblur="check(this)" />
+    <p></p>
+    <span id="aa"></span>
+  </form>
+</body>
+
+</html>

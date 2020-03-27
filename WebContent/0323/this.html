@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script>
-      function check(my) {
-        alert(my.value);
-      }
-      function check2(my2) {
-        alert(my2);
-      }
-      function check3(my3) {
-        alert(my3);
-      }
-    </script>
-  </head>
 
-  <body>
-    <input type="text" onkeyup="check(this)" />
-    <p></p>
-    <input type="text" onkeyup="check2(this.value)" />
-    <p></p>
-    <input type="text" onkeyup="check3(this.value.length)" />
-    <p></p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    function check(my) {
+      alert(my.value);
+    }
+    function check2(my2) {
+      alert(my2);
+    }
+    function check3(my3) {
+      alert(my3);
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" onkeyup="check(this)" />
+  <p></p>
+  <input type="text" onkeyup="check2(this.value)" />
+  <p></p>
+  <input type="text" onkeyup="check3(this.value.length)" />
+  <p></p>
+  <p>현재 오브젝트를 참조하는 this....</p>
+  <p>this 사용법만 책 한권</p>
+
+</body>
+
 </html>

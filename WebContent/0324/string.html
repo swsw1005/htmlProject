@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function check() {
+            var leng = document.pkc.title.value.length;
+            alert(leng);
+
+            var a1 = "19000";
+            alert("a1 " + a1.length); //5
+
+            var a2 = 19000;
+            alert("a2 " + a2.length); //undefined
+            alert("a2 " + (a2 + "").length); //5
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form name="pkc">
+        <input type="text" name="title">
+        <p></p>
+        <button type="button" onclick="check()">버튼타입:버튼</button>
+    </form>
+
+</body>
+
+</html>

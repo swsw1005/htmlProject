@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function view() {
+            var a = "모니터의 가로 " + screen.width;
+            var b = "모니터의 세로 " + screen.height;
+
+            var c = "사용가능 가로 " + screen.availWidth;
+            var d = "사용가능 세로 " + screen.availHeight;
+
+            var e = "컬러 " + screen.colorDepth;
+            var f = "픽셀 " + screen.pixelDepth;
+
+            var g = "브라우저 가로 " + innerWidth;
+            var h = "브라우저 세로 " + innerHeight;
+
+            var i = "브라우저 가로 " + document.documentElement.clientWidth;
+            var j = "브라우저 세로 " + document.documentElement.clientHeight;
+
+            var k = "body가로 " + document.body.clientWidth;
+            var l = "body세로 " + document.body.clientHeight;
+
+            document.getElementById("aa").innerText = a;
+            document.getElementById("bb").innerText = b;
+            document.getElementById("cc").innerText = c;
+            document.getElementById("dd").innerText = d;
+            document.getElementById("ee").innerText = e;
+            document.getElementById("ff").innerText = f;
+            document.getElementById("gg").innerText = g;
+            document.getElementById("hh").innerText = h;
+            document.getElementById("ii").innerText = i;
+            document.getElementById("jj").innerText = j;
+        }
+    </script>
+</head>
+
+<body onload="view()" onresize="view()">
+    <input type="button" value="클릭" onclick="view()" />
+
+    <div id="aa"></div>
+    <div id="bb"></div>
+    <div id="cc"></div>
+    <div id="dd"></div>
+    <div id="ee"></div>
+    <div id="ff"></div>
+    <div id="gg"></div>
+    <div id="hh"></div>
+    <div id="ii"></div>
+    <div id="jj"></div>
+</body>
+
+</html>

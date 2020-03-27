@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function date() {
+            var today = new Date(); //today_date
+
+            var yy = today.getFullYear();
+            var mm = today.getMonth();
+            var dd = today.getDate();
+
+            var hh = today.getHours();
+            var mi = today.getMinutes();
+            var ss = today.getSeconds();
+
+            yy = (yy + 10000 + "").substr(1, 4);
+            mm = (mm + 100 + "").substr(1, 2);
+            dd = (dd + 100 + "").substr(1, 2);
+            hh = (hh + 100 + "").substr(1, 2);
+            mi = (mi + 100 + "").substr(1, 2);
+            ss = (ss + 100 + "").substr(1, 2);
+
+            var weekday = "";
+
+            switch (today.getDay()) {
+                case 0:
+                    weekday = "일요일";
+                    break;
+                case 1:
+                    weekday = "월요일";
+                    break;
+                case 2:
+                    weekday = "화요일";
+                    break;
+                case 3:
+                    weekday = "수요일";
+                    break;
+                case 4:
+                    weekday = "목요일";
+                    break;
+                case 5:
+                    weekday = "금요일";
+                    break;
+                case 6:
+                    weekday = "토요일";
+                    break;
+                default:
+                    break;
+            }
+            var date_str =
+                yy + "년 " + mm + "월 " + dd + "일 " + hh + ":" + mi + ":" + ss;
+
+            document.getElementById("time").innerText = date_str;
+
+            setTimeout(date, 1000);
+        }
+
+      // function start() {
+      //     ss = setInterval(date, 500);
+      //     //인터벌 함수의 정보를 변수에 저장
+      // }
+
+      // function stop() {
+      //     clearInterval(ss);
+      //     //start에서 저장된 변수를 중지
+      // }
+    </script>
+</head>
+
+<body onload="date()">
+    <div style="width: 100%; height: 50px; top: 0; left: 0; position: absolute;background: green;color: white;">
+        <div style="height: 25px;" id="time"></div>
+        <button onclick="start()" type="button">시작</button>
+        <button onclick="stop()" type="button">종료</button>
+    </div>
+</body>
+
+</html>

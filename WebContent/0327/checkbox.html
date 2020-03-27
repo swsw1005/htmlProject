@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        function main() {
+            if (document.pkc.main_chk.checked) {
+
+                var length = document.pkc.sang.length;
+                for (i = 0; i < length; i++)
+                    document.pkc.sang[i].checked = true;
+            } else {
+                var length = document.pkc.sang.length;
+                for (i = 0; i < length; i++)
+                    document.pkc.sang[i].checked = false;
+
+            }
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <form name="pkc">
+        <input type="checkbox" name="main_chk" onclick="main()">
+        <hr>
+        <input name="sang" type="checkbox">상품1<br>
+        <input name="sang" type="checkbox">상품2<br>
+        <input name="sang" type="checkbox">상품3<br>
+        <input name="sang" type="checkbox">상품4<br>
+        <input name="sang" type="checkbox">상품5<br>
+    </form>
+
+</body>
+
+</html>

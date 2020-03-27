@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    function check(aa) {
+      if (aa.value.length <= 8) {
+        document.getElementById("aa").innerText = "아이디 8자 이상";
+      } else {
+        document.getElementById("aa").innerText = "";
+      }
+    }// 
+
+    function check2(aa) {
+      if (aa.value.length >= 8) {
+        document.getElementById("bb").style.color = "blue";
+      } else {
+        document.getElementById("bb").style.color = "red";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <p>아이디 8자 이상인지, 서로 다른 방법으로 체크</p>
+  <form name="pkc">
+    <p>아이디</p>
+    <input type="text" name="user_id" onblur="check(this)" />
+    <span id="aa"></span>
+    <p>비밀번호</p>
+    <input type="text" name="user_pwd" onblur="check2(this)" />
+    <span id="bb">아이디는 8자 이상</span>
+  </form>
+</body>
+
+</html>

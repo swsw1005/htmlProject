@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pkc {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+    </style>
+
+    <script>
+
+        function move() {
+            ss = setInterval(right_move, 10);
+        }
+        var num = 30;
+
+        function right_move() {
+            num++;
+            document.getElementById("pkc").style.left = num + "px";
+            if (num >= 300) {
+                clearInterval(ss);
+            }
+        }
+
+        var num2 = 30;
+        function big() {
+            num2++;
+            document.getElementById("pkc").style.width = num2 + "px";
+            document.getElementById("pkc").style.height = num2 + "px";
+            if (num2 >= 100)
+                clearInterval(ss);
+        }
+
+        setInterval(big, 50);
+
+    </script>
+</head>
+
+<body>
+    <button onclick="right_move()">우 이동</button>
+    <button onclick="move()"> 이동</button>
+    <button onclick="big()"> 빅빅</button>
+
+    <div id="pkc">광고입니다...</div>
+</body>
+
+</html>

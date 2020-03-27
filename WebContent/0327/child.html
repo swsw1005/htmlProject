@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function jundal() {
+
+            opener.document.pkc.kor_par.value = document.son.kor_son.value
+        }
+    </script>
+</head>
+
+<body>
+    <h3>자식창</h3>
+    <form name="son">
+        <input type="text" name="kor_son" />
+        <input type="button" onclick="jundal()" value="전달" />
+    </form>
+</body>
+
+</html>

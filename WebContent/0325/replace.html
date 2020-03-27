@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function check() {
+            var str = " java 는 자바!";
+            var a = str.replace("java", "자바");
+
+            var b = str.replace(/java/g, "자바라");
+
+            document.getElementById("a").innerText = a;
+            document.getElementById("b").innerText = b;
+        }
+    </script>
+</head>
+
+<body onload="check()">
+    <hr />
+    <div id="a"></div>
+    <hr />
+    <div id="b"></div>
+    <hr />
+</body>
+
+</html>

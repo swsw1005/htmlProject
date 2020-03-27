@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pkc {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+    </style>
+
+    <script>
+
+        function move() {
+            ss = setInterval(right_move, 100);
+        }
+        var num = 1;
+
+        function right_move() {
+            num = num - 0.05;
+            document.getElementById("pkc").style.opacity = num;
+            if (num <= 0)
+                clearInterval(ss);
+        }
+    </script>
+
+</head>
+
+<body>
+    <button type="button" onclick="move()">버어틍</button>
+    <div id="pkc">광고입니다...</div>
+
+</body>
+
+</html>

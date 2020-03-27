@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var c1;
+
+        function win_open() {
+            // 자식창 열기 - 창 없으면 열기
+            if (c1 == null || !(c1.closed == false)) {
+                c1 = open("child.html", "", "width=300, height=200");
+            } else {
+                c1.focus();
+            }
+        }
+
+        function win_close() {//자식창 닫기
+            c1.close();
+        }
+
+        function jundal() {//자식창에 내용전달
+            c1.document.son.kor_son.value = document.pkc.kor_par.value;
+        }
+
+        function win_open_jundal() {// 창 열면서+내용전달
+            win_open();
+            c1.window.onload = jundal;
+        }
+        function move() { // 자식창 이동
+            // c1.moveTo(300, 300);
+            var a = parseInt(Math.random() * 500);
+            var b = parseInt(Math.random() * 500);
+            c1.moveTo(a, b);
+
+        }
+
+        function auto_move_start() {
+            setInterval(move, 500);
+        }
+
+        function resize() { //자식창 크기 조정
+            c1.resizeTo(400, 400);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" onclick="win_open()" value="창 생성">
+    <input type="button" onclick="win_close()" value="창 닫기">
+    <hr>
+    <form name="pkc">
+        <input type="text" name="kor_par">
+        <input type="button" onclick="win_open_jundal()" value="전달">
+    </form>
+    <p> 부모창 - 자식창 정보 전달 </p>
+    <input type="button" onclick="move()" value="이동">
+    <input type="button" onclick="resize()" value="크기변경">
+    <input type="button" onclick="auto_move_start()" value="조카놀리기">
+
+    <p> </p>
+    <p> </p>
+</body>
+
+</html>

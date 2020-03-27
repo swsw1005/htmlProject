@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pkc {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+    </style>
+
+    <script>
+
+        function hide() {
+            document.getElementById("pkc").style.visibility = "hidden";
+        }
+        function start() {
+            setTimeout(hide, 5000);
+        }
+    </script>
+
+</head>
+
+<body onload="start()">
+    <div id="pkc">광고입니다...</div>
+
+</body>
+
+</html>

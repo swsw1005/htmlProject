@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function aa() {
+            var str = document.pkc.email.value;
+            str = str + "";
+
+            var leng = str.length;
+            var index_of_g = str.indexOf("@");
+            // alert(str + "  " + index_of_g);
+
+            var d1 = str.substring(0, index_of_g);
+            var d2 = str.substring(index_of_g + 1, leng);
+
+            document.pkc.userid.value = d1;
+            document.pkc.server.value = d2;
+        }
+
+        function bb() {
+            var tel = document.pkc2.phone.value;
+            tel = tel + "";
+
+            var ind1 = tel.indexOf("-");
+            var ind2 = tel.lastIndexOf("-");
+            var ind3 = tel.length;
+
+            var t1 = tel.substring(0, ind1);
+            var t2 = tel.substring(ind1 + 1, ind2);
+            var t3 = tel.substring(ind2 + 1, ind3);
+
+            document.pkc2.p1.value = t1;
+            document.pkc2.p2.value = t2;
+            document.pkc2.p3.value = t3;
+        }
+
+        function cc() {
+
+            var tel = document.pkc3.uu.value;
+            var str = tel.split("-");
+
+            for (i = 0; i < str.length; i++) {
+                document.pkc3.aa[i].value = str[i];
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="pkc">
+        <input style="border: 2px solid red;" type="text" name="email" />
+        <button type="button" onclick="aa()">분리</button>
+        <br /><br />
+        아이디 <input type="text" name="userid" /><br />
+        서버 <input type="text" name="server" /><br />
+    </form>
+    <hr />
+    <form name="pkc2">
+        <input style="border: 2px solid red;" type="text" name="phone" />
+        <button type="button" onclick="bb()">분리</button>
+        <br /><br />
+        앞자리 <input type="text" name="p1" /><br />
+        중간 <input type="text" name="p2" /><br />
+        뒷자리 <input type="text" name="p3" /><br />
+
+    </form>
+    <hr>
+    <form name="pkc3">
+        <input style="border: 2px solid red;" type="text" name="uu">
+        <p></p>
+        <input type="text" id="aa" name="u1">
+        <p></p>
+        <input type="text" id="aa" name="u2">
+        <p></p>
+        <input type="text" id="aa" name="u3">
+        <p></p>
+        <input type="text" id="aa" name="u4">
+        <p></p>
+        <input type="text" id="aa" name="u5">
+        <p></p>
+        <input type="text" id="aa" name="u6">
+        <p></p>
+        <input type="text" id="aa" name="u7">
+        <p></p>
+        <button type="button" onclick="cc()">split 분리</button>
+    </form>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        table {
+            border: 2px solid violet;
+        }
+
+        td {
+            text-align: center;
+            border: none;
+            /* border-radius: 15px; */
+        }
+
+        .aa {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            background: yellow;
+            border-radius: 10px;
+            box-shadow: 3px black;
+        }
+
+        .bb {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            background: cyan;
+            border-radius: 10px;
+            box-shadow: 3px black;
+        }
+
+        .cc {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 3px black;
+        }
+    </style>
+
+    <script>
+        function move_before() {
+            var yy = document.getElementById("year").value;
+            var mm = document.getElementById("month").value;
+            yy = yy * 1;
+            mm = mm * 1;
+
+            console.log(">>>" + yy + "  " + mm);
+            mm = mm - 1;
+            var temp = new Date(yy, mm, 1);
+
+            console.log(temp);
+
+            document.getElementById("year").value = temp.getFullYear();
+            document.getElementById("month").value = temp.getMonth();
+
+            console.log(">>>" + yy + "  " + mm);
+            date(yy, mm);
+        }
+
+        function move_after() {
+            var yy = document.getElementById("year").value;
+            var mm = document.getElementById("month").value;
+            yy = yy * 1;
+            mm = mm * 1;
+
+            console.log(">>>" + yy + "  " + mm);
+            mm = mm + 1;
+            var temp = new Date(yy, mm, 1);
+
+            console.log(temp);
+
+            document.getElementById("year").value = temp.getFullYear();
+            document.getElementById("month").value = temp.getMonth();
+
+            console.log(">>>" + yy + "  " + mm);
+            date(yy, mm);
+        }
+
+        function default_check() {
+            var yy = new Date().getFullYear();
+            var mm = new Date().getMonth();
+
+            console.log(" ");
+            console.log("오늘 dal...+" + yy + " " + (mm + 1));
+            console.log(" ");
+
+            document.getElementById("year").value = yy;
+            document.getElementById("month").value = mm;
+
+            date(yy, mm);
+        } // onload  기본 날짜 달력
+
+        function check() {
+            var yy = document.getElementById("year").value;
+            var mm = document.getElementById("month").value;
+            yy = yy * 1;
+            mm = mm * 1;
+
+            console.log(" ");
+            console.log("update dal...+" + yy + " " + (mm + 1));
+            console.log(" ");
+
+            date(yy, mm);
+        } // onchange 매개변수 입력
+
+        function date(yy, mm) {
+            // var today = new Date();
+
+            // var y = today.getFullYear(); // 오늘 몇년도
+            // var m = today.getMonth(); // 오늘 몇월
+            // var d = new Date().getDate(); //오늘 며칠
+
+            var y = yy;
+            var m = mm;
+
+            //1~12월 마지막 날
+            var last_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            // 2월 마지막 날 구하기
+            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) last_days[1] = 29;
+
+            //1일은 무슨요일
+            var firstDay = new Date(y, m, 1);
+            var firstWeekDay = firstDay.getDay();
+
+            //몇주?
+            var ju = Math.ceil((last_days[m] + firstWeekDay) / 7);
+
+            console.log("-----create dal-----");
+            console.log(y + " " + (m + 1) + " ");
+            console.log(last_days[m] + "  " + firstWeekDay + "  " + ju);
+
+            var cal_form = "<table width=300 border=1>";
+            cal_form = cal_form + "<tr>";
+            cal_form = cal_form + "<td> <div class=\"aa\">일</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">월</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">화</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">수</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">목</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">금</div> </td>";
+            cal_form = cal_form + "<td> <div class=\"aa\">토</div> </td>";
+            cal_form = cal_form + "</tr>";
+
+            var n = 1;
+            for (let i = 0; i < ju; i++) {
+                //tr
+                cal_form = cal_form + "<tr>";
+                for (let j = 0; j < 7; j++) {
+                    //td
+
+                    if ((firstWeekDay > j && i == 0) || last_days[m] < n) {
+                        cal_form = cal_form + "<td> <div class=\"cc\">" + "&nbsp" + "</div></td>";
+                    } else {
+                        cal_form = cal_form + "<td> <div class=\"bb\">" + n + "</div></td>";
+                        n++;
+                    }
+                }
+                cal_form = cal_form + "</tr>";
+            }
+            document.getElementById("pkc").innerHTML = cal_form;
+        }
+    </script>
+</head>
+
+<body onload="default_check()">
+    <button type="button" onclick="default_check()">오늘...</button>
+    <hr />
+    <input id="year" type="number" onchange="check()" />
+    <select id="month" onchange="check()">
+        <option>월</option>
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+    </select>
+    <button type="button" onclick="move_before()">≤</button>
+    <button type="button" onclick="move_after()">≥</button>
+    <hr />
+    <div id="pkc"></div>
+</body>
+
+</html>

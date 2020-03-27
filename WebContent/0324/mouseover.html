@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #pkc {
+        position: absolute;
+        transition: 0.2s;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+        border-radius: 10px;
+        display: flex;
+      }
+    </style>
+
+    <script>
+      function mouse_move() {
+        // 1. 좌표 따서 문자열
+        var txt = "X : " + event.clientX + " Y : " + event.clientY;
+
+        // 2. 좌표 표시하기
+        document.getElementById("aa").innerText = txt;
+
+        // 3. pkc가 따라다니게
+        document.getElementById("pkc").style.left = event.clientX + "px";
+        document.getElementById("pkc").style.top = event.clientY + "px";
+      }
+      document.onmousemove = mouse_move;
+    </script>
+  </head>
+  <body>
+    <p>마우스 좌표를 인식하는 onmousemove</p>
+    <span id="aa"></span>
+    <div id="pkc">안녕</div>
+  </body>
+</html>

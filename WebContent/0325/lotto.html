@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function lotto_gen() {
+            var lotto = new Array(6);
+
+            var tt = "";
+
+            for (i = 0; i < 6; i++) {
+                lotto[i] = parseInt(Math.random() * 45) + 1;
+                tt = tt + " " + lotto[i];
+                for (j = 0; j < i; j++) {
+                    if (lotto[i] == lotto[j]) {
+                        i--;
+                    } // if end
+                } //for end
+            } //for end
+            // document.getElementsByName("lot").value = tt;
+            // document.pkc.innertext = tt;
+
+            var lotto2 = lotto.sort(function (a, b) { return a - b; });
+            document.getElementsByName("lot")[0].value = lotto2;
+        }
+    </script>
+</head>
+
+<body onload="lotto_gen()">
+    <input type="text" name="lot" />
+    <div id="pkc" class="pkc"></div>
+    <div id="pkc" class="pkc"></div>
+    <div id="pkc" class="pkc"></div>
+    <div id="pkc" class="pkc"></div>
+    <div id="pkc" class="pkc"></div>
+    <div id="pkc" class="pkc"></div>
+</body>
+
+</html>
