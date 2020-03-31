@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+   ul {
+	padding:0px;
+   }
+   .main {
+     width:150px;
+	 height:30px;
+	 border:1px solid black;
+	 background:#eeeeee;
+	 display:flex;
+	 align-items:center;
+   }
+   .sub_main {
+     margin-top:-19px;
+     width:150px;
+	 height:120px;
+	 border:1px solid black;
+	 display:none;
+   }
+   .sub {
+     width:150px;
+	 height:30px;
+	 display:flex;
+	 align-items:center;
+   }
+  </style>
+  
+  <script>
+
+  $( function() 
+  {
+
+	  $(".main").click(function()
+	  {
+         $(".sub_main").show();
+  	  });
+
+	  $(".sub").mouseover(function()
+	  {
+         $(this).css("background","blue").css("color","white");
+	  });
+
+	  $(".sub").mouseout(function()
+	  {
+         $(this).css("background","white").css("color","black");
+	  });
+
+	  $(".sub").click(function()
+	  {
+         $(".sub_main").hide();
+	  });
+
+ 
+  });
+   
+  </script>
+</head>
+<body>
+ <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+     <ul>
+       <li class=main> &nbsp;&nbsp; 선 택 </li>
+	   <li>
+	     <ul class=sub_main>
+           <li class=sub> 선 택 </li>
+		   <li class=sub> 짜장면 </li>
+		   <li class=sub> 짬 뽕 </li>
+		   <li class=sub> 탕수육 </li>
+		 </ul>
+	   </li>
+	   
+	 </ul>
+ 
+   <hr>
+   <xmp>
+
+   </xmp>
+</body>
+</html>

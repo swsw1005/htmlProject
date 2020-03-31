@@ -34,11 +34,10 @@
 
 .flex_out_box1 {
   max-width: 1000px;
-
   margin: auto;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   /* -------------dev option---------------- */
   background: yellow;
 }
@@ -47,7 +46,7 @@
   flex: 50%;
   padding: 5px;
   max-width: 450px;
-  min-width: 300px;
+  min-width: 380px;
   box-sizing: border-box;
   /* -------------dev option---------------- */
   background: cyan;
@@ -55,17 +54,16 @@
 }
 
 .bar {
-  width: 100%;
+  width: 150%;
   height: 10px;
-  min-width: 800000px;
   /* -------------dev option---------------- */
   background: violet;
 }
 
 input {
-  padding: 8px;
+  padding: 7px;
   height: auto;
-  margin: 3px;
+  margin: auto;
   font-size: medium;
   width: 90%;
   box-shadow: 0 0 3px #00000070;
@@ -73,17 +71,20 @@ input {
   border: 2px solid gray;
 }
 
-input[type="button"]:hover,
-input[type="submit"]:hover {
+input[type="submit"],
+input[type="button"] {
+  width: max-content;
+  height: 100%;
+  border: 2px solid gray;
+  border-radius: 12px;
+  transition: 0.35s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
   border: 2px solid yellow;
   background: black;
   color: yellow;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="num"]:hover {
-  border: 2px solid yellow;
 }
 
 input[type="text"]:focus,
@@ -108,7 +109,6 @@ input[type="num"]:focus {
   width: 250px;
   height: 60px;
   text-align: center;
-  color: blue;
   font-weight: 500;
   margin: auto;
   line-height: 60px;
@@ -132,36 +132,31 @@ input[type="num"]:focus {
   color: purple;
   background: black;
 }
-.flex_box input[type="num"] {
-  min-width: 70px;
-  width: 30%;
-}
-
-.flex_box input[type="submit"],
-.flex_box input[type="button"] {
-  width: 130px;
-  border: 2px solid gray;
-  border-radius: 24px;
-  transition: 0.35s;
-}
+/* .flex_box input[type="num"] {
+  width: 4em;
+  width: 25%;
+} */
 
 .text_center {
   text-align: center;
-
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
+  border: 1px solid red;
 }
 
 .text_left {
   text-align: left;
-
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
+  border: 1px solid red;
 }
 
 .text_right {
   text-align: right;
-
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
+  border: 1px solid red;
 }

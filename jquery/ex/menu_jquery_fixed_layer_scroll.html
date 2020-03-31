@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background:#eeeeee;
+	  margin:0;
+	}
+   #main_show {
+      width:100%;
+	  height:30px;
+	  background:darkblue;
+	  color:white;
+	  font-weight:900;
+	  text-align:center;
+	  position:relative;
+	  margin:auto;
+   }
+   #main_show input {
+      width:80px;
+	  height:23px;
+	  background:white;
+	  border:1px solid darkblue;
+	  border-radius:8px;
+	  color:darkblue;
+	}
+	#menu {
+      width:1200px;
+      height:100px;
+	  margin:auto;
+	}
+	.fix_m {
+      position:fixed;
+	  top:-8px;
+	}
+	#menu #parent>li {
+      list-style-type:none;
+	  float:left;
+	  width:150px;
+	  height:30px;
+	  color:darkblue;
+	  font-weight:900;
+	  background:white;
+	  border:1px solid darkblue;
+	  border-radius:10px;
+	  margin-left:40px;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	}
+	#menu #parent>li:hover {
+      color:white;
+	  background:darkblue;
+	}
+	#menu #parent>li:first-child {
+      width:220px;
+	  position:relative;
+	}
+	#menu #parent #child {
+	  list-style-type:none;
+      padding-left:0px;
+	  width:218px;
+	  height:420px;
+	  background:white;
+	  position:absolute;
+	  left:0px;
+	  top:0px;
+	  margin-top:31px;
+	  margin-left:0px;
+	  padding-top:7px;
+	} 
+	#child {
+      border:1px solid darkblue;
+	  border-radius:10px;
+	  display:none;
+	}
+	#child li {
+	  padding-left:20px;
+      padding-top:11px;
+	  color:darkblue;
+	  background:white;
+    }
+	#child li:hover {
+      text-decoration:underline;
+	}
+
+	#third {
+      width:1200px;
+	  height:300px;
+	  background:red;
+	  margin:auto;
+	}
+	#fourth {
+      width:1200px;
+	  height:500px;
+	  background:gray;
+	  margin:auto;
+	}
+	#fifth {
+      width:1200px;
+	  height:400px;
+	  background:yellow;
+	  margin:auto;
+	}
+	#sixth {
+      width:1200px;
+	  height:300px;
+	  background:green;
+	  margin:auto;
+	}
+	#layer {
+       position:absolute;
+	   left:-300px;
+	   top:300px;
+	   background:yellow;
+	   width:300px;
+	   height:300px;
+	   z-index:100;
+	}
+	#adv {
+	   position:fixed;
+	   left:1300px;
+       top:700px;
+       width:50px;
+	   height:30px;
+	   background:#eeeeee;
+	   border:1px solid red;
+	   border-radius:8px;
+	   z-index:100;
+	   display:flex;
+	   justify-content:center;
+	   align-items:center;
+	   cursor:default;
+	}
+  </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script>
+     $(function()
+	 {
+		 // 전체카테고리 메뉴 보이기 숨기기
+         $("#parent>li:first-child").mouseover(function()
+		 {
+              $("#child").show();
+		 });
+
+		 $("#parent>li:first-child").mouseout(function()
+		 {
+              $("#child").hide();
+		 });
+        // 제일윗부분 닫기버튼으로 없애기
+         $("#close").click(function()
+		 {
+            $("#main_show").animate(
+			 {
+                top:"-30px"
+			 },1000);
+		 });
+		 // 메뉴의 고정
+		 $(window).scroll(function()
+		 {
+            if($(window).scrollTop() > 30)
+		        $("#parent").addClass("fix_m");
+			else
+                $("#parent").removeClass("fix_m");
+		 });
+
+		 // 광고레이어 오른쪽 이동 및 숨기기
+		  $("#layer").animate(
+		  {
+             left:"400px"
+		  },2000);
+         $("#layer_close").click(function()
+		 {
+             $("#layer").hide();
+		 });
+		 // 제일 위로 이동
+         $("#tops").click(function()
+		 {
+            $(window).scrollTop(0);
+		 });
+
+         // 텍스트 수직스크롤
+		 setInterval(function()
+		 {
+		   $("#ver_sub").animate(
+		   {
+             marginTop:"-300px"
+		   },6000,function()
+		   {
+		     $("#ver_sub").css("marginTop","0px");	 
+		   });
+		 },1000);
+
+		 // 텍스트 수평스크롤
+		  setInterval(function()
+		  {
+             $("#mt_sub").animate(
+			 {
+               marginLeft:"-960px"
+			 },10000,function()
+			 {
+                $("#mt_sub").css("marginLeft","0px");
+			 });
+		  },10);
+		 
+	 });
+ 
+ </script>
+ </head>
+ <body>
+   <div id=layer>
+       <table width=300 height=280>
+          <tr>
+            <td height=270 align=center> 광고입니다 </td>
+		  </tr>
+		  <tr>
+            <td align=right> <img src=x.png id=layer_close> </td>
+		  </tr> 
+	   </table>
+   </div>
+   <div id=adv> <span id=tops> TOP </span> </div>
+   <div id=main_show> 
+     <div>
+     어서오세요!! 회원가입하면 갈비찜10kg이 공짜!!  
+	 <input type=button value=회원가입>
+	 <input type=button value=닫기 id=close> 
+	 </div>
+ 
+   <div id=menu>
+     <ul id=parent>
+	   <li> 
+	     전체카테고리 
+		 <ul id=child>
+           <li> 채소 </li>
+		   <li> 과일.견과.쌀 </li>
+		   <li> 수산.해산.건어물 </li>
+		   <li> 정육.계란 </li>
+		   <li> 국.반찬.메인요리</li>
+		   <li> 샐러드.간편식 </li>
+		   <li> 면.양념.오일 </li>
+		   <li> 음료.우유.떡.간식 </li>
+		   <li> 베이커리.치즈.델리 </li>
+		   <li> 건강식품.생활용품 </li>
+		   <li> 주방.홈리빙 </li>
+		   <li> 베이비.키즈 </li>
+		   <li> 반려동물 </li>
+		 </ul> 
+	   </li>
+       <li> 신상품 </li>
+	   <li> 베스트 </li>
+	   <li> 알뜰쇼핑 </li>
+	   <li> 이벤트 </li>
+	 </ul>
+   </div>
+   <style>
+   #ver_main {
+      width:220px;
+	  height:30px;
+	  font-size:25px;
+	  overflow:hidden;
+	  position:relative;
+	  background:black;
+	  color:yellow;
+	}
+	#ver_sub {
+      position:absolute;
+	  top:0px;
+	  width:220px;
+	  height:260px;
+	}
+ </style>
+   <div id=third></div>
+   <div id=fourth>
+      <div id=ver_main style="float:right">
+       <div id=ver_sub>
+	    <div> &nbsp; </div>
+        <div> 짜장면 : 4,000원 </div>
+	    <div> 짬  뽕 : 6,000원 </div>
+        <div> 탕수육 : 9,000원 </div>
+	    <div> 라조기 : 8,000원 </div>
+	    <div> 팔보채 : 7,000원 </div>
+	    <div> 유린기 : 9,000원 </div>
+	    <div> 전가복 : 9,000원 </div>
+	    <div> 돈까스 : 7,000원 </div>
+	   </div>
+     </div>
+   </div>
+   <div id=fifth> <div id=move_text>
+       <div id=mt_sub>
+         오늘은 즐거운 토요일입니다!! 날씨도 좋고 여행가기 좋네요!! 하지만, 우리는 열심히 공부를 합니다.
+	   </div>
+	 </div>
+   </div>
+   <style>
+    #move_text {
+      width:200px;
+	  height:40px;
+	  border:1px solid black;
+      overflow:hidden;
+	}
+    #mt_sub {
+      width:950px;
+	  height:40px;
+	  display:flex;
+	  justify-content:flex-end;
+	  align-items:center;
+	  color:black;
+	}
+
+   </style>
+   <div id=sixth></div>
+ </body>
+</html>

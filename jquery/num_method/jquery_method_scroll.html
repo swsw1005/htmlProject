@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="jquery-3.3.1.js"></script>
+   
+  <script>
+
+   $(function()
+   {  
+     $("#btn1").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+	   // alert(document.body.scrollTop); // <!doctype html>이 없어야 된다..
+	   // alert(document.documentElement.scrollTop);
+     });
+
+	 $("#btn2").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+     });
+
+	 $("#btn3").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+     });
+
+	 $("#btn4").click(function()
+	 {
+        $(window).scrollTop(0);      
+     });
+
+     $("#btn5").click(function()
+	  {
+        var t=$(window).scrollTop(); 
+        var start=setInterval(function()
+		{
+           t=t-1;
+		   if(t>0)
+		     $(window).scrollTop(t);
+		   else
+		     clearInterval(start);
+		},10);
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 수치관련 메소드 ※ </h1>
+   <hr>
+      <input type=button id=btn1 value=scrollTop>
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <input type=button id=btn2 value=scrollTop>
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <input type=button id=btn3 value=scrollTop>
+	  <input type=button id=btn4 value=위로>
+	  <input type=button id=btn5 value=천천히위로>
+   <hr>
+   <xmp>
+  <script>
+
+   $(function()
+   {  
+     $("#btn1").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+	   // alert(document.body.scrollTop); // <!doctype html>이 없어야 된다..
+	   // alert(document.documentElement.scrollTop);
+     });
+
+	 $("#btn2").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+     });
+
+	 $("#btn3").click(function()
+	 {
+        var t=$(window).scrollTop();      
+	    alert(t);
+     });
+
+	 $("#btn4").click(function()
+	 {
+        $(window).scrollTop(0);      
+     });
+
+     $("#btn5").click(function()
+	  {
+        var t=$(window).scrollTop(); 
+        var start=setInterval(function()
+		{
+           t=t-1;
+		   if(t>0)
+		     $(window).scrollTop(t);
+		   else
+		     clearInterval(start);
+		},10);
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 수치관련 메소드 ※ </h1>
+   <hr>
+      <input type=button id=btn1 value=scrollTop>
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <input type=button id=btn2 value=scrollTop>
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <input type=button id=btn3 value=scrollTop>
+	  <input type=button id=btn4 value=위로>
+	  <input type=button id=btn5 value=천천히위로>
+   <hr>
+   </xmp>
+ </body>
+</html>

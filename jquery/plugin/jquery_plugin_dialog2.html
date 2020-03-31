@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+  <script>
+
+  $( function() 
+  {
+
+    $("#aa" ).dialog(
+	{
+       autoOpen:false,
+	   show: {effect:"bounce",duration:1000} , // slide , blind, explode, fade ,fold
+	   //hide: {effect:"blind",duration:1000} ,  
+	   /* buttons: [
+	   {
+          text:"ok",
+		  icon:"ui-icon-heart",
+		  click:function()
+ 		  {
+			  $(this).dialog("close");
+		  }
+	   }
+	   ] , */
+	   // closeOnEscape:false ,
+	   // draggable:false,
+	  // width:700,height:400,
+	  //  modal:true,
+	   //resizable:false
+	   title:"테스트"
+ 
+	});
+
+    $("#btn").click(function()
+	{
+       $("#aa").dialog("open");
+	});
+  });
+
+  </script>
+</head>
+<body>
+<h1 style="color:red;"> ※ 플러그인 ※ </h1>
+  <hr>
+ <input type=button id=btn value=대화창>
+<div id="aa">
+  <p>안녕하세요 대화창입니다.</p>
+</div>
+<hr>
+<xmp>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+  <script>
+
+  $( function() 
+  {
+
+    $("#aa" ).dialog(
+	{
+       autoOpen:false,
+	   show: {effect:"bounce",duration:1000} , // slide , blind, explode, fade ,fold
+	   //hide: {effect:"blind",duration:1000} ,  
+	   /*buttons: [
+	   {
+          text:"ok",
+		  icon:"ui-icon-heart",
+		  click:function()
+ 		  {
+			  $(this).dialog("close");
+		  }
+	   }
+	   ] */
+	   //closeOnEscape:true 
+	   //draggable:false
+	   //width:700,height:400
+	   //modal:true
+	   //resizable:false
+	   title:"테스트"
+ 
+	});
+
+    $("#btn").click(function()
+	{
+       $("#aa").dialog("open");
+	});
+  });
+
+  </script>
+</head>
+<body>
+ <input type=button id=btn value=대화창>
+<div id="aa">
+  <p>안녕하세요 대화창입니다.</p>
+</div>
+ 
+</xmp>
+ 
+</body>
+</html>

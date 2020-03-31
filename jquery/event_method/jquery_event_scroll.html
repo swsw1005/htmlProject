@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    #aa {
+       position:fixed;
+	   left:200px;
+	   top:200px;
+	}
+  </style> 
+  <script>
+   
+   $(function()
+   {  
+       $(window).scroll(function()
+	   {
+           $("#aa").text($(this).scrollTop());
+	   });
+   });
+
+  </script>
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+	  <p>하하<p>하하<p>하하<p>하하<p>하하<p>하하<p>하하
+      <div id=aa></div>
+   <hr>
+   <xmp>
+ 
+   </xmp>
+ </body>
+</html>

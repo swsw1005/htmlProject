@@ -19,9 +19,24 @@
                 var length = document.pkc.sang.length;
                 for (i = 0; i < length; i++)
                     document.pkc.sang[i].checked = false;
+            }
+        }
 
+        function all_check() {
+
+            var all_checked = true;
+            var length = document.pkc.sang.length;
+
+            for (i = 0; i < length; i++) {
+                var temp = document.pkc.sang[i].checked;
+                all_checked = all_checked && temp;
             }
 
+            if (all_checked) {
+                document.pkc.main_chk.checked = true;
+            } else {
+                document.pkc.main_chk.checked = false;
+            }
         }
     </script>
 
@@ -33,11 +48,11 @@
     <form name="pkc">
         <input type="checkbox" name="main_chk" onclick="main()">
         <hr>
-        <input name="sang" type="checkbox">상품1<br>
-        <input name="sang" type="checkbox">상품2<br>
-        <input name="sang" type="checkbox">상품3<br>
-        <input name="sang" type="checkbox">상품4<br>
-        <input name="sang" type="checkbox">상품5<br>
+        <input name="sang" type="checkbox" onchange="all_check()">상품1<br>
+        <input name="sang" type="checkbox" onchange="all_check()">상품2<br>
+        <input name="sang" type="checkbox" onchange="all_check()">상품3<br>
+        <input name="sang" type="checkbox" onchange="all_check()">상품4<br>
+        <input name="sang" type="checkbox" onchange="all_check()">상품5<br>
     </form>
 
 </body>

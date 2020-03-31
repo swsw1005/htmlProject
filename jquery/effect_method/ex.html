@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+    var max=500;
+	var min=100;
+	var st;
+	var ed;
+	function imsi()
+	{  
+      st=setInterval(aaa,1);
+	}
+	function imsi2()
+	{
+      ed=setInterval(bbb,1);
+	}
+
+    function aaa()
+	{
+       min=min+1;
+	   if(min<500)
+	   {
+           aa.width=min;
+		   aa.height=min;
+ 	   }
+	   else
+	   {
+	      clearInterval(st);
+          min=100;
+ 	   }
+	}
+	function bbb()
+	{
+       max=max-1;
+	   if(max>100)
+	   {
+          aa.width=max;
+		  aa.height=max;
+	   }
+	   else
+	   {
+	      clearInterval(ed);
+          max=500;
+	   }
+	}
+    
+  </script>
+ </head>
+ <body>
+    <input type=button onclick=imsi() value=크게>
+	<input type=button onclick=imsi2() value=작게> <p>
+    <img src=a1.jpg width=100 height=100 id=aa>
+	
+ </body>
+</html>

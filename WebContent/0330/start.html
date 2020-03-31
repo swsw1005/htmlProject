@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="start.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function aa() {
+            $("#pkc").css("color", "yellow");
+            $("#pkc").css("background", "black");
+        }
+
+        $(document).ready(function () {
+            $("#pkc").css("background", "yellow");
+        });
+
+    </script>
+    <style>
+        #pkc {
+            width: 70px;
+            margin: auto;
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+            border: 2px solid red;
+        }
+
+        /* $(선택자).메소드(); => $(선택자).메소드(function () {  } ); */
+    </style>
+</head>
+
+<body>
+    <input type="button" value="클릭" onclick="imsi()" />
+    <hr />
+    <div id="pkc" onclick="aa()">aaa</div>
+</body>
+
+</html>

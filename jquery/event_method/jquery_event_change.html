@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script>
+   
+   $(function()
+   {  
+       $(".food").change(function()
+	   {
+            $("#jumun").text($(".food").val());
+	   });
+   });
+
+  </script>
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <form>
+       주문음식
+	   <select class=food>
+         <option value=""> 선택 </option>
+		 <option> 짜장면 </option>
+		 <option> 우동 </option>
+		 <option> 짬뽕 </option>
+		 <option> 탕수육 </option>
+	   </select>
+	 </form> 
+   <hr>
+      <div id=jumun></div>
+   <hr>
+   <xmp>
+    <script>
+   
+   $(function()
+   {  
+       $(".food").change(function()
+	   {
+            $("#jumun").text($(".food").val());
+	   });
+   });
+
+  </script>
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <form>
+       주문음식
+	   <select class=food>
+         <option value=""> 선택 </option>
+		 <option> 짜장면 </option>
+		 <option> 우동 </option>
+		 <option> 짬뽕 </option>
+		 <option> 탕수육 </option>
+	   </select>
+	 </form> 
+   <hr>
+      <div id=jumun></div>
+   <hr>
+   </xmp>
+ </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+ 
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+ 
+ 
+ <style>
+ 
+    li { 
+	  list-style-type:none;
+      width:84px;
+	  height:30px;
+	  font-weight:900;
+	  color:#777777;
+	  background:#f7f7f7;
+	  border:1px solid #dddddd;
+	  border-radius:3px;
+	  float:left;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  margin:2px;
+	}
+    .radio {
+      width:12px;
+	  height:12px;
+	  border:1px solid #dddddd;
+	  background:white;
+	  border-radius:6px;
+	}
+	.add {
+      background:#007fff;
+	  color:white;
+	  border:1px solid darkblue;
+	}
+	.add2 {
+      border-width:3px;
+	  border-color:blue;
+	  width:9px;
+	  height:9px;
+	  border-radius:10px;
+	}
+
+ </style>
+ <script>
+
+   $(function() 
+   {
+      //$(".sub").checkboxradio();
+	  //$(".sub1").checkboxradio();
+     
+	  $(".abc").click(function()
+	  {
+         $(".abc").removeClass("add");
+		 $(".radio").removeClass("add2");
+		 var n=$(this).index();
+         $(this).addClass("add");
+		 $(".radio").eq(n).addClass("add2");
+	  });
+	 
+   });
+
+ </script>
+</head>
+
+<body>
+   <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+      <label for=kor> 국어 </label> <input class=sub type=radio id=kor name=sub> 
+	  <label for=eng> 영어 </label> <input class=sub type=radio id=eng name=sub> 
+	  <label for=mat> 수학 </label> <input class=sub type=radio id=mat name=sub> 
+   <hr>
+      <label for=kor1> 국어 </label> <input class=sub1 type=checkbox id=kor1 name=sub1> 
+	  <label for=eng1> 영어 </label> <input class=sub1 type=checkbox id=eng1 name=sub1> 
+	  <label for=mat1> 수학 </label> <input class=sub1 type=checkbox id=mat1 name=sub1> 
+   <hr>
+  
+   <ul style="padding:0px">
+     <li class=abc>
+      <span class=radio></span> &nbsp; <label for=kor1 class=la> 국어 </label>  
+	 </li>
+	 <li class=abc>
+	  <span class=radio></span> &nbsp; <label for=eng1 class=la> 영어 </label>  
+	 </li>
+	 <li class=abc>
+	  <span class=radio></span> &nbsp; <label for=mat1 class=la> 수학 </label> 
+	 </li>
+   </ul>  
+  
+<xmp> 
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+ 
+ 
+ <style>
+  /*
+    li { 
+	  list-style-type:none;
+      width:84px;
+	  height:30px;
+	  font-weight:900;
+	  color:#777777;
+	  background:#f7f7f7;
+	  border:1px solid #dddddd;
+	  border-radius:3px;
+	  float:left;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  margin:2px;
+	}
+    .radio {
+      width:12px;
+	  height:12px;
+	  border:1px solid #dddddd;
+	  background:white;
+	  border-radius:6px;
+	}
+	.add {
+      background:#007fff;
+	  color:white;
+	  border:1px solid darkblue;
+	}
+	.add2 {
+      border-width:3px;
+	  border-color:blue;
+	  width:9px;
+	  height:9px;
+	  border-radius:10px;
+	}
+	*/
+ </style>
+ <script>
+
+   $(function() 
+   {
+      $(".sub").checkboxradio();
+	  $(".sub1").checkboxradio();
+      /*
+	  $(".abc").click(function()
+	  {
+         $(".abc").removeClass("add");
+		 $(".radio").removeClass("add2");
+		 var n=$(this).index();
+         $(this).addClass("add");
+		 $(".radio").eq(n).addClass("add2");
+	  });
+	  */
+   });
+
+ </script>
+</head>
+
+<body>
+   <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+      <label for=kor> 국어 </label> <input class=sub type=radio id=kor name=sub> 
+	  <label for=eng> 영어 </label> <input class=sub type=radio id=eng name=sub> 
+	  <label for=mat> 수학 </label> <input class=sub type=radio id=mat name=sub> 
+   <hr>
+      <label for=kor1> 국어 </label> <input class=sub1 type=checkbox id=kor1 name=sub1> 
+	  <label for=eng1> 영어 </label> <input class=sub1 type=checkbox id=eng1 name=sub1> 
+	  <label for=mat1> 수학 </label> <input class=sub1 type=checkbox id=mat1 name=sub1> 
+   <hr>
+   <!--
+   <ul style="padding:0px">
+     <li class=abc>
+      <span class=radio></span> &nbsp; <label for=kor1 class=la> 국어 </label>  
+	 </li>
+	 <li class=abc>
+	  <span class=radio></span> &nbsp; <label for=eng1 class=la> 영어 </label>  
+	 </li>
+	 <li class=abc>
+	  <span class=radio></span> &nbsp; <label for=mat1 class=la> 수학 </label> 
+	 </li>
+   </ul> -->
+</xmp>
+ </body>
+</html>

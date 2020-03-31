@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function aa() {
+            for (i = 0; i < document.getElementsByTagName("li").length; i++) {
+                document.getElementsByTagName("li")[i].style.width = "100px";
+                document.getElementsByTagName("li")[i].style.border = "2px solid red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬봉</li>
+        <li>탕수육</li>
+    </ul>
+    <input type="button" value="aa" onclick="aa()" />
+</body>
+
+</html>

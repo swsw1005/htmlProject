@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+   #banner{
+	width:1260px;
+	height:130px;
+	display:flex;
+	align-items:center;	
+	background:#eeeeee;	
+	border:1px solid blue;
+	overflow:hidden;
+   }
+
+   #banner ul{
+	width:1500px;
+	margin:0px;
+	padding:0px;
+   }
+   
+   #banner ul li{
+	float:left;
+	margin:5px;
+    list-style-type:none;
+   }
+  </style>
+  <script>
+
+
+	var ab=setInterval(imsi,2500);
+
+    function imsi()
+    {
+	  $("ul").animate(
+	  {
+		  marginLeft:"-178px"
+	  } ,function()
+	    { 
+	      //$("li").eq(0).appendTo("ul"); 
+		  $("ul").append($("li").eq(0));
+	      $("ul").css("marginLeft","0px"); 
+	    }); 
+    }
+ 
+    function stop_banner()
+    {
+	  clearInterval(ab);
+    }
+
+    function start_banner()
+    {
+	 ab=setInterval(imsi,2500);
+    }	
+
+
+  </script>
+ </head>
+ <body>
+ <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+   <div id="banner" onmouseover=stop_banner() onmouseout=start_banner()>
+	<div>
+	  <ul>
+	    <li><img src="a1.jpg" width=170 height=68></li>
+	    <li><img src="a2.jpg" width=170 height=68></li>
+	    <li><img src="a3.jpg" width=170 height=68></li>
+		<li><img src="a4.jpg" width=170 height=68></li>
+		<li><img src="b1.jpg" width=170 height=68></li>
+		<li><img src="b2.jpg" width=170 height=68></li>
+		<li><img src="b3.jpg" width=170 height=68></li>
+		<li><img src="b4.jpg" width=170 height=68></li>
+	  </ul>
+	</div>	 
+   </div>
+  <hr>
+  <xmp>
+  <style>
+   #banner{
+	width:1260px;
+	height:130px;
+	display:flex;
+	align-items:center;	
+	background:#eeeeee;	
+	border:1px solid blue;
+	overflow:hidden;
+   }
+
+   #banner ul{
+	width:1500px;
+	margin:0px;
+	padding:0px;
+   }
+   
+   #banner ul li{
+	float:left;
+	margin:5px;
+    list-style-type:none;
+   }
+  </style>
+  <script>
+
+
+	var ab=setInterval(imsi,2500);
+
+    function imsi()
+    {
+	  $("ul").animate(
+	  {
+		  marginLeft:"-178px"
+	  } ,function()
+	    { 
+	      //$("li").eq(0).appendTo("ul"); 
+		  $("ul").append($("li").eq(0));
+	      $("ul").css("marginLeft","0px"); 
+	    }); 
+    }
+ 
+    function stop_banner()
+    {
+	  clearInterval(ab);
+    }
+
+    function start_banner()
+    {
+	 ab=setInterval(imsi,2500);
+    }	
+
+
+  </script>
+ </head>
+ <body>
+ <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+   <div id="banner" onmouseover=stop_banner() onmouseout=start_banner()>
+	<div>
+	  <ul>
+	    <li><img src="a1.jpg" width=170 height=68></li>
+	    <li><img src="a2.jpg" width=170 height=68></li>
+	    <li><img src="a3.jpg" width=170 height=68></li>
+		<li><img src="a4.jpg" width=170 height=68></li>
+		<li><img src="b1.jpg" width=170 height=68></li>
+		<li><img src="b2.jpg" width=170 height=68></li>
+		<li><img src="b3.jpg" width=170 height=68></li>
+		<li><img src="b4.jpg" width=170 height=68></li>
+	  </ul>
+	</div>	 
+   </div>
+  <hr>
+  </xmp>
+ </body>
+</html>

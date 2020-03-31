@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+  <script>
+
+  $( function() 
+  {
+     $("#date").datepicker(
+	 {
+         //showAnim:"explode", // show,slideDown,fadeIn,blind,bounce,drop,clip,slide,fold
+		 //duration:1000, // 나타나는 시간
+		 //showOtherMonths:true,
+		 //selectOtherMonths:true
+		 //changeMonth: true,
+         //changeYear: true
+         //numberOfMonths:3,
+		 dateFormat:"yy-mm-dd", // y , m , d , D , DD , M , MM
+         //  showOn:"button",
+		 //  buttonText:"select",
+		 //buttonImage:"calendar.gif",
+		 //buttonImageOnly:true,
+         // altField:"#date2",
+		 //altFormat:"yy년 mm월 dd일",
+		 // minDate:-5,
+		 //maxDate:"+1M +11D"
+		 //showWeek: true,
+         // firstDay: 0
+
+
+	 });
+  });
+
+  </script>
+</head>
+<body>
+  <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+     <input type="text" id="date"> <input type="text" id="date2">
+   <hr>
+
+   <xmp>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+  <script>
+
+  $( function() 
+  {
+     $("#date").datepicker(
+	 {
+         //showAnim:"explode", // show,slideDown,fadeIn,blind,bounce,drop,clip,slide,fold
+		 //duration:1000
+		 //showOtherMonths:true,
+		 //selectOtherMonths:true
+		 //changeMonth: true,
+         //changeYear: true
+         //numberOfMonths:3
+		 //dateFormat:"yy년 mm월 dd일" // y , m , d , D , DD , M , MM
+         //showOn:"button",
+		 //buttonText:"select",
+		 //buttonImage:"calendar.gif",
+		 //buttonImageOnly:true,
+         //altField:"#date2",
+		 //altFormat:"yy년 mm월 dd일"
+		 //minDate:-5,
+		 //maxDate:"+1M +11D"
+		 //showWeek: true,
+         //firstDay: 1
+
+
+	 });
+  });
+
+  </script>
+</head>
+<body>
+  <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+     <input type="text" id="date"> <input type="text" id="date2">
+   <hr>
+
+   </xmp>
+</body>
+</html>

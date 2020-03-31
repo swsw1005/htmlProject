@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script>
+        function imsi() {
+            document.querySelector("#aa").style.background = "yellow";
+
+            document.querySelector("#aa").style.width = "100px";
+            document.querySelector(".food").style.color = "red";
+            //쿼리셀렉터 : 선택자 여러개 있어도 첫번째만 인식한다.
+
+            for (i = 0; i < document.querySelectorAll(".hobby").length; i++) {
+                document.querySelectorAll(".hobby")[i].style.color = "blue";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="클릭" onclick="imsi()" />
+    <div id="aa">
+        <div class="food">한국음식</div>
+        <div class="food">일본음식</div>
+        <div class="food">중국음식</div>
+        <div class="food">태국음식</div>
+    </div>
+    <hr />
+    <div id="bb">
+        <div class="hobby">낚시</div>
+        <div class="hobby">헬스</div>
+        <div class="hobby">배드민턴</div>
+        <div class="hobby">등산</div>
+    </div>
+</body>
+
+</html>

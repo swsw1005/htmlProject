@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="jquery-3.3.1.js"></script>
+  <style>
+    .s1 {
+      font-size:20pt;
+	  background:yellow;
+	}
+
+  </style>
+  <script>
+
+   $(function()
+   {  
+      $("#btn").click(function()
+	  {
+          $("#aa").toggleClass("s1");
+		  alert($("#aa").hasClass("s1"));
+	  });
+	  
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 속성관련 메소드 ※ </h1>
+   <hr>
+     <div id=aa> 안녕하세요 </div> 
+	 <input type=button id=btn value=toggleClass>
+   
+   <hr>
+   <xmp>
+  <style>
+    .s1 {
+      font-size:20pt;
+	  background:yellow;
+	}
+
+  </style>
+  <script>
+
+   $(function()
+   {  
+      $("#btn").click(function()
+	  {
+          $("#aa").toggleClass("s1");
+		  alert($("#aa").hasClass("s1"));
+	  });
+	  
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 속성관련 메소드 ※ </h1>
+   <hr>
+     <div id=aa> 안녕하세요 </div> 
+	 <input type=button id=btn value=toggleClass>
+   
+   </xmp>
+ </body>
+</html>

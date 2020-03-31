@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function imsi() {
+            alert("클릭");
+        }
+
+        Window.onload = function () {
+            document.getElementById("aa").onclick = imsi;
+
+            document.getElementById("bb").onclick = function () {
+                alert("익명함수 호출");
+            };
+        };
+
+        $(document).ready(function () {
+            $("#pkc").css("font-size", "100px");
+        });
+
+        $(function () {
+            $("pkc").css("background", "yellow");
+        });
+
+        // 2초 타임아웃 > 배경색 노랑으로 바꾸는 jQuery
+        setTimeout(() => {
+            $(function () {
+                $("body").css("background", "yellow");
+                $("div").css("background", "cyan");
+                $("div").css("margin", "5px");
+                // $("div").css("background", "cyan", "margin", "5px");//같이 쓸수 없다.
+            })
+        }, 2000);
+    </script>
+</head>
+
+<body>
+    <div onclick="imsi()">클릭1</div>
+
+    <div id="aa">aa</div>
+    <div id="bb">bb</div>
+
+    <div id="pkc">안녕하세요</div>
+</body>
+
+</html>

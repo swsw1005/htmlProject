@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+ <script>  
+ $(function()
+ {
+	 $("img").draggable(
+	 {
+       // containment: "parent",
+	   //cursor:"pointer",
+	   //cursorAt:{top:0},
+	     delay:3000,
+	   opacity:0.2,
+      //revert:true
+	 });
+	 $("#aa").draggable(
+	 {
+
+	 });
+ });
+</script>
+ <body>
+  <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+  <hr>
+   <div style="width:500px;height:500px;background:yellow">
+   <span id=aa>안녕하세요</span>
+   <img src=../effect_method/a1.jpg width=100 height=100>
+   </div>
+  <hr>
+  <xmp>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+ <script>  
+ $(function()
+ {
+	 $("img").draggable(
+	 {
+       containment: "parent",
+	   //cursor:"pointer"
+	   //cursorAt:{top:0}
+	   //delay:3000
+	   //opacity:0.2
+       //revert:true
+	 });
+	 $("#aa").draggable(
+	 {
+
+	 });
+ });
+</script>
+ <body>
+  <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+  <hr>
+   <div style="width:500px;height:500px;background:yellow">
+   <span id=aa>안녕하세요</span>
+   <img src=../effect_method/a1.jpg width=100 height=100>
+   </div>
+  <hr>
+  </xmp>
+ </body>
+</html>

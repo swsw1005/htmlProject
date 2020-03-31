@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+     document.cookie="name=박기찬";
+
+	 var name=document.cookie.split("=");
+	 alert(name[1]);
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+ 
+    <h1>JavaScript With Crocus</h1>
+ 
+    <p>아래 버튼을 눌러보세요!</p>
+    <button type="button" onclick="display()"> << 현재 쿠키 보기 >> </button>
+    <p></p>
+    <button type="button" onclick="create1()"> << 쿠키1 생성 클릭 >> </button>
+    <button type="button" onclick="create2()"> << 쿠키2 생성 클릭 >> </button>
+    <p></p>
+    <button type="button" onclick="delete1()"> << 쿠키1 삭제 클릭 >> </button>
+    <button type="button" onclick="delete2()"> << 쿠키2 삭제 클릭 >> </button>
+    <p></p>
+ 
+    <script>
+        function display() {
+            var txt = "";
+            var ans = "";
+            if (document.cookie != ""){
+                txt = document.cookie.split(";"); // ';'를 기준으로 split
+                for(i in txt) // txt에 있는 쿠키들을 조사
+                {
+                    // name과 value 모두 있는 쿠키만 ans에 넣어준다.
+                    if (txt[i][txt[i].length - 1] != "=") { 
+                        ans += txt[i];
+                    }
+                }
+            }
+            // 쿠키가 존재하지 않았을 경우
+            if (ans == "")
+                alert("쿠키가 없습니다.");
+            // 쿠키가 존재할 경우 alert(ans); 
+            else
+                alert(ans);
+        }
+ 
+        function create1() {
+            document.cookie = "cookie1 = Crocus; expires = Wed, 18 Dec 2023 12:00:00 GMT";
+            display();
+        }
+        function create2() {
+            document.cookie = "cookie2 = KKW; expires = Wed, 18 Dec 2023 12:00:00 GMT";
+            display();
+        }
+        function delete1() {
+            document.cookie = "cookie1 = ; expires = Wed; 01 Jan 1970";
+            display();
+        }
+        function delete2() {
+            document.cookie = "cookie2 = ; expires = Wed; 01 Jan 1970";
+            display();
+        }
+ 
+     </script>
+ 
+</body>
+</html>
+ 
+ 
+
+
+출처: https://www.crocus.co.kr/1036?category=251939 [Crocus]

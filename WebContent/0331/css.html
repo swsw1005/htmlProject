@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function imsi() {
+            $("li").css("color", "yellow");
+            $("li").css("background", "black");
+        }
+
+        function border() {
+            $("li").css("border", "1px solid yellow");
+        }
+
+
+        $(function () {
+            S("li").css("color", "yellow").css("background", "black");
+
+            $("ul").click(function () {
+                $("li").css("border", "1px solid yellow");
+            });
+        });
+    </script>
+</head>
+
+<body onload="imsi()">
+    <ul onclick="border()">
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

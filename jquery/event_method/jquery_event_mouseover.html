@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  
+  <style> 
+     .cc , .dd {
+	   outline:0px;
+       background:yellow;
+	   border-radius:10px;
+	   width:100px;
+	   height:30px;
+	   font-weight:900;
+	   display:flex;
+	   align-items:center;
+	   justify-content:center;
+	 }
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $(".aa").mouseover(function()
+	{
+        $(this).attr("src","a2.jpg");
+	});
+	$(".aa").mouseout(function()
+	{
+        $(this).attr("src","a1.jpg");
+	});
+
+	$(".bb").hover(function()
+	{ 
+        $(this).attr("src","b2.jpg");
+	},
+	function()
+	{
+        $(this).attr("src","b1.jpg");
+	});
+
+    $(".cc").mouseover(function()
+	{
+        $(this).css("background","red").css("color","white");
+	});
+	$(".cc").mouseout(function()
+	{
+         $(this).css("background","yellow").css("color","black");
+	});
+
+	$(".dd").hover(function()
+	{ 
+        $(this).css("background","red").css("color","white");
+	},
+	function()
+	{
+        $(this).css("background","yellow").css("color","black");
+	});
+
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <img src=a1.jpg class=aa width=100> <img src=b1.jpg class=bb width=100><p>
+	 <div class=cc> 메 뉴 1 </div> <p>
+	 <div class=dd> 메 뉴 2 </div>
+  
+   <hr>
+   <xmp>
+    <style> 
+     .cc , .dd {
+	   outline:0px;
+       background:yellow;
+	   border-radius:10px;
+	   width:100px;
+	   height:30px;
+	   font-weight:900;
+	   display:flex;
+	   align-items:center;
+	   justify-content:center;
+	 }
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $(".aa").mouseover(function()
+	{
+        $(this).attr("src","a2.jpg");
+	});
+	$(".aa").mouseout(function()
+	{
+        $(this).attr("src","a1.jpg");
+	});
+
+	$(".bb").hover(function()
+	{ 
+        $(this).attr("src","b2.jpg");
+	},
+	function()
+	{
+        $(this).attr("src","b1.jpg");
+	});
+
+    $(".cc").mouseover(function()
+	{
+        $(this).css("background","red").css("color","white");
+	});
+	$(".cc").mouseout(function()
+	{
+         $(this).css("background","yellow").css("color","black");
+	});
+
+	$(".dd").hover(function()
+	{ 
+        $(this).css("background","red").css("color","white");
+	},
+	function()
+	{
+        $(this).css("background","yellow").css("color","black");
+	});
+
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <img src=a1.jpg class=aa width=100> <img src=b1.jpg class=bb width=100><p>
+	 <div class=cc> 메 뉴 1 </div> <p>
+	 <div class=dd> 메 뉴 2 </div>
+  
+   <hr>
+
+   </xmp>
+ </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	   $(".userid").focusin(function()
+	   {
+           $("#a").text("input");
+		   });
+	   $("#aa").focusin(function()
+	   {
+           $("#b").text("div");
+	   });
+
+	   $(".pwd").focus(function()
+	   {
+           $("#a").text("input2");
+		   });
+	   $("#bb").focus(function()
+	   {
+           $("#b").text("div2");
+	   });
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	 <div id=aa>
+	  아이디 <input type=text name=userid class=userid> 
+	 </div>
+	 <p>
+	 <div id=bb>
+	  비밀번호 <input type=password name=pwd class=pwd> 
+	 </div>
+	</form>
+    <div id=a></div> <div id=b></div>
+   <hr>
+   <xmp>
+    <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	   $(".userid").focusin(function()
+	   {
+           $("#a").text("input");
+		   });
+	   $("#aa").focusin(function()
+	   {
+           $("#b").text("div");
+	   });
+
+	   $(".pwd").focus(function()
+	   {
+           $("#a").text("input2");
+		   });
+	   $("#bb").focus(function()
+	   {
+           $("#b").text("div2");
+	   });
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	 <div id=aa>
+	  아이디 <input type=text name=userid class=userid> 
+	 </div>
+	 <p>
+	 <div id=bb>
+	  비밀번호 <input type=password name=pwd class=pwd> 
+	 </div>
+	</form>
+    <div id=a></div> <div id=b></div>
+   <hr>
+   </xmp>
+ </body>
+</html>

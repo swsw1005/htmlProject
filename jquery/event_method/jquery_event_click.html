@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+   
+  <script>
+
+ $(function()
+ {
+    $(".aa").click(function()
+	{
+        alert("클릭");
+	});
+	$(".bb").dblclick(function()
+	{
+        alert("더블 클릭");
+	});
+	$("#btn").click(function()
+	{
+        alert("button 클릭");
+	});
+	$("#link").click(function(e)
+	{
+		$(this).css("background","yellow");
+		// e.preventDefault();
+		// e.stopPropagation();
+		//return false;
+	});
+	$(".cc").click(function()
+	{
+       $(this).css("background","red");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div class=aa> 여기를 클릭하세요 </div>
+	  <div class=bb> 클릭 </span> <p>
+	  <button id=btn> 클릭 </button> <p>
+	  <div class=cc> 연결 <a href="http://www.daum.net" id=link> 클릭 </a> </div>
+   <hr>
+   <xmp>
+    
+  <script>
+
+ $(function()
+ {
+    $(".aa").click(function()
+	{
+        alert("클릭");
+	});
+	$(".bb").dblclick(function()
+	{
+        alert("더블 클릭");
+	});
+	$("#btn").click(function()
+	{
+        alert("button 클릭");
+	});
+	$("#link").click(function(e)
+	{
+		$(this).css("background","yellow");
+		//e.preventDefault();
+		//e.stopPropagation();
+		return false;
+	});
+	$(".cc").click(function()
+	{
+       $(this).css("background","red");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div class=aa> 여기를 클릭하세요 </div>
+	  <div class=bb> 클릭 </span> <p>
+	  <button id=btn> 클릭 </button> <p>
+	  <div class=cc> 연결 <a href="http://www.naver.com" id=link> 클릭 </a> </div>
+   <hr>
+   </xmp>
+ </body>
+</html>

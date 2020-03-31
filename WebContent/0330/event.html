@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 100px;
+            background: yellow;
+        }
+
+        ul {
+            background: cyan;
+
+        }
+    </style>
+
+    <script>
+        function main() {
+            alert("ul태그에서 호출");
+        }
+        function sub() {
+            alert("li태그에서 호출");
+        }
+        function sub2() {
+            alert("li태그에서 호출");
+            event.stopPropagation();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <ul onclick="main()">
+        <li onclick="sub()">클릭</li>
+        <p>li 이벤트 실행되고, ul이벤트 또한 실행된다.</p>
+        <p>li이벤트 실행되고, 다음 이벤트를 중지시키는 방법!</p>
+    </ul>
+    <hr>
+    <ul onclick="main()">
+        <li onclick="sub2()">클릭</li>
+    </ul>
+
+
+</body>
+
+</html>

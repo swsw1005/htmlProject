@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+
+   <script>
+
+   $(function()
+   {  
+	  $("#btn1").click(function()
+	  {
+        for(i=0;i<4;i++)
+		{
+		  var food=document.pkc.food[i].value;
+          $("span").eq(i).replaceWith("<span>"+food+"</span>");
+       	}
+	  });
+	  $("#btn2").click(function()
+	  {
+         $("<span>  </span>").replaceAll("span");
+	  });
+
+	  $("#btn3").click(function()
+	  {
+         alert($("body").html());
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+    <button id=btn3>클릭</button>
+    <form name=pkc>
+      1번 <input type=text name=food size=8> <br>
+	  2번 <input type=text name=food size=8> <br>
+	  3번 <input type=text name=food size=8> <br>
+	  4번 <input type=text name=food size=8> <br>
+	</form>
+    <button id=btn1> 전달 </button> <button id=btn2> 초기화 </button>
+   <hr>
+     <div>1번 <span></span> </div>
+	 <div>2번 <span></span> </div>
+	 <div>3번 <span></span> </div>
+	 <div>4번 <span></span> </div>
+   <hr>
+   <xmp>
+   <script>
+
+   $(function()
+   {  
+	  $("#btn1").click(function()
+	  {
+        for(i=0;i<4;i++)
+		{
+		  var food=document.pkc.food[i].value;
+          $("span").eq(i).replaceWith("<span>"+food+"</span>");
+       	}
+	  });
+	  $("#btn2").click(function()
+	  {
+         $("<span>  </span>").replaceAll("span");
+	  });
+
+	  $("#btn3").click(function()
+	  {
+         alert($("body").html());
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+    <button id=btn3>클릭</button>
+    <form name=pkc>
+      1번 <input type=text name=food size=8> <br>
+	  2번 <input type=text name=food size=8> <br>
+	  3번 <input type=text name=food size=8> <br>
+	  4번 <input type=text name=food size=8> <br>
+	</form>
+    <button id=btn1> 전달 </button> <button id=btn2> 초기화 </button>
+   <hr>
+     <div>1번 <span></span> </div>
+	 <div>2번 <span></span> </div>
+	 <div>3번 <span></span> </div>
+	 <div>4번 <span></span> </div>
+   <hr>
+
+   </xmp>
+ </body>
+</html>

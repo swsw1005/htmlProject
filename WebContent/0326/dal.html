@@ -45,78 +45,76 @@
     </style>
 
     <script>
+        ////////////////////////////////////////////////////////////////
         function move_before() {
             var yy = document.getElementById("year").value;
             var mm = document.getElementById("month").value;
             yy = yy * 1;
             mm = mm * 1;
 
-            console.log(">>>" + yy + "  " + mm);
             mm = mm - 1;
             var temp = new Date(yy, mm, 1);
 
+            console.log("----move_before()----");
             console.log(temp);
 
             document.getElementById("year").value = temp.getFullYear();
             document.getElementById("month").value = temp.getMonth();
 
-            console.log(">>>" + yy + "  " + mm);
-            date(yy, mm);
+            console.log(">>>>" + yy + "  " + (mm + 1));
+            setTimeout(date(temp.getFullYear(), temp.getMonth()), 100);
         }
 
+        ////////////////////////////////////////////////////////////////
         function move_after() {
             var yy = document.getElementById("year").value;
             var mm = document.getElementById("month").value;
             yy = yy * 1;
             mm = mm * 1;
 
-            console.log(">>>" + yy + "  " + mm);
             mm = mm + 1;
             var temp = new Date(yy, mm, 1);
 
+            console.log("----move_after()----");
             console.log(temp);
 
             document.getElementById("year").value = temp.getFullYear();
             document.getElementById("month").value = temp.getMonth();
 
-            console.log(">>>" + yy + "  " + mm);
-            date(yy, mm);
+            console.log(">>>>" + yy + "  " + mm);
+            setTimeout(date(temp.getFullYear(), temp.getMonth()), 100);
         }
 
+        ////////////////////////////////////////////////////////////////
         function default_check() {
             var yy = new Date().getFullYear();
             var mm = new Date().getMonth();
 
-            console.log(" ");
-            console.log("오늘 dal...+" + yy + " " + (mm + 1));
-            console.log(" ");
+            console.log("---default_check()---");
+            console.log("오늘 날짜..+" + yy + " " + (mm + 1));
+            console.log("---default_check() end----");
 
             document.getElementById("year").value = yy;
             document.getElementById("month").value = mm;
 
-            date(yy, mm);
+            setTimeout(date(yy, mm), 500);
         } // onload  기본 날짜 달력
 
+        ////////////////////////////////////////////////////////////////
         function check() {
             var yy = document.getElementById("year").value;
             var mm = document.getElementById("month").value;
             yy = yy * 1;
             mm = mm * 1;
 
-            console.log(" ");
+            console.log("----check()----");
             console.log("update dal...+" + yy + " " + (mm + 1));
-            console.log(" ");
+            console.log("----check() end----");
 
-            date(yy, mm);
+            setTimeout(date(yy, mm), 500);
         } // onchange 매개변수 입력
-
+        ////////////////////////////////////////////////////////////////
         function date(yy, mm) {
-            // var today = new Date();
-
-            // var y = today.getFullYear(); // 오늘 몇년도
-            // var m = today.getMonth(); // 오늘 몇월
-            // var d = new Date().getDate(); //오늘 며칠
-
             var y = yy;
             var m = mm;
 
@@ -124,7 +122,13 @@
             var last_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
             // 2월 마지막 날 구하기
-            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) last_days[1] = 29;
+            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+                last_days[1] = 29;
+            }
+
+            // 2월 마지막 날 구하기 ver 2 >>  3월 -1일
+            var ddd = new Date(y, 2, -1);
+            last_days[1] = ddd.getDate();
 
             //1일은 무슨요일
             var firstDay = new Date(y, m, 1);
@@ -133,19 +137,26 @@
             //몇주?
             var ju = Math.ceil((last_days[m] + firstWeekDay) / 7);
 
-            console.log("-----create dal-----");
+            console.log("-----date()----");
             console.log(y + " " + (m + 1) + " ");
-            console.log(last_days[m] + "  " + firstWeekDay + "  " + ju);
+            console.log(
+                "말일 " +
+                last_days[m] +
+                "   1일은 무슨요일 " +
+                firstWeekDay +
+                "   이번달은 몇주 " +
+                ju
+            );
 
             var cal_form = "<table width=300 border=1>";
             cal_form = cal_form + "<tr>";
-            cal_form = cal_form + "<td> <div class=\"aa\">일</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">월</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">화</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">수</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">목</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">금</div> </td>";
-            cal_form = cal_form + "<td> <div class=\"aa\">토</div> </td>";
+            cal_form = cal_form + '<td> <div class="aa">일</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">월</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">화</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">수</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">목</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">금</div> </td>';
+            cal_form = cal_form + '<td> <div class="aa">토</div> </td>';
             cal_form = cal_form + "</tr>";
 
             var n = 1;
@@ -156,9 +167,10 @@
                     //td
 
                     if ((firstWeekDay > j && i == 0) || last_days[m] < n) {
-                        cal_form = cal_form + "<td> <div class=\"cc\">" + "&nbsp" + "</div></td>";
+                        cal_form =
+                            cal_form + '<td> <div class="cc">' + "&nbsp" + "</div></td>";
                     } else {
-                        cal_form = cal_form + "<td> <div class=\"bb\">" + n + "</div></td>";
+                        cal_form = cal_form + '<td> <div class="bb">' + n + "</div></td>";
                         n++;
                     }
                 }
@@ -166,6 +178,7 @@
             }
             document.getElementById("pkc").innerHTML = cal_form;
         }
+      ////////////////////////////////////////////////////////////////
     </script>
 </head>
 

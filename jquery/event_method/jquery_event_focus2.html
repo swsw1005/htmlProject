@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+  <script>
+   
+   $(function()
+   {
+        $(".userid").focus(function()
+		{
+           $(".aa").html("<b> 아이디는 8자이상 </b>");
+		});
+		$(".pwd").focus(function()
+		{
+           $(".bb").html("<b> 비밀번호는 10자이상 </b>");
+		});
+
+		$(".userid").blur(function()
+		{
+           var len=$(".userid").val().length;
+		   if(len < 8)
+		   {
+		     alert("아이디의 길이는 8자이상입니다.");
+			 $(".userid").val("");
+  		   }
+		     
+		});
+		$(".pwd").blur(function()
+		{
+           var len=$(".pwd").val().length;
+		   if(len < 10)
+		   {
+		     alert("비밀번호는 10자 이상입니다.");
+			 $(".pwd").val("");
+  		   }
+		     
+		});
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid> <span class=aa></span> <p>
+	  비밀번호 <input type=password name=pwd class=pwd> <span class=bb></span> <p>
+	</form>
+ 
+   <hr>
+   <xmp>
+   <script>
+   
+   $(function()
+   {
+        $(".userid").focus(function()
+		{
+           $(".aa").html("<b> 아이디는 8자이내 </b>");
+		});
+		$(".pwd").focus(function()
+		{
+           $(".bb").html("<b> 비밀번호는 10자이상 </b>");
+		});
+
+		$(".userid").blur(function()
+		{
+           var len=$(".userid").val().length;
+		   if(len > 8)
+		   {
+		     alert("아이디의 길이는 8자이내입니다.");
+			 $(".userid").val("");
+  		   }
+		     
+		});
+		$(".pwd").blur(function()
+		{
+           var len=$(".pwd").val().length;
+		   if(len < 10)
+		   {
+		     alert("비밀번호는 10자 이상입니다.");
+			 $(".pwd").val("");
+  		   }
+		     
+		});
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid> <span class=aa></span> <p>
+	  비밀번호 <input type=password name=pwd class=pwd> <span class=bb></span> <p>
+	</form>
+ 
+   <hr>
+   </xmp>
+ </body>
+</html>

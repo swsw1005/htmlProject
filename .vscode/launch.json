@@ -10,14 +10,6 @@
       "request": "launch",
       "mainClass": "",
       "args": "${command:SpecifyProgramArgs}"
-    },
-
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "url": "http://localhost:8090",
-      "webRoot": "${workspaceFolder}"
     }
   ]
 }

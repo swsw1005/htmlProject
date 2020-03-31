@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration:none;
+	  color:black;
+	}
+  	a:hover {
+      text-decoration:underline;
+	  color:red;
+	}
+    li {
+      list-style-type:none;
+	}
+	#submenu {
+      display:none;
+	}
+	#menu {
+      width:100px;
+	  height:20px;
+      display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  background:darkblue;
+	  color:white;
+	  border:1px solid white;
+	  font-size:15px;
+	}
+	
+	#submenu li {
+      padding-left:10px;
+	  font-size:12px;
+	  height:15px;
+	}
+  </style> 
+  <script>
+    var chk=[0,0,0,0,0,0];
+    function view(n)
+	{ 
+      for(i=0;i<chk.length;i++)
+	    submenu[i].style.display="none";
+
+      if(chk[n]%2 == 0)
+	    submenu[n].style.display="inline";
+	
+	  chk[n]=chk[n]+1;
+	}
+  </script>
+ </head>
+ <body>
+  <center style="color:darkblue;font-size:20px;font-weight:900">jQuery</center>
+  <!-- 따로 만드는 문서로 수업과 직접관계가 없음 -->
+  <ul>
+    <li id=menu onclick=view(0)> 속성메소드 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="attr_method/jquery_method_css.html" target=sou> css() </a></li>
+		<li> <a href="attr_method/jquery_method_html.html" target=sou> html() 1</a></li>
+		<li> <a href="attr_method/jquery_method_html2.html" target=sou> html() 2</a></li>
+		<li> <a href="attr_method/jquery_method_attr.html" target=sou> attr() </a></li>
+		<li> <a href="attr_method/jquery_method_removeattr.html" target=sou> removeAttr() </a></li>
+		<li> <a href="attr_method/jquery_method_addclass.html" target=sou> addClass() </a></li>
+		<li> <a href="attr_method/jquery_method_toggleclass.html" target=sou> toggleClass() </a></li>
+		<li> <a href="attr_method/jquery_method_hasclass.html" target=sou> hasClass() </a></li>
+		<li> <a href="attr_method/jquery_method_val.html" target=sou> val() </a></li>
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(1)> 수치메소드 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="num_method/jquery_method_widthheight.html" target=sou> width() 1 </a></li>
+		<li> <a href="num_method/jquery_method_widthheight2.html" target=sou> width() 2</a></li>
+		<li> <a href="num_method/jquery_method_widthheight3.html" target=sou> width() 3</a></li>
+		<li> <a href="num_method/jquery_method_position.html" target=sou> position() </a></li>
+		<li> <a href="num_method/jquery_method_scroll.html" target=sou> scroll() </a></li>
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(2)> 편집메소드 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="edit_method/jquery_method_afterbefore.html" target=sou> after() </a></li>
+		<li> <a href="edit_method/jquery_method_append.html" target=sou> append() </a></li>
+		<li> <a href="edit_method/jquery_method_appendafter.html" target=sou> append() 2 </a></li>
+		<li> <a href="edit_method/jquery_method_appendto.html" target=sou> appendTo() </a></li>
+		<li> <a href="edit_method/jquery_method_insert_afterbefore.html" target=sou> insertAfter() 1 </a></li>
+		<li> <a href="edit_method/jquery_method_insert_afterbefore2.html" target=sou> insertAfter() 2 </a></li>
+		<li> <a href="edit_method/jquery_method_insert_afterbefore3.html" target=sou> insertAfter() 3 </a></li>
+		<li> <a href="edit_method/jquery_method_insert_afterbefore4.html" target=sou> insertAfter() 4 </a></li>
+        <li> <a href="edit_method/jquery_method_remove.html" target=sou> remove() 1 </a></li>
+		<li> <a href="edit_method/jquery_method_remove2.html" target=sou> remove() 2 </a></li>
+        <li> <a href="edit_method/jquery_method_replace.html" target=sou> replace 1 </a></li>
+		<li> <a href="edit_method/jquery_method_replace2.html" target=sou> replace 2 </a></li>
+		<li> <a href="edit_method/jquery_method_wrap.html" target=sou> wrap() </a></li>
+	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(3)> 이벤트메소드 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="event_method/jquery_event.html" target=sou> event </a></li>
+		<li> <a href="event_method/jquery_	event_load.html" target=sou> ready()  </a></li>
+		<li> <a href="event_method/jquery_event_click.html" target=sou> click() </a></li>
+		<li> <a href="event_method/jquery_event_mouseover.html" target=sou> mouseover() </a></li>
+		<li> <a href="event_method/jquery_event_mouseleave.html" target=sou> mouseleave() 1</a></li>
+		<li> <a href="event_method/jquery_event_mouseleave1.html" target=sou> mouseleave() 2 </a></li>
+		<li> <a href="event_method/jquery_event_mousemove.html" target=sou> mousemove() </a></li>
+		<li> <a href="event_method/jquery_event_mousedown.html" target=sou> mousedown() </a></li>
+        <li> <a href="event_method/jquery_event_contextmenu.html" target=sou> contextmenu() </a></li>
+		<li> <a href="event_method/jquery_event_focus.html" target=sou> focus() 1 </a></li>
+        <li> <a href="event_method/jquery_event_focus2.html" target=sou> focus() 2 </a></li>
+		<li> <a href="event_method/jquery_event_focusin.html" target=sou> focusin() </a></li>
+		<li> <a href="event_method/jquery_event_keyevent.html" target=sou> keyevent 1 </a></li>
+		<li> <a href="event_method/jquery_event_keyevent2.html" target=sou> keyevent 2 </a></li>
+		<li> <a href="event_method/jquery_event_keyevent3.html" target=sou> keyevent 3 </a></li>
+		<li> <a href="event_method/jquery_event_keyevent4.html" target=sou> keyevent 4 </a></li>
+		<li> <a href="event_method/jquery_event_keyevent5.html" target=sou> keyevent 5 </a></li>
+		<li> <a href="event_method/jquery_event_keyevent6.html" target=sou> keyevent 6 </a></li>
+		<li> <a href="event_method/jquery_event_change.html" target=sou> change() </a></li>
+		<li> <a href="event_method/jquery_event_scroll.html" target=sou> scroll() </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(4)> 효과메소드 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="effect_method/jquery_effect_showhide.html" target=sou> show(),hide() </a></li>
+		<li> <a href="effect_method/jquery_effect_showhide2.html" target=sou> toggle() </a></li>
+		<li> <a href="effect_method/jquery_effect_fadein.html" target=sou> fadeIn() 1 </a></li>
+		<li> <a href="effect_method/jquery_effect_fadein2.html" target=sou> fadeIn() 2 </a></li>
+		<li> <a href="effect_method/jquery_effect_fadetoggle.html" target=sou> fadeToggle() </a></li>
+		<li> <a href="effect_method/jquery_effect_slideup.html" target=sou> slideUp() 1 </a></li>
+		<li> <a href="effect_method/jquery_effect_slideup2.html" target=sou> slideUp() 2 </a></li>
+		<li> <a href="effect_method/jquery_effect_slideup3.html" target=sou> slideUp() 3 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate.html" target=sou> animate() 1 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate2.html" target=sou> animate() 2 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate3.html" target=sou> animate() 3 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate4.html" target=sou> animate() 4 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate5.html" target=sou> animate() 5 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate6.html" target=sou> animate() 6 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate7.html" target=sou> animate() 7 </a></li>
+		<li> <a href="effect_method/jquery_effect_animate8.html" target=sou> animate() 8 </a></li>
+		<li> <a href="effect_method/jquery_effect_stop.html" target=sou> stop() </a></li>
+        <li> <a href="effect_method/jquery_effect_queue.html" target=sou> queue() 1</a></li>
+        <li> <a href="effect_method/jquery_effect_queue2.html" target=sou> queue() 2 </a></li>
+ 	  </ul>
+    </li> 
+	<li> &nbsp; </li>
+	<li id=menu onclick=view(5)> 플러그인 </li>
+    <li>
+      <ul id=submenu>
+        <li> <a href="plugin/jquery_plugin_accordion.html" target=sou> accordion() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_accordion2.html" target=sou> accordion() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_autocomplete.html" target=sou> autocomplete() </a></li>
+		<li> <a href="plugin/jquery_plugin_button.html" target=sou> button() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_button2.html" target=sou> button() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_checkbox.html" target=sou> checkbox() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_checkbox2.html" target=sou> checkbox() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_colorani.html" target=sou> color_ani </a></li>
+		<li> <a href="plugin/jquery_plugin_datepicker.html" target=sou> datepicker() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_datepicker2.html" target=sou> datepicker() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_dialog.html" target=sou> dialog() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_dialog2.html" target=sou> dialog() 2 </a></li>
+        <li> <a href="plugin/jquery_plugin_draggable.html" target=sou> draggable() </a></li>
+		<li> <a href="plugin/jquery_plugin_effect.html" target=sou> effect() </a></li>
+		<li> <a href="plugin/jquery_plugin_menu.html" target=sou> menu() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_menu2.html" target=sou> menu() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_progressbar.html" target=sou> progressbar() </a></li> 
+		<li> <a href="plugin/jquery_plugin_resize.html" target=sou> resize() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_resize2.html" target=sou> resize() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_select.html" target=sou> select() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_select2.html" target=sou> select() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_selectable.html" target=sou> selectable() </a></li>
+        <li> <a href="plugin/jquery_plugin_sortable.html" target=sou> sortable() 1 </a></li>
+		<li> <a href="plugin/jquery_plugin_sortable2.html" target=sou> sortable() 2 </a></li>
+		<li> <a href="plugin/jquery_plugin_sortable3.html" target=sou> sortable() 3 </a></li>
+		<li> <a href="plugin/jquery_plugin_spinner.html" target=sou> spinner() </a></li>
+		<li> <a href="plugin/jquery_plugin_tabs.html" target=sou> tabs() </a></li>
+		<li> <a href="plugin/jquery_plugin_tooltip.html" target=sou> tooltip() </a></li>
+		<li> <a href="plugin/bxslider_plugin1.html" target=sou> bxslider() 1 </a></li>
+		<li> <a href="plugin/bxslider_plugin2.html" target=sou> bxslider() 2 </a></li>
+ 	  </ul>
+    </li> 
+  </ul>
+ </body>
+</html>

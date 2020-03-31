@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+   
+  <script>
+
+   $(function()
+   {  
+        $(".aa").click(function()
+		{
+            alert("클릭");
+		});
+		$(".bb").on("click",function()
+		{
+            alert("클릭");
+		});
+		$(".cc").one("click",function()
+		{
+            alert("클릭");
+		});
+		$(".dd").off("click",function()
+		{
+            alert("클릭");
+		});
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div class=aa> 하하하 </div> <p>
+	  <div class=bb> 호호호 </div> <p>
+	  <div class=cc> 헤헤헤 </div> <p>
+	  <div class=dd> 히히히 </div>
+   <hr>
+   <xmp>
+   <script>
+
+   $(function()
+   {  
+        $(".aa").click(function()
+		{
+            alert("클릭");
+		});
+		$(".bb").on("click",function()
+		{
+            alert("클릭");
+		});
+		$(".cc").one("click",function()
+		{
+            alert("클릭");
+		});
+		$(".dd").off("click",function()
+		{
+            alert("클릭");
+		});
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div class=aa> 하하하 </div> <p>
+	  <div class=bb> 호호호 </div> <p>
+	  <div class=cc> 헤헤헤 </div> <p>
+	  <div class=dd> 히히히 </div>
+   <hr>
+   </xmp>
+ </body>
+</html>

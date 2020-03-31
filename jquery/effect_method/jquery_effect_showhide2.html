@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+
+  <script>
+
+ $(function()
+ {
+    $("#btn1").click(function()
+	{
+        $(".txt").toggle();
+	});
+	$("#btn2").click(function()
+	{ 
+        $("img").toggle();
+	});
+	$("#btn3").click(function()
+	{ 
+        $("img").toggle("slow");
+	});
+	$("#btn4").click(function()
+	{ 
+        $("img").toggle("fast");
+	});
+	$("#btn5").click(function()
+	{ 
+        $("img").toggle(5000);
+	});
+
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+     <span class=txt> 안녕하세요!! </span> 홍길동!! <p>
+	 <img src=a1.jpg width=200>
+	 <p>
+	 <input type=button id=btn1 value=글자>
+	 <input type=button id=btn2 value=그림>
+	 <input type=button id=btn3 value=그림slow>
+	 <input type=button id=btn4 value=그림fast>
+	 <input type=button id=btn5 value=그림time>
+   <hr>
+   <xmp>
+  <script>
+
+ $(function()
+ {
+    $("#btn1").click(function()
+	{
+        $(".txt").toggle();
+	});
+	$("#btn2").click(function()
+	{ 
+        $("img").toggle();
+	});
+	$("#btn3").click(function()
+	{ 
+        $("img").toggle("slow");
+	});
+	$("#btn4").click(function()
+	{ 
+        $("img").toggle("fast");
+	});
+	$("#btn5").click(function()
+	{ 
+        $("img").toggle(5000);
+	});
+
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+     <span class=txt> 안녕하세요!! </span> 홍길동!! <p>
+	 <img src=a1.jpg width=200>
+	 <p>
+	 <input type=button id=btn1 value=글자>
+	 <input type=button id=btn2 value=그림>
+	 <input type=button id=btn3 value=그림slow>
+	 <input type=button id=btn4 value=그림fast>
+	 <input type=button id=btn5 value=그림time>
+   <hr>
+   </xmp>
+ </body>
+</html>

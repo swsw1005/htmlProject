@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  
+  <style>
+    .aa , .bb {
+       width:200px;
+	   height:100px;
+	   background:yellow;
+	   padding:100px;
+	}
+ 
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $(".aa").mouseover(function()
+	{
+       $(".aa > li").css("background","red");
+	});
+	$(".bb").mouseenter(function()
+	{
+       $(".bb > li").css("background","red");
+	});
+
+	$(".aa").mouseout(function()
+	{
+       $(".aa > li").css("background","yellow").css("border","5px solid black");
+	});
+	$(".bb").mouseleave(function()
+	{
+       $(".bb > li").css("background","yellow").css("border","5px solid black");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <ul class=aa>
+       <li> 하하하 </li>
+	   <li> 호호호 </li>
+	 </ul>
+	 <ul class=bb>
+       <li> 하하하 </li>
+	   <li> 호호호 </li>
+	 </ul>
+   <hr>
+   <xmp>
+     <style>
+    .aa , .bb {
+       width:200px;
+	   height:100px;
+	   background:yellow;
+	   padding:100px;
+	}
+ 
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $(".aa").mouseover(function()
+	{
+       $(".aa > li").css("background","red");
+	});
+	$(".bb").mouseenter(function()
+	{
+       $(".bb > li").css("background","red");
+	});
+
+	$(".aa").mouseout(function()
+	{
+       $(".aa > li").css("background","yellow").css("border","5px solid black");
+	});
+	$(".bb").mouseleave(function()
+	{
+       $(".bb > li").css("background","yellow").css("border","5px solid black");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <ul class=aa>
+       <li> 하하하 </li>
+	   <li> 호호호 </li>
+	 </ul>
+	 <ul class=bb>
+       <li> 하하하 </li>
+	   <li> 호호호 </li>
+	 </ul>
+   <hr>
+   </xmp>
+ </body>
+</html>

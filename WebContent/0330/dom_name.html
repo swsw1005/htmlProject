@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background: yellow;
+            border: none;
+        }
+    </style>
+
+    <script>
+        function imsi() {
+            document.getElementsByName("name")[0].style.color = "red";
+            document.getElementsByName("pwd")[0].style.color = "blue";
+            document.getElementsByName("food")[0].style.background = "black";
+            document.getElementsByName("food")[0].style.color = "yellow";
+            document.getElementsByName("food")[2].style.background = "black";
+            document.getElementsByName("food")[2].style.color = "yellow";
+            document.getElementsByName("food")[4].style.background = "black";
+            document.getElementsByName("food")[4].style.color = "yellow";
+        }
+
+        function aa() {
+            for (i = 1; i < document.getElementsByTagName("input").length; i++)
+                document.getElementsByTagName("input")[i].value =
+                    i + " " + i + " " + i + " " + i;
+        }
+    </script>
+</head>
+
+<body onload="aa()">
+    <form name="pkc">
+        <input type="button" onclick="imsi()" value="click" />
+        <p>name</p>
+        <input type="text" name="name" id="" />
+        <p>pwd</p>
+        <input type="password" name="pwd" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+        <p>food</p>
+        <input type="text" name="food" id="" />
+    </form>
+</body>
+
+</html>

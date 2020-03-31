@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    #aa::after{
+      content:"안녕";
+	}
+	#aa::before{
+      content:"홍길동";
+	}
+  </style>
+   <script>
+
+   $(function()
+   {  
+	  $("#pkc").before("슈퍼맨");
+	  $("#pkc").after("안녕");
+
+	  $("#btn").click(function()
+	  {
+          $("#bb").after($("h1"));
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     CSS에서의 after,before :  <span id=aa> 반가워!! </span>  
+   <hr>
+    jQuery에서 after,before : <span id=pkc>반가워!! </span>
+   <hr>
+     <span id=bb> 테스트 </span>
+     <input type=button id=btn value=클릭> 
+   <hr>
+   <xmp>
+  <style>
+    #aa::after{
+      content:"안녕";
+	}
+	#aa::before{
+      content:"홍길동";
+	}
+  </style>
+   <script>
+
+   $(function()
+   {  
+	  $("#pkc").before("슈퍼맨");
+	  $("#pkc").after("안녕");
+
+	  $("#btn").click(function()
+	  {
+          $("#bb").after($("h1"));
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     CSS에서의 after,before :  <span id=aa> 반가워!! </span>  
+   <hr>
+     jQuery에서 after,before : <span id=pkc>반가워!! </span>
+   <hr>
+     <span id=bb> 테스트 </span>
+     <input type=button id=btn value=클릭> 
+   <hr>
+   </xmp>
+ </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    .bb {
+     background:darkblue;
+	 color:white;
+   }
+  </style>
+  <script>
+
+ $(function()
+ {
+     $("#btn1").click(function()
+	 {
+        $(".aa").fadeOut();
+	 });
+	 $("#btn2").click(function()
+	 {
+        $(".aa").fadeIn();
+	 });
+
+	 $("#btn3").click(function()
+	 {
+        $(".bb").fadeOut();
+	 });
+	 $("#btn4").click(function()
+	 {
+        $(".bb").fadeIn();
+	 });
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+	 <input type=button id=btn1 value=그림fadeOut>
+	 <input type=button id=btn2 value=그림fadeIn>
+	 <input type=button id=btn3 value=텍스트fadeOut>
+	 <input type=button id=btn4 value=텍스트fadeIn> <p>
+
+     <img src=a1.jpg width=300 height=300 class=aa> <p>
+	 <span class=bb> 안녕하세요 </span> 
+   <hr>
+   <xmp> 
+   <style>
+    .bb {
+     background:darkblue;
+	 color:white;
+   }
+  </style>
+  <script>
+
+ $(function()
+ {
+     $("#btn1").click(function()
+	 {
+        $(".aa").fadeOut();
+	 });
+	 $("#btn2").click(function()
+	 {
+        $(".aa").fadeIn();
+	 });
+
+	 $("#btn3").click(function()
+	 {
+        $(".bb").fadeOut();
+	 });
+	 $("#btn4").click(function()
+	 {
+        $(".bb").fadeIn();
+	 });
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   
+	 <input type=button id=btn1 value=그림fadeOut>
+	 <input type=button id=btn2 value=그림fadeIn>
+	 <input type=button id=btn3 value=텍스트fadeOut>
+	 <input type=button id=btn4 value=텍스트fadeIn> <p>
+
+     <img src=a1.jpg width=300 height=300 class=aa> <p>
+	 <span class=bb> 안녕하세요 </span> 
+
+   </xmp>
+ </body>
+</html>

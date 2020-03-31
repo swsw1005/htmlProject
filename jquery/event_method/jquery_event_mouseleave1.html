@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  
+  <style>
+   #wrap1,#wrap2 {
+       background:red;
+	   padding:10px;
+	}
+
+    
+   </style>
+   
+  <script>
+
+ $(function()
+ {
+    $("#wrap1").mouseover(function()
+	{
+       $("#wrap1 p").css("background","yellow");
+	});
+    $("#wrap1").mouseout(function()
+	{
+       $("#wrap1 p").css("background","blue").css("width","400px");
+	});
+
+    $("#wrap2").mouseenter(function()
+	{
+       $("#wrap2 p").css("background","yellow");
+	});
+	$("#wrap2").mouseleave(function()
+	{
+       $("#wrap2 p").css("background","blue").css("width","400px");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <div id=wrap1>
+       <p>내용</p>
+ 	 </div>
+	 <p>
+	 <div id=wrap2>
+       <p>내용</p>
+ 	 </div>
+    <hr>
+   <xmp>
+      <style>
+   #wrap1,#wrap2 {
+       background:red;
+	   padding:10px;
+	}
+
+    
+   </style>
+   
+  <script>
+
+ $(function()
+ {
+    $("#wrap1").mouseover(function()
+	{
+       $("#wrap1 p").css("background","yellow");
+	});
+    $("#wrap1").mouseout(function()
+	{
+       $("#wrap1 p").css("background","blue").css("width","400px");
+	});
+
+    $("#wrap2").mouseenter(function()
+	{
+       $("#wrap2 p").css("background","yellow");
+	});
+	$("#wrap2").mouseleave(function()
+	{
+       $("#wrap2 p").css("background","blue").css("width","400px");
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+     <div id=wrap1>
+       <p>내용</p>
+ 	 </div>
+	 <p>
+	 <div id=wrap2>
+       <p>내용</p>
+ 	 </div>
+    <hr>
+   </xmp>
+ </body>
+</html>

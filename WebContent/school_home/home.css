@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-size: large;
+  font-size: medium;
 }
 
 .head_label {
@@ -31,6 +31,7 @@
 
 .table_body {
   background: yellow;
+  max-width: 800px;
 }
 
 .row {
@@ -41,17 +42,17 @@
 
 .col1 {
   flex: 1;
-  min-width: 100px;
-  margin: 5px 15px;
-  padding: 3px;
+  min-width: 60px;
+  margin: 2px;
+  padding: 2px;
   text-align: center;
   background: gray;
 }
 
 .col2 {
   flex: 3;
-  min-width: 200px;
-  margin: 5px 15px;
+  width: fit-content;
+  margin: 2px;
   padding: 3px;
   text-align: center;
   background: cyan;

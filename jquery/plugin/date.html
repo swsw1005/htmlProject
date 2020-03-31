@@ -1,0 +1,119 @@
+<meta charset="utf-8">
+<script>
+var mon = [31,28,31,30,31,30,31,31,30,31,30,31]; // 월의 총일수를 배열
+
+function dall(year,month)
+{
+ if(!year) // 1번if
+ {
+  today=new Date();
+  year=today.getFullYear();
+  month=today.getMonth();
+ }
+ else
+  month=month-1;
+
+ if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) //2번if
+  mon[1] = 29;
+ else
+  mon[1] = 28;
+
+ firstday = new Date(year, month, 1);
+ firstday = firstday.getDay(); // 요일을 가져오기
+                
+ w_form="<table width=100 height=100 border=1>";
+ w_form=w_form+"<caption>";
+
+ if(month==0) // 3번 if
+ {
+  yy1=year-1;
+  w_form=w_form+" <a href='javascript:dall("+yy1+",12)'> 이전 </a> ";
+ }
+ else
+ {
+  mm1=month;
+  w_form=w_form+" <a href='javascript:dall("+year+","+mm1+")'> 이전 </a> ";
+ }
+ 
+ w_form=w_form+year+"년 "+(month+1)+"월";
+
+ if(month==11) // 4번 if
+ {
+  yy2=year+1;
+  w_form=w_form+" <a href='javascript:dall("+yy2+",1)'> 다음 </a> ";
+ }
+ else
+ {
+  mm2=month+2;
+  w_form=w_form+" <a href='javascript:dall("+year+","+mm2+")'> 다음 </a> ";
+ }
+
+  w_form=w_form+"</caption>";
+  w_form=w_form+"<tr>";
+  w_form=w_form+" <td> 일 </td> ";
+  w_form=w_form+" <td> 월 </td> ";
+  w_form=w_form+" <td> 화 </td> ";
+  w_form=w_form+" <td> 수 </td> ";
+  w_form=w_form+" <td> 목 </td> ";
+  w_form=w_form+" <td> 금 </td> ";
+  w_form=w_form+" <td> 토 </td> ";
+  w_form=w_form+"</tr>";
+
+
+  k=0;
+  for(i=1;i<=mon[month];) // 1번 for
+  {
+   w_form=w_form+"<tr>";
+   for(j=0;j<7;j++)      // 2번 for
+   {
+ 	if(k<firstday)   // 5번 if
+	{
+  	 w_form=w_form+"<td> &nbsp; </td>";
+ 	 k++;
+	} // 5번 if끝
+	else // 5번 else시작
+	{
+	  if(i<=mon[month]) // 6번 if
+	  {
+	   if(j==0) // 일요일 // 7번 if
+	 	w_form=w_form+"<td> <a style='color:red' href='javascript:cal_input("+year+","+month+","+i+")'>"+i+"</a> </td>";
+	   else if(j==6) // 토요일 // 8번 if
+		 	 w_form=w_form+"<td> <a style='color:blue' href='javascript:cal_input("+year+","+month+","+i+")'>"+i+"</a> </td>";
+			else
+			 w_form=w_form+"<td> <a style='color:black' href='javascript:cal_input("+year+","+month+","+i+")'>"+i+"</a> </td>";
+	   i++;
+ 	  } //6번 if끝
+	  else // 6번 else
+	   w_form=w_form+"<td> &nbsp; </td>"; // 6번 else끝
+	} // 5번 else끝
+   } // 2번 for끝
+  w_form=w_form+"</tr>";
+ } // 1번 for끝
+ 
+ w_form=w_form+"</table>";
+ pkc.innerHTML=w_form;
+
+} // 함수 끝
+function cal_input(y,m,d)
+{
+	document.ca.yy.value=y;
+	document.ca.mm.value=m+1;
+	document.ca.dd.value=d;
+    pkc.innerHTML="";
+}
+</script>
+<style>
+td,caption,input {font-size:9pt;text-align:center}
+a {text-decoration:none;color:black}
+a:hover {text-decoration:underline;color:red}
+</style>
+<body>
+시작일
+<form name=ca style="font-size:9pt">
+ <input type=text name=yy size=4 onfocus=dall()>년
+ <input type=text name=mm size=2>월
+ <input type=text name=dd size=2>일
+</form>
+
+<div id=pkc>  </div>
+

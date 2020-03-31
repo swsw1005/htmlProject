@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+    #main {
+      width:200px;
+	  height:40px;
+	  border:1px solid black;
+	  overflow:hidden;
+	}
+	ul {
+      width:200px;
+	  height:360px;
+	  padding-left:5px;
+	  margin-top:0px;
+	}
+	li {
+	  list-style-type:none;
+      width:200px;
+	  height:40px;
+	  font-size:20px;
+	  display:flex;
+	  align-items:center;
+	}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+     $(function()
+	 {
+		setInterval(function()
+		{
+          $("ul").animate(
+		  {
+              marginTop:"-40px" 
+		  },1000,function()
+		  {
+			 $("ul").css("marginTop","0px");
+			 $("li").eq(0).insertAfter($("li").eq(8));
+	 	  }); 
+		},2000);
+	 }); 
+  </script>
+ </head>
+ <body>
+  <div id=main>
+   <ul> 
+     <li> 1. 유명산 자연휴양림 </li>
+	 <li> 2. 해운대 해수욕장 </li>
+	 <li> 3. 속초 해수욕장 </li>
+	 <li> 4. 한림 해수욕장 </li>
+	 <li> 5. 지리산 국립공원 </li>
+	 <li> 6. 태안 연포해수욕장 </li>
+	 <li> 7. 강원도 무릉계곡 </li>
+	 <li> 8. 보령 해수욕장 </li>
+	 <li> 9. 속리산 국립공원 </li>
+   </ul>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+    #main {
+      width:200px;
+	  height:40px;
+	  border:1px solid black;
+	   overflow:hidden;
+	}
+	ul {
+      width:200px;
+	  height:360px;
+	  padding-left:5px;
+	  margin-top:0px;
+	}
+	li {
+	  list-style-type:none;
+      width:200px;
+	  height:40px;
+	  font-size:20px;
+	  display:flex;
+	  align-items:center;
+	}
+  </style>
+ <script>
+    function move_text()
+	{
+       var newNode=document.createElement("li");
+	   var textNode=document.createTextNode(document.getElementsByTagName("li")[0].innerText);
+	   newNode.appendChild(textNode);
+
+	   var listNode=document.getElementById("sub_main");
+	   for(i=1;i<9;i++)
+	   {
+		  var newNode2=document.createElement("li");
+	      var textNode2=document.createTextNode(document.getElementsByTagName("li")[i].innerText);
+		  newNode2.appendChild(textNode2);
+		  
+	      listNode.replaceChild(newNode2,listNode.childNodes[(i*2)-1]);
+		  //alert(textNode2+" "+i+" "+document.getElementsByTagName("li")[i].innerText);
+	   }
+	   listNode.replaceChild(newNode,listNode.childNodes[17]);
+	}
+	var h=0;
+	function aa()
+	{
+	  h=h-1;
+      document.all.sub_main.style.marginTop=h+"px";
+	  if(h<=-40)
+  	  {
+		 document.all.sub_main.style.marginTop="0px";
+         move_text();
+         h=0;
+		 setTimeout(aa,1000);
+	  }
+	  else
+	    setTimeout(aa,10);
+	}
+  </script>
+ </head>
+ <body id=bb onload=aa()> 
+ 
+  <div id=main>
+   <ul id=sub_main> 
+     <li> 1.유명산 자연휴양림 </li>
+	 <li> 2.해운대 해수욕장 </li>
+	 <li> 3.속초 해수욕장 </li>
+	 <li> 4.한림 해수욕장 </li>
+	 <li> 5.지리산 국립공원 </li>
+	 <li> 6.태안 연포해수욕장 </li>
+	 <li> 7.강원도 무릉계곡 </li>
+	 <li> 8.보령 해수욕장 </li>
+	 <li> 9.속리산 국립공원 </li>
+   </ul>
+  </div>
+  
+ </body>
+</html>

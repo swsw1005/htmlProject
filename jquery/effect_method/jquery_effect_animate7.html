@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    .main {
+      width:1085px;
+	  height:68px;
+	  overflow:hidden;
+	}
+	.main .ban {
+      width:1600px;
+	}
+	img {
+	  margin:5px;
+	}
+  </style>
+  <script>
+
+ $(function()
+ {
+     setInterval(function()
+	 {
+       $(".ban").animate(
+  	   {
+		  marginLeft:"-178px"
+	   },function()
+	     {
+			$(".ban").css("marginLeft","0px")
+			$("img").eq(0).appendTo(".ban");
+		
+		 });
+	 },2000);
+
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+    <div class=main>
+	 <div class=ban>
+      <img src=a1.jpg width=170 height=68><img src=a2.jpg width=170 height=68><img src=a3.jpg width=170 height=68><img src=a4.jpg width=170 height=68><img src=b1.jpg width=170 height=68><img src=b2.jpg width=170 height=68><img src=b3.jpg width=170 height=68><img src=b4.jpg width=170 height=68>
+	 </div>
+ 	</div>
+   <hr>
+   <xmp>  
+     <style>
+    .main {
+      width:1085px;
+	  height:68px;
+	  overflow:hidden;
+	}
+	.main .ban {
+      width:1600px;
+	}
+	img {
+	  margin:5px;
+	}
+  </style>
+  <script>
+
+ $(function()
+ {
+     setInterval(function()
+	 {
+       $(".ban").animate(
+  	   {
+		  marginLeft:"-178px"
+	   },function()
+	     {
+			$(".ban").css("marginLeft","0px")
+			$("img").eq(0).appendTo(".ban");
+		
+		 });
+	 },2000);
+
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+    <div class=main>
+	 <div class=ban>
+      <img src=a1.jpg width=170 height=68><img src=a2.jpg width=170 height=68><img src=a3.jpg width=170 height=68><img src=a4.jpg width=170 height=68><img src=b1.jpg width=170 height=68><img src=b2.jpg width=170 height=68><img src=b3.jpg width=170 height=68><img src=b4.jpg width=170 height=68>
+	 </div>
+ 	</div>
+   <hr>
+   </xmp>
+ </body>
+</html>

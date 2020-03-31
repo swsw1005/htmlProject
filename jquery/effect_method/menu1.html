@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <style>
+    #bb {
+      width:100px;
+	  height:50px;
+	  background:yellow;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	  float:left;
+	  margin:10px;
+	}
+	#aa {
+      width:1000px;
+	  height:600px;
+	  background:blue;
+	}
+	ul {
+	   width:800px;
+  	   margin:auto;
+	   background:blue;
+	} 
+	#a {
+      width:800px;
+	  height:500px;
+	  visibility:hidden;
+	  padding:0px;
+	}
+	
+	#a li {
+      list-style-type:none;
+	  width:100px;
+	  text-align:center;
+	}
+  </style>
+  <script>
+     function aaa()
+	 {
+        a.style.visibility="visible";
+	 }
+	 function bbb()
+	 {
+        a.style.visibility="hidden";
+	 }
+  </script>
+ </head>
+ <body>
+    <ul>
+     <li id=bb style="position:relative" onmouseover=aaa() onmouseout=bbb()>
+	   우하하 
+	   <ul id=a style="position:absolute;top:50px;left:0px">
+         <li> 헤헤헤 </li>
+		 <li> 헤헤헤 </li>
+		 <li> 헤헤헤 </li>
+		 <li> 헤헤헤 </li>
+		 <li> 헤헤헤 </li>
+	   </ul>
+	 </li>
+	 <li id=bb> 우하하 </li>
+	 <li id=bb> 우하하 </li>
+	 <li id=bb> 우하하 </li>
+	 <li id=bb> 우하하 </li>
+   </ul>
+ </body>
+</html>

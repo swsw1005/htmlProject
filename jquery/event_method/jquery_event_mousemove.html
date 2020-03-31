@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+  <style> 
+     #pkc {
+        width:400px;
+		height:400px;
+		background:yellow;
+	 }
+	 #bb {
+       position:absolute;
+	 }
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $("#pkc").mousemove(function(e)
+	{
+       $("#aa").text(e.pageX+" "+e.pageY);
+	   $("#bb").css("left",e.pageX);
+	   $("#bb").css("top",e.pageY);
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div id=pkc>
+	   <div id=bb>하하</div>
+	  </div>
+      <div id=aa></div>
+ 
+   <hr>
+   <xmp>
+   <style> 
+     #pkc {
+        width:400px;
+		height:400px;
+		background:yellow;
+	 }
+	 #bb {
+       position:absolute;
+	 }
+  </style>
+   
+  <script>
+
+ $(function()
+ {
+    $("#pkc").mousemove(function(e)
+	{
+       $("#aa").text(e.pageX+" "+e.pageY);
+	   $("#bb").css("left",e.pageX);
+	   $("#bb").css("top",e.pageY);
+	});
+ });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+      <div id=pkc>
+	   <div id=bb>하하</div>
+	  </div>
+      <div id=aa></div>
+ 
+   </xmp>
+ </body>
+</html>

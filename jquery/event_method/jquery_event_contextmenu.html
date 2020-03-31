@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+  <script>
+   /*
+    document.oncontextmenu=imsi;
+	function imsi()
+	{
+       alert("오른쪽버튼 사용불가");
+	   return false;
+	}
+   */
+
+   $(function()
+   {
+       $(document).contextmenu(function()
+	   {
+          alert("오른쪽버튼 사용불가");
+		  return false;
+	   });
+   });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+       
+ 
+   <hr>
+   <xmp>
+   <script>
+   /*
+    document.oncontextmenu=imsi;
+	function imsi()
+	{
+       alert("오른쪽버튼 사용불가");
+	   return false;
+	}
+   */
+
+   $(function()
+   {
+       $(document).contextmenu(function()
+	   {
+          alert("오른쪽버튼 사용불가");
+		  return false;
+	   });
+   });
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+       
+ 
+   <hr>
+   </xmp>
+ </body>
+</html>

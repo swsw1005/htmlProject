@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	  $(".userid").keydown(function()
+	  {
+          alert(event.keyCode);
+	  });
+
+	  $(".irum").keypress(function(e)
+	  { 
+          alert(e.keyCode);
+	  });
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid> <p>
+	  이름 <input type=text name=irum class=irum> 
+	</form>
+   <hr>
+   <xmp>
+  <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	  $(".userid").keydown(function()
+	  {
+          alert(event.keyCode);
+	  });
+
+	  $(".irum").keypress(function(e)
+	  { 
+          alert(e.keyCode);
+	  });
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid> <p>
+	  이름 <input type=text name=irum class=irum> 
+	</form>
+   <hr>
+   </xmp>
+ </body>
+</html>

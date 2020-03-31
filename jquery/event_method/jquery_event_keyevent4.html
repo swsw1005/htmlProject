@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    input {
+       border:1px solid darkblue;
+	}
+	.aa , .bb {
+      color:red;
+	  display:none;
+	  font-size:12px;
+	}
+ 
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	   $(".userid").focus(function()
+		{
+           $(".aa").css("display","inline");
+		});
+		$(".pwd").focus(function()
+		{
+           $(".bb").css("display","inline");
+		});
+
+		$(".userid").keyup(function()
+		{
+            var n=$(this).val().length;
+
+			if(n>=8)
+			  $(".aa").css("color","blue");
+			else
+			  $(".aa").css("color","red");
+			
+		});
+
+		$(".pwd").keyup(function()
+		{
+            var n=$(this).val().length;
+
+			if(n>=10)
+			  $(".bb").css("color","blue");
+			else
+			  $(".bb").css("color","red");
+		});
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid>
+	  <span class=aa> 아이디는 8자이상</span> <p>
+	  비밀번호 <input type=password name=pwd class=pwd>
+	  <span class=bb> 비밀번호는 10자이상 </span> <p>
+	</form>
+   <hr>
+   <xmp>
+   <style>
+    input {
+       border:1px solid darkblue;
+	}
+	.aa , .bb {
+      color:red;
+	  display:none;
+	  font-size:12px;
+	}
+ 
+  </style>
+  <script>
+   
+   $(function()
+   { 
+	   $(".userid").focus(function()
+		{
+           $(".aa").css("display","inline");
+		});
+		$(".pwd").focus(function()
+		{
+           $(".bb").css("display","inline");
+		});
+
+		$(".userid").keyup(function()
+		{
+            var n=$(this).val().length;
+
+			if(n>=8)
+			  $(".aa").css("color","blue");
+			else
+			  $(".aa").css("color","red");
+			
+		});
+
+		$(".pwd").keyup(function()
+		{
+            var n=$(this).val().length;
+
+			if(n>=10)
+			  $(".bb").css("color","blue");
+			else
+			  $(".bb").css("color","red");
+		});
+   });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  아이디 <input type=text name=userid class=userid>
+	  <span class=aa> 아이디는 8자이상</span> <p>
+	  비밀번호 <input type=password name=pwd class=pwd>
+	  <span class=bb> 비밀번호는 10자이상 </span> <p>
+	</form>
+   <hr>
+   </xmp>
+ </body>
+</html>

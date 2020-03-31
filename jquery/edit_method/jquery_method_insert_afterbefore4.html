@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    img {
+      width:80px;
+	  height:50px;
+	  margin:8px;
+	}
+  </style>
+  <script>
+   
+   var img=["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/b1.jpg","img/b2.jpg","img/b3.jpg"];
+
+   setInterval(imsi,2000);
+   function imsi()
+   {
+      imm=img[0];
+      for(i=0;i<5;i++)
+	    img[i]=img[i+1];
+	  img[5]=imm;
+ 
+	  for(i=0;i<=5;i++)
+	    aa[i].src=img[i];
+   }
+ 
+ 
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     <img id=aa src=img/a1.jpg><img id=aa src=img/a2.jpg><img id=aa src=img/a3.jpg><img id=aa src=img/b1.jpg><img id=aa src=img/b2.jpg><img id=aa src=img/b3.jpg>
+   <hr>
+   <xmp>
+   <style>
+    img {
+      width:80px;
+	  height:50px;
+	  margin:8px;
+	}
+  </style>
+  <script>
+   
+   var img=["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/b1.jpg","img/b2.jpg","img/b3.jpg"];
+
+   setInterval(imsi,2000);
+   function imsi()
+   {
+      imm=img[0];
+      for(i=0;i<5;i++)
+	    img[i]=img[i+1];
+	  img[5]=imm;
+ 
+	  for(i=0;i<=5;i++)
+	    aa[i].src=img[i];
+   }
+ 
+ 
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     <img id=aa src=img/a1.jpg><img id=aa src=img/a2.jpg><img id=aa src=img/a3.jpg><img id=aa src=img/b1.jpg><img id=aa src=img/b2.jpg><img id=aa src=img/b3.jpg>
+   <hr>
+   </xmp>
+ </body>
+</html>

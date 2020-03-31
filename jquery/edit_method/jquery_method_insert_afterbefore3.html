@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    img {
+      width:80px;
+	  height:50px;
+	  margin:8px;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   {  
+	  setInterval(function()
+	  {
+        $("img").eq(0).insertAfter($("img").eq(7));
+	  },2000);
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     <img src=img/a1.jpg><img src=img/a2.jpg><img src=img/a3.jpg><img src=img/a4.jpg><img src=img/b1.jpg><img src=img/b2.jpg><img src=img/b3.jpg><img src=img/b4.jpg>
+   <hr>
+   <xmp>
+   <style>
+    img {
+      width:80px;
+	  height:50px;
+	  margin:8px;
+	}
+  </style>
+  <script>
+   
+   $(function()
+   {  
+	  setInterval(function()
+	  {
+        $("img").eq(0).insertAfter($("img").eq(7));
+	  },2000);
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+     <img src=img/a1.jpg><img src=img/a2.jpg><img src=img/a3.jpg><img src=img/a4.jpg><img src=img/b1.jpg><img src=img/b2.jpg><img src=img/b3.jpg><img src=img/b4.jpg>
+   <hr>
+   </xmp>
+ </body>
+</html>

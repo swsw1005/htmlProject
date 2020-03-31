@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="sign_in_dev.css" />
+  <title>회원가입</title>
+  <style>
+    /* 스타일  */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .header {
+      width: 100%;
+      overflow: hidden;
+      height: 70px;
+      background: #344955;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .header a {
+      color: white;
+      size: 40px;
+      margin: 15px;
+      float: left;
+      text-decoration: none;
+      transition: 0.3s;
+      line-height: 30px;
+      vertical-align: middle;
+    }
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* -------------dev option---------------- */
+      background: cyan;
+    }
+
+    .flex_out_box1 {
+      max-width: 1000px;
+
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* -------------dev option---------------- */
+      background: yellow;
+    }
+
+    .flex_box {
+      flex: 50%;
+      padding: 5px;
+      max-width: 450px;
+      min-width: 400px;
+      box-sizing: border-box;
+      /* -------------dev option---------------- */
+      background: cyan;
+      border: 1px solid red;
+    }
+
+    .bar {
+      width: 100%;
+      height: 10px;
+      /* min-width: 800000px; */
+      /* -------------dev option---------------- */
+      background: violet;
+    }
+
+    input {
+      padding: 8px;
+      height: auto;
+      margin: 3px;
+      font-size: medium;
+      width: 90%;
+      box-shadow: 0 0 3px #00000070;
+      transition: 0.5s;
+      border: 2px solid gray;
+    }
+
+    input[type="button"]:hover,
+    input[type="submit"]:hover {
+      border: 2px solid yellow;
+      background: black;
+      color: yellow;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="num"]:hover {
+      border: 2px solid yellow;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="num"]:focus {
+      border: 2px solid red;
+      box-shadow: gold 5px;
+    }
+
+    .select_num {
+      padding: 8px;
+      height: auto;
+      margin: 3px;
+      font-size: medium;
+      width: 70px;
+      box-shadow: 0 0 3px #00000070;
+      transition: 0.5s;
+      border: 2px solid gray;
+    }
+
+    .head_label {
+      width: 250px;
+      height: 60px;
+      text-align: center;
+      font-weight: 500;
+      margin: auto;
+      line-height: 60px;
+      vertical-align: middle;
+      /* -------------dev option---------------- */
+      color: purple;
+      background: black;
+    }
+
+    .label {
+      width: 150px;
+      height: 40px;
+      top: 50%;
+      margin-left: 15px;
+      font-size: large;
+      transition: 0.3s;
+      font-weight: 500;
+      line-height: 40px;
+      vertical-align: middle;
+      /* -------------dev option---------------- */
+      color: purple;
+      background: black;
+    }
+
+    /* .flex_box input[type="num"] {
+  width: 4em;
+  width: 25%;
+} */
+
+    .flex_box input[type="submit"],
+    .flex_box input[type="button"] {
+      width: 130px;
+      border: 2px solid gray;
+      border-radius: 24px;
+      transition: 0.35s;
+    }
+
+    .text_center {
+      text-align: center;
+      /* -------------dev option---------------- */
+      background: green;
+      border: 1px solid red;
+    }
+
+    .text_left {
+      text-align: left;
+      /* -------------dev option---------------- */
+      background: green;
+      border: 1px solid red;
+    }
+
+    .text_right {
+      text-align: right;
+      /* -------------dev option---------------- */
+      background: green;
+      border: 1px solid red;
+    }
+
+    @media screen and (max-width: 640px) {
+      .flex_box {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<!--///-->
+
+<body>
+  <!--내용-->
+
+  <div class="header">
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+    <a href="#">질문</a>
+  </div>
+
+  <div class="text_center">
+    <div class="head_label">
+      <h1>회원가입</h1>
+    </div>
+  </div>
+  <script type="text/javascript" src="../0318/form01.js"></script>
+
+  <form name="form11" class="form" action="aa.jsp" method="POST" onsubmit="return submit_check()">
+    <div class="flex_out_box1">
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">이름</div>
+        <div class="text_left">
+          <input type="text" name="hw_name" placeholder="이 름" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <a class="label">이메일</a>
+        <input style="float: right;" type="button" name="hw_email_check" value="중복확인" />
+        <div class="text_left">
+          <input type="email" name="hw_email" placeholder="예) kildong@gmail.com" />
+        </div>
+        <!-- <div class=" text_right">
+          <input type="button" name="hw_email_check" value="Check!" />
+        </div> -->
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <div class="label">비밀번호</div>
+        <div class="text_left">
+          <input type="password" name="hw_pw" value="" placeholder="4 ~ 12자리" />
+        </div>
+        <div class="label">confirm 비밀번호</div>
+        <div class="text_left">
+          <input type="password" name="hw_pw_confirm" value="" placeholder="4 ~ 12자리" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <a class="label">주소</a>
+        <input style="float: right;" type="button" name="hw_post_search" value="우편번호" />
+
+        <div class="text_center">
+          <a class="label">우편번호</a>
+          <input type="num" name="hw_post_1" value="" style="width: 3em;" />
+          <input type="num" name="hw_post_2" value="" style="width: 3em;" />
+        </div>
+
+        <div class="text_left">
+          <input type="text" name="hw_post_num" value="" />
+        </div>
+        <div class="text_left">
+          <input type="text" name="hw_address" value="" />
+        </div>
+      </div>
+      <!-- ----------------- -->
+      <div class="flex_box">
+        <a class="label">전화번호</a>
+
+        <div class="text_center">
+          <select class="select_num" name="hw_tel_1">
+            <option value="0">010</option>
+            <option value="1">011</option>
+            <option value="2">016</option>
+            <option value="3">017</option>
+            <option value="4">019</option>
+          </select>
+          <input type="num" name="hw_tel_2" value="" style="width: 4em;" />
+          <input type="num" name="hw_tel_3" value="" style="width: 4em;" />
+          <input style="float: right;" type="button" name="hw_tel_check" value="인증번호 전송" />
+        </div>
+        <div class="text_left">
+          <a class="label">인증번호</a>
+          <input type="num" name="hw_tel_check_num" value="" style="width: 8em;" />
+        </div>
+
+      </div>
+      <!-- ----------------- -->
+    </div>
+    <!-- ----------------- -->
+    <!-- ----------------- -->
+
+    <div class="flex_out_box1">
+      <div class="bar"></div>
+      <div class="flex_box">
+        <div class="text_center">
+          <input type="submit" name="hw_join" value="JOIN" />
+          <input type="button" name="hw_LogIn" value="Log In" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------- -->
+  </form>
+</body>
+
+</html>
+<!--///-->

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+    // 대문자 65~90  소문자 97~122  숫자 48~57 
+   $(function()   
+   { 
+	  $(".irum").keypress(function(e)
+	  {   
+          var ch=e.keyCode;
+
+		  if((ch>=65 && ch<=90) || (ch>=97 && ch<=122) || (ch>=48 && ch<=57))
+		    return true;
+		  else
+		    return false;
+	  });
+	  $(".age").keypress(function(e)
+	  {   
+          var ch=e.keyCode;
+
+		  if(ch>=48 && ch<=57)
+		    return true;
+		  else
+		    return false;
+	  });
+    });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  이름 <input type=text name=irum class=irum> <p>
+	  나이 <input type=text name=age class=age>
+	</form>
+   <hr>
+   <xmp>
+   <style>
+    input {
+       border:1px solid darkblue;
+	}
+  </style>
+  <script>
+    // 대문자 65~90  소문자 97~122  숫자 48~57 
+   $(function()   
+   { 
+	  $(".irum").keypress(function(e)
+	  {   
+          var ch=e.keyCode;
+
+		  if((ch>=65 && ch<=90) || (ch>=97 && ch<=122) || (ch>=48 && ch<=57))
+		    return true;
+		  else
+		    return false;
+	  });
+	  $(".age").keypress(function(e)
+	  {   
+          var ch=e.keyCode;
+
+		  if(ch>=48 && ch<=57)
+		    return true;
+		  else
+		    return false;
+	  });
+    });
+
+  </script>
+
+
+
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 이벤트 메소드 ※ </h1>
+   <hr>
+    <form name=pkc>
+	  이름 <input type=text name=irum class=irum> <p>
+	  나이 <input type=text name=age class=age>
+	</form>
+   <hr>
+   </xmp>
+ </body>
+</html>

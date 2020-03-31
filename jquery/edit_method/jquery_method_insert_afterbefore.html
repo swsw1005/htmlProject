@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+
+   <script>
+
+   $(function()
+   {  
+	  $("div").eq(0).insertAfter($("div").eq(2));  // 0을 2뒤로 옮겨라
+	  //$(".pkc").eq(1).insertBefore($(".pkc").eq(0)); // 1을 0앞으로 옮겨라
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   
+   <hr>
+     <div> 짜장면 </div>
+	 <div> 우동 </div>
+	 <div> 짬뽕 </div>
+	 <div> 탕수육 </div>
+	 <p>
+	 <div class=pkc> 떡뽁이 </div>
+	 <div class=pkc> 김밥 </div>
+	 <div class=pkc> 튀김 </div>
+	 <div class=pkc> 팥빙수 </div>
+    <hr>
+
+   <xmp>
+    <script>
+
+   $(function()
+   {  
+	  $("div").eq(0).insertAfter($("div").eq(2));
+	  $(".pkc").eq(1).insertBefore($(".pkc").eq(0));
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   
+   <hr>
+     <div> 짜장면 </div>
+	 <div> 우동 </div>
+	 <div> 짬뽕 </div>
+	 <div> 탕수육 </div>
+	 <p>
+	 <div class=pkc> 떡뽁이 </div>
+	 <div class=pkc> 김밥 </div>
+	 <div class=pkc> 튀김 </div>
+	 <div class=pkc> 팥빙수 </div>
+    <hr>
+   </xmp>
+ </body>
+</html>

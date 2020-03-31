@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script>
+
+   $(function()
+   {  
+	  $("#pkc").append("슈퍼맨!!");
+	  $("#pkc").prepend(" 반가워요!! ");
+
+	  $("#btn").click(function()
+	  {
+          $("#bb").append($("h1"));
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+      <span id=pkc> 안녕하세요!! </span> 
+   <hr>
+     <span id=bb> 테스트 </span>
+     <input type=button id=btn value=클릭> 
+   <hr>
+   <xmp>
+   <script>
+
+   $(function()
+   {  
+	  $("#pkc").append("슈퍼맨!!");
+	  $("#pkc").prepend(" 반가워요!! ");
+
+	  $("#btn").click(function()
+	  {
+          $("#bb").append($("h1"));
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <hr>
+      <span id=pkc> 안녕하세요!! </span> 
+   <hr>
+     <span id=bb> 테스트 </span>
+     <input type=button id=btn value=클릭> 
+   <hr>
+   </xmp>
+ </body>
+</html>

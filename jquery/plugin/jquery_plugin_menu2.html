@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    .ui-menu {
+       width:150px;
+	}
+  </style>
+  <script>
+
+  $( function() 
+  {
+     $("#menu").menu(
+	 {
+        items:"> :not(.ui-widget-header)"
+	 });
+  });
+
+  </script>
+</head>
+<body>
+ <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+  <hr>
+    <ul id=menu>
+	  <li class=ui-widget-header> <div> 한국음식 </div> </li>
+	  <li> <div> 불고기 </div> </li>
+	  <li> <div> 매운탕 </div> </li>
+	  <li> <div> 비빔밥 </div> </li>
+	  <li class=ui-widget-header> <div> 중국음식 </div> </li>
+      <li> <div> 탕수육 </div> </li>
+	  <li> <div> 팔보채 </div> </li>
+	  <li> <div> 라조기 </div> </li>
+    </ul>
+  <hr> 
+  <xmp>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    .ui-menu {
+       width:150px;
+	}
+  </style>
+  <script>
+
+  $( function() 
+  {
+     $("#menu").menu(
+	 {
+        items:"> :not(.ui-widget-header)"
+	 });
+  });
+
+  </script>
+</head>
+<body>
+ <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+  <hr>
+    <ul id=menu>
+	  <li class=ui-widget-header> <div> 한국음식 </div> </li>
+	  <li> <div> 불고기 </div> </li>
+	  <li> <div> 매운탕 </div> </li>
+	  <li> <div> 비빔밥 </div> </li>
+	  <li class=ui-widget-header> <div> 중국음식 </div> </li>
+      <li> <div> 탕수육 </div> </li>
+	  <li> <div> 팔보채 </div> </li>
+	  <li> <div> 라조기 </div> </li>
+    </ul>
+  <hr> 
+  </xmp>
+</body>
+</html>

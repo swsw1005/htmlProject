@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="jquery-3.3.1.js"></script>
+  
+  <script>
+
+   $(function()
+   {  
+       var s1=$("#sung").attr("value");
+	   alert(s1);
+
+       var s2=$("#sung").prop("value");
+	   alert(s2);
+
+	   var s3=$("#sung").attr("checked");
+	   alert(s3);
+
+	   var s4=$("#sung").prop("checked");
+	   alert(s4);
+
+	   var a1=$("#aa").attr("href");
+	   alert(a1);
+
+	   var a2=$("#aa").prop("href");
+	   alert(a2);
+
+;
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 속성관련 메소드 ※ </h1>
+   <hr>
+     <input type=radio value=여자 id=sung checked>  <p>
+	 <a href="abc.html" id=aa> 링크 </a> <p>
+   <hr>
+   <xmp>
+ <script>
+
+   $(function()
+   {  
+       var s1=$("#sung").attr("value");
+	   alert(s1);
+
+       var s2=$("#sung").prop("value");
+	   alert(s2);
+
+	   var s3=$("#sung").attr("checked");
+	   alert(s3);
+
+	   var s4=$("#sung").prop("checked");
+	   alert(s4);
+
+	   var a1=$("#aa").attr("href");
+	   alert(a1);
+
+	   var a2=$("#aa").prop("href");
+	   alert(a2);
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 속성관련 메소드 ※ </h1>
+   <hr>
+     <input type=radio value=여자 id=sung checked>  <p>
+	 <a href="abc.html" id=aa> 링크 </a> <p>
+   <hr>
+   </xmp>
+ </body>
+</html>

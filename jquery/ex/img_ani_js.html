@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+    #main {
+      width:300px;
+	  height:280px;
+      overflow:hidden;
+	}
+	#sub_main {
+      width:1900px;
+	  height:280px;
+	}
+  </style>
+  <script>
+    var w=0;
+    function move()
+	{
+       w=w-1;
+	   document.all.sub_main.style.marginLeft=w+"px";
+	   if(w<=-300)
+	   {
+	     clearInterval(ss);
+		 w=0;
+		 document.all.sub_main.style.marginLeft="0px";
+         temp=document.all.sub[0].innerHTML;
+		 for(i=0;i<5;i++)
+		   document.all.sub[i].innerHTML=document.all.sub[i+1].innerHTML;
+		 document.all.sub[5].innerHTML=temp;
+		 setTimeout(start,1000);
+	   }
+	}
+	function start()
+	{
+	  ss=setInterval(move,10);
+	}
+  </script>
+ </head>
+ <body onload=start()> 
+    <div id=main>
+	 <div id=sub_main>
+      <span id=sub><img src=img/1.jpg width=300></span>
+	  <span id=sub><img src=img/2.jpg width=300></span>
+	  <span id=sub><img src=img/3.jpg width=300></span>
+	  <span id=sub><img src=img/4.jpg width=300></span>
+	  <span id=sub><img src=img/5.jpg width=300></span>
+	  <span id=sub><img src=img/6.jpg width=300></span>
+	 </div>
+	</div>
+ </body>
+</html>

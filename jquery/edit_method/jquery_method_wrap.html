@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+
+   <script>
+
+   $(function()
+   {  
+	 
+      //$("u").unwrap();
+	  $("li").wrap("<s>");
+	  //$("li").wrapAll("<s>");
+       $("li").wrapInner("<u>");
+
+	  $("#btn").click(function()
+	  {
+         $("#view").text($("body").html());
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <button id=btn>클릭</button>
+   <hr>
+      <header>
+        <div id=aa>
+          <ul>
+            <li> 하하하 </li>
+			<li> <i> 호호호 </i> </li>
+		  </ul>
+		</div>
+		<div id=bb>
+          <span> 안녕하세요 </span> <p>
+		  <b> 감사합니다 <u>슈퍼맨!!</u> </b>
+		</div>
+	  </header>
+   <hr>
+      <div id=view></div>
+   <hr>
+   <xmp>
+    <script>
+
+   $(function()
+   {  
+	 
+      //$("u").unwrap();
+	  //$("li").wrap("<s>");
+	  //$("li").wrapAll("<s>");
+      // $("li").wrapInner("<u>");
+
+	  $("#btn").click(function()
+	  {
+         $("#view").text($("body").html());
+	  });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   <button id=btn>클릭</button>
+   <hr>
+      <header>
+        <div id=aa>
+          <ul>
+            <li> 하하하 </li>
+			<li> <i> 호호호 </i> </li>
+		  </ul>
+		</div>
+		<div id=bb>
+          <span> 안녕하세요 </span> <p>
+		  <b> 감사합니다 <u>슈퍼맨!!</u> </b>
+		</div>
+	  </header>
+   <hr>
+      <div id=view></div>
+   <hr>
+   </xmp>
+ </body>
+</html>

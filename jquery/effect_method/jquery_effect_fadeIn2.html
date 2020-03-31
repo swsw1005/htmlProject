@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+ 
+  <script>
+
+ $(function()
+ {
+     $("#btn1").click(function()
+	 {
+        $(".aa").fadeIn("slow");
+	 });
+	 $("#btn2").click(function()
+	 {
+        $(".aa").fadeOut("slow");
+	 });
+
+	 $("#btn3").click(function()
+	 {
+        $(".aa").fadeIn("fast");
+	 });
+     $("#btn4").click(function()
+	 {
+        $(".aa").fadeOut("fast");
+	 });
+
+	 $("#btn5").click(function()
+	 {
+        $(".aa").fadeIn(3000);
+	 });
+	 $("#btn6").click(function()
+	 {
+        $(".aa").fadeOut(3000);
+	 });
+ 
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+	 <input type=button id=btn1 value=fadeIn_slow>
+	 <input type=button id=btn2 value=fadeOut_slow>
+	 <input type=button id=btn3 value=fadeIn_fast>
+	 <input type=button id=btn4 value=fadeOut_fast>
+	 <input type=button id=btn5 value=fadeIn_3초>
+	 <input type=button id=btn6 value=fadeOut_3초> <p>
+
+     <img src=a1.jpg width=300 height=300 class=aa> <p>
+
+   <hr>
+   <xmp> 
+ <script>
+
+ $(function()
+ {
+     $("#btn1").click(function()
+	 {
+        $(".aa").fadeIn("slow");
+	 });
+	 $("#btn2").click(function()
+	 {
+        $(".aa").fadeOut("slow");
+	 });
+
+	 $("#btn3").click(function()
+	 {
+        $(".aa").fadeIn("fast");
+	 });
+     $("#btn4").click(function()
+	 {
+        $(".aa").fadeOut("fast");
+	 });
+
+	 $("#btn5").click(function()
+	 {
+        $(".aa").fadeIn(3000);
+	 });
+	 $("#btn6").click(function()
+	 {
+        $(".aa").fadeOut(3000);
+	 });
+ 
+ });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 효과 메소드 ※ </h1>
+   <hr>
+	 <input type=button id=btn1 value=fadeIn_slow>
+	 <input type=button id=btn2 value=fadeOut_slow>
+	 <input type=button id=btn3 value=fadeIn_fast>
+	 <input type=button id=btn4 value=fadeOut_fast>
+	 <input type=button id=btn5 value=fadeIn_3초>
+	 <input type=button id=btn6 value=fadeOut_3초> <p>
+
+     <img src=a1.jpg width=300 height=300 class=aa> <p>
+
+   <hr>
+   </xmp>
+ </body>
+</html>

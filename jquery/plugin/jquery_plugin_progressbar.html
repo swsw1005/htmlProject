@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <style>
+  #progress {
+    position: relative;
+  }
+  .label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+  }
+
+  </style>
+  <script>
+
+  $( function() 
+  {
+     $("#progress").progressbar(
+     {  
+		value:false,
+		change:function()
+		{
+          $(".label").text($("#progress").progressbar("value")+"%");
+		},
+		complete:function()
+		{
+          $(".label").text("완료");
+		}
+	 });
+  
+     function progress() 
+	 { 
+       var num=$("#progress").progressbar("value");
+       $("#progress").progressbar("value",num+2);
+       if(num<99) 
+         setTimeout(progress, 80);
+     }
+    // setTimeout(progress,2000);
+  });
+    
+  </script>
+</head>
+<body>
+ <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+<div id="progress"> <div class="label"> Loading... </div> </div>
+ <hr>
+ <xmp>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+ 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <style>
+  #progress {
+    position: relative;
+  }
+  .label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+  }
+
+  </style>
+  <script>
+
+  $( function() 
+  {
+     $("#progress").progressbar(
+     {  
+		value:false,
+		change:function()
+		{
+          $(".label").text($("#progress").progressbar("value")+"%");
+		},
+		complete:function()
+		{
+          $(".label").text("완료");
+		}
+	 });
+  
+     function progress() 
+	 { 
+       var num=$("#progress").progressbar("value");
+       $("#progress").progressbar("value",num+2);
+       if(num<99) 
+         setTimeout(progress, 80);
+     }
+     setTimeout(progress,2000);
+  });
+    
+  </script>
+</head>
+<body>
+ <h1 style="color:red;"> ※ 플러그인 ※ </h1>
+   <hr>
+<div id="progress"> <div class="label"> Loading... </div> </div>
+ <hr>
+ </xmp>
+ 
+</body>
+</html>

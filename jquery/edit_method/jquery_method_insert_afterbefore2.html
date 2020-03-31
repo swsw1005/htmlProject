@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!-- CDN 연결방법 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 파일을 서버로 다운받은후 사용하는 방법 -->
+
+   <script>
+
+   $(function()
+   {  
+	   $(".pkc").click(function()
+	   {
+           var n=$(this).index();
+		   if(n!=0)
+      	     $(".pkc").eq(n-1).insertAfter($(".pkc").eq(n));
+           else
+		     $(".pkc").eq(0).insertAfter($(".pkc").eq(5));
+		   /*
+           if(n!=0)
+      	     $(".pkc").eq(n).insertBefore($(".pkc").eq(n-1));
+           else
+		     $(".pkc").eq(5).insertBefore($(".pkc").eq(6)); 
+		   */
+         
+	   });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   
+   <hr>
+     <ul>
+ 	   <li class=pkc> 떡뽁이 </li>
+	   <li class=pkc> 김밥 </li>
+	   <li class=pkc> 튀김 </li>
+	   <li class=pkc> 팥빙수 </li>
+	   <li class=pkc> 쫄면 </li>
+	   <li class=pkc> 라면 </li>
+	 </ul>
+   <hr>
+
+   <xmp>
+   <script>
+
+   $(function()
+   {  
+	   $(".pkc").click(function()
+	   {
+           var n=$(this).index();
+		   if(n!=0)
+      	     $(".pkc").eq(n-1).insertAfter($(".pkc").eq(n));
+           else
+		     $(".pkc").eq(0).insertAfter($(".pkc").eq(5));
+		   /*
+           if(n!=0)
+      	     $(".pkc").eq(n).insertBefore($(".pkc").eq(n-1));
+           else
+		     $(".pkc").eq(5).insertBefore($(".pkc").eq(6)); 
+		   */
+         
+	   });
+   });
+
+  </script>
+ </head>
+ <body>
+   <h1 style="color:red;"> ※ 편집관련 메소드 ※ </h1>
+   
+   <hr>
+     <ul>
+ 	   <li class=pkc> 떡뽁이 </li>
+	   <li class=pkc> 김밥 </li>
+	   <li class=pkc> 튀김 </li>
+	   <li class=pkc> 팥빙수 </li>
+	   <li class=pkc> 쫄면 </li>
+	   <li class=pkc> 라면 </li>
+	 </ul>
+   <hr>
+   </xmp>
+ </body>
+</html>
