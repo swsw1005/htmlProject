@@ -16,8 +16,11 @@
             $("li").css("border", "1px solid yellow");
         }
 
+        //이렇게 안하고
+
 
         $(function () {
+
             S("li").css("color", "yellow").css("background", "black");
 
             $("ul").click(function () {
@@ -27,8 +30,8 @@
     </script>
 </head>
 
-<body onload="imsi()">
-    <ul onclick="border()">
+<body>
+    <ul>
         <li>짜장면</li>
         <li>우동</li>
         <li>짬뽕</li>

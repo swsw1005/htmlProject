@@ -1,0 +1,48 @@
+.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                alert($("body").html());
+                console.log($("body").html());
+            });
+            $("#aa").click(function () {
+                $("#aa").wrap("<b>"); // id가 "aa"인 태그 바깥에 <b>태그
+            });
+            $("#bb").click(function () {
+                $("#bb").wrapInner("<b>"); //aa 안쪽에 <b>태그
+            });
+
+            $("#cc").click(function () {
+                // $("li")  .wrap("<b>");
+                $("li").wrapAll("<b>");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn">소스보기</button>
+    <hr>
+    <div>
+        <span id="aa"> #aa 안녕 </span>
+        <p></p>
+        <span id="bb"> #bb 하하 </span>
+        <ul id="cc">
+            <li>짜장면</li>
+            <li>우동</li>
+            <li>짬뽕</li>
+        </ul>
+    </div>
+</body>
+
+</html>

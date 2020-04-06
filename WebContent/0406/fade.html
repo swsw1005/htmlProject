@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .wrap {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+        }
+
+        .aa {
+            width: 90%;
+            height: 90%;
+            margin: 5%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .bb {
+            margin: 0px;
+            padding: 0px;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#btn1").click(function () {
+                $("#pkc1").fadeOut("slow");
+                $("#pkc2").fadeOut("fast");
+                $("#pkc3").fadeOut(3500);
+            });
+
+            $("#btn2").click(function () {
+                $("#pkc1").fadeIn(5000);
+                $("#pkc2").fadeIn(2000);
+                $("#pkc3").fadeIn("fast");
+            });
+
+            $("#btn3").click(function () {
+                $("#pkc1").fadeToggle();
+                $("#pkc2").fadeToggle();
+                $("#pkc3").fadeToggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div class="wrap">
+        <div class="aa">버튼</div>
+        <button class="aa" id="btn1">버튼1</button>
+        <button class="aa" id="btn2">버튼2</button>
+        <button class="aa" id="btn3">버튼3</button>
+    </div>
+    <hr />
+    <div class="wrap">
+        <div class="aa">페이드 대상</div>
+        <div class="bb">
+            <div class="aa" id="pkc1">#pkc1</div>
+        </div>
+        <div class="bb">
+            <div class="aa" id="pkc2">#pkc2</div>
+        </div>
+        <div class="bb">
+            <div class="aa" id="pkc3">#pkc3</div>
+        </div>
+    </div>
+    <hr />
+    <div class="wrap">
+        <div class="aa">fadeOut</div>
+        <div class="aa">5000</div>
+        <div class="aa">2000</div>
+        <div class="aa">fast</div>
+    </div>
+    <hr />
+    <div class="wrap">
+        <div class="aa">fadeIn</div>
+
+        <div class="aa">slow</div>
+        <div class="aa">fast</div>
+        <div class="aa">3500</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!-- 과제 : 순환하는 목록(실검 순위) JS로 만들기 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        #aa {
+            width: 80px;
+            height: 23px;
+            border: 2px solid red;
+            list-style-type: none;
+            /* overflow: hidden; */
+        }
+    </style>
+
+    <script>
+        function aa() {
+            var max = document.getElementsByTagName("li").length;
+            var arr = document.getElementsByTagName("li");
+            var temp = arr[0].innerText;
+
+            for (i = 0; i < max - 1; i++) {
+                arr[i].innerText = arr[i + 1].innerText;
+            }
+            arr[max - 1].innerText = temp;
+
+            console.log(max + " " + arr[0].innerText);
+        }
+
+        setInterval(aa, 2000);
+    </script>
+</head>
+
+<body>
+    <ul id="aa">
+        <li>0. 짜장면</li>
+        <li>1. 우동</li>
+        <li>2. 짬뽕</li>
+        <li>3. 탕수육</li>
+        <li>4. 팔보채</li>
+        <li>5. 전가복</li>
+    </ul>
+
+    <button id="btn" onclick="aa()">a button</button>
+    <hr />
+</body>
+
+</html>

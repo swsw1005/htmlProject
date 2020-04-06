@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #btn,
+        #tt {
+            width: 150px;
+            height: 50px;
+            border: 1px solid seagreen;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#btn").click(function () {
+                $("#tt").toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div id="btn">토글버튼</div>
+
+    <div id="tt">토글 대상</div>
+
+</body>
+
+</html>

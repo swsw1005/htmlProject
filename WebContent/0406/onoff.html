@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa {
+            width: 150px;
+            height: 40px;
+            border: 1px solid blue;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+
+            let cnt1 = 0;
+            $("#aa").click(function () { // .on("click" ,function) 과 동일
+                cnt1++;
+                if (cnt1 % 2) {
+                    $(this).css("background", "yellow");
+                } else {
+                    $(this).css("background", "none");
+                }
+            });
+            let cnt2 = 0;
+            $("#bb").on("click", function () { // .click 과 동일
+                cnt2++;
+                if (cnt2 % 2) {
+                    $(this).css("background", "yellow");
+                } else {
+                    $(this).css("background", "none");
+                }
+            });
+            let cnt3 = 0;
+            $("#cc").one("click", function () { // 한번만 실행
+                cnt3++;
+                if (cnt3 % 2) {
+                    $(this).css("background", "yellow");
+                } else {
+                    $(this).css("background", "none");
+                }
+            });
+
+            $("#dd").off("click", function () { //작동안하게 
+                $(this).css("background", "yellow");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div class="aa" id="aa">aa 클락하세요</div>
+    <div class="aa" id="bb">bb 클락하세요</div>
+    <div class="aa" id="cc">cc 클락하세요</div>
+    <div class="aa" id="dd">dd 클락하세요</div>
+
+    <div class="aa" id="b1"></div>
+
+</body>
+
+</html>

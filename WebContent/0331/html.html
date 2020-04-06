@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function inner() {
+            var tt = document.getElementById("aa").innerText;
+            var hh = document.getElementById("aa").innerHTML;
+            alert("tt");
+            alert("hh");
+        }
+
+        $(function () {
+            // id = "bb" 클릭하면...
+            $("#bb").click(function () {
+                var tt = $("#bb").text();
+                var hh = $("#bb").html();
+                alert(tt);
+                alert(hh);
+            });
+
+            // id = bb1 클릭하면...
+            $("#bb1").click(function () {
+                $("#bb2").text("<b>하하</b>");
+                $("#bb3").html("<b>하하</b>");
+                $("#bb4").html("  ");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="bb"><b>하하</b></div>
+
+    <hr />
+    <button onclick="inner()">uuu</button>
+
+    <div id="bb1">......</div>
+    <div id="bb2">......</div>
+    <div id="bb3">......</div>
+    <div id="bb4">......</div>
+
+
+</body>
+
+</html>

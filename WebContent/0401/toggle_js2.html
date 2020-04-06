@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var chk=0;
+        function view_hide()
+        {
+            chk++;
+            alert(chk);
+            if(chk%2==0){
+                document.getElementById("pkc").style.display="block";
+            }else{
+                document.getElementById("pkc").style.display="none";
+            }
+        }
+        var chk2=0;
+        function three()
+        {
+            chk2++;
+            var ch = chk2%3; // ch값은 0, 1, 2
+
+            switch(ch){
+                case 0: document.getElementById("jin").style.color="blue"; break;
+                case 1: document.getElementById("jin").style.color="red"; break;
+                case 2: document.getElementById("jin").style.color="orange"; break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="view_hide()">보이기 숨기기</button>
+    <hr>
+    <div id="pkc"> 오늘은 만우절입니다. </div>
+    <hr>
+    <button onclick="three()">3가지</button>
+    <div id="jin"> 오늘은 4월달 입니다. </div>
+
+</body>
+</html>

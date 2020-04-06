@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #aa::before {
+            content: "파전";
+        }
+
+        #aa::after {
+            content: "막걸리";
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#bb").before("치킨");
+            $("#bb").after("맥주");
+        });
+
+        $(function () {
+            $().click(function () { });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div id="aa">에는 역시</div>
+    <div id="bb">에는 역시</div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .cc {
+            width: 200px;
+            height: 100px;
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+
+            $("#aa").on({
+                click: function () { $("#bb").text("클릭"); },
+                mouseover: function () { $("#bb").text("마우스오버"); },
+                mouseenter: function () { $("#bb").text("마우스엔터"); },
+                mouseleave: function () { $("#bb").text("마우스리브"); }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div id="aa" class="cc">클릭하세요</div>
+    <div id="bb" class="cc"></div>
+
+</body>
+
+</html>

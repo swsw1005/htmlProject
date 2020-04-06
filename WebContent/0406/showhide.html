@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa {
+            width: 150px;
+            height: 50px;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid red;
+        }
+
+        .aa:hover {
+            background: yellowgreen;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#btn1").click(function () {
+                $("#pkc").show();
+            });
+            $("#btn2").click(function () {
+                $("#pkc").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button id="btn1" class="aa">show</button>
+    <button id="btn2" class="aa">hide</button>
+    <hr />
+    <div id="pkc" class="aa">#pkc</div>
+    <hr />
+</body>
+
+</html>

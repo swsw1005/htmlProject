@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function() // val() = > form태그의 value
+        {
+            $("#btn").click(function()
+            {
+                var name=$("#name").val(); // id가 name인 입력박스에 입력된 값
+                var age=$("#age").val(); // id가 age인 입력박스에 입력된 값
+                alert("이름: "+name+"\n나이: "+age);
+            });
+        });
+        function check() // form 객체에 접근, dom 접근
+        {
+            var name=document.getElementById("name").value;
+            var age=document.getElementById("age").value;
+            alert("이름: "+name+"\n나이: "+age);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        이름<input type="text" name="name" id="name"> <p>
+        나이<input type="text" name="age" id="age"> <p>
+        <input type="button" id="btn" value="jquery">
+        <input type="button" onclick="check()" value="javascript">
+    </form>    
+</body>
+</html>

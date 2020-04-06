@@ -1,0 +1,161 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  min-height: 100%;
+  background-image: linear-gradient(black, grey);
+  background-repeat: no-repeat;
+  font-family: system-ui;
+  background-size: auto;
+}
+
+.main {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: yellow;
+}
+
+form {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 38px 1fr 1px 42px;
+  grid-gap: 10px;
+  /* dev op */
+  /* background: cyan; */
+}
+
+#add_btn {
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 30px;
+  color: yellow;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* -------------------------------------- */
+
+.tasksBoard {
+  margin-top: 20px;
+  padding-top: 25px;
+  display: none;
+  background: rgba(129, 129, 129, 0.05);
+  border-radius: 25px;
+  /* dev option */
+  /* background-color: rgb(53, 8, 8); */
+}
+
+#aa {
+  /* padding-right: 20px; */
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  /* dev option */
+  /* border: 1px solid blue; */
+}
+
+.li {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 38px 1fr 1px 42px;
+  /* grid-gap: 10px; */
+  /* dev option */
+  /* background: yellow; */
+}
+
+.chkbox {
+  margin: 5px 2px;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.content_wrap {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 2px;
+  /* dev option */
+  /* border: 1px solid red; */
+}
+
+#task,
+.content {
+  margin-top: 5px;
+  padding-left: 5px;
+  height: 30px;
+  width: 100%;
+  border: none;
+  font-size: 1.5em;
+  background: #ffffff07;
+  color: yellow;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+}
+
+.delete {
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 30px;
+  color: red;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* -------------------------------------- */
+
+#bb {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+  /* dev option */
+  /* background: cyan; */
+}
+
+.clear {
+  margin: auto;
+  width: 30%;
+  text-align: center;
+  color: #ff6161;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: 2px solid red;
+}
+
+/* -------------------------------------- */
+
+@media (max-width: 500px) {
+  .main {
+    margin: auto;
+    width: 100%;
+  }
+  /* input[type="text"] {
+    width: 80%;
+  } */
+  /* button {
+    width: 10%;
+  } */
+}

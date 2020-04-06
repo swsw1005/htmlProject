@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #oo {
+            display: flex;
+            background: cyan;
+        }
+
+        td {
+            width: max-content;
+            height: max-content;
+        }
+
+        ul {
+            width: max-content;
+            height: 240px;
+            margin: 5px;
+            padding: 5px;
+            flex-wrap: wrap;
+            background: burlywood;
+            transition: 1s;
+        }
+
+        li {
+            width: 100px;
+            height: 35px;
+            display: flexbox;
+            background: black;
+            color: yellow;
+            margin: auto;
+            border: 2px solid red;
+            transition: 1s;
+        }
+
+        #gg,
+        #hh,
+        #kk {
+            border: 2px solid red;
+        }
+
+        #ff,
+        #ll {
+            border: 2px solid violet;
+        }
+
+        .qq {
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+    <script>
+        // 스크립트
+        var cnt = 0;
+
+        $(function () {
+            $("li").on("mouseover", mouseover_f);
+
+            function mouseover_f() {
+                var a = $(this).index();
+                var b1 = $("#dd li").length;
+                var b2 = $("#gg li").length;
+                var b3 = $("#ff li").length;
+                var b4 = $("#kk li").length;
+                var b5 = $("#ll li").length;
+
+                var e = $(this)
+                    .closest("ul")
+                    .prop("id");
+
+                var f = $(this)
+                    .parent()
+                    .attr("id");
+
+                var str1 = a + " " + b1 + " " + e + " " + f;
+                var str2 = a + " " + b2 + " " + e + " " + f;
+                var str3 = a + " " + b3 + " " + e + " " + f;
+                var str4 = a + " " + b4 + " " + e + " " + f;
+                var str5 = a + " " + b5 + " " + e + " " + f;
+                $("#tt1").text(str1);
+                $("#tt2").text(str2);
+                $("#tt3").text(str3);
+                $("#tt4").text(str4);
+                $("#tt5").text(str5);
+            }
+
+            //////////////////////////////////////////////////////
+            $("#aa").append("열심히하자");
+            $("#aa").prepend("오늘은");
+
+            $("#btn").click(function () {
+                cnt++;
+
+                if (cnt % 2 == 0) {
+                    $("#aa").append($("#bb"));
+                } else {
+                    $("#cc").append($("#bb"));
+                }
+            });
+
+            //////////////////////////////////////////////////////
+            $("#dd li").click(function () {
+                var a = $(this).index();
+                var b = $("#dd li").length;
+                var c = b - 1;
+                console.log(a + " " + b + " " + c);
+                var d = $("#dd li")[c].textContent;
+                console.log(d);
+
+                $("#dd li")[c].after($("#dd li")[a]);
+                // $("li")[c].append($("li")[a]);
+                // append 쓰면 안되는 이유 >>
+                // <li>5전가복 <li>1우동</li> </li>
+            });
+
+            //////////////////////////////////////////////////////
+            $("#gg li").click(function () {
+                var a = $(this).index();
+                var e = $(this)
+                    .closest("ul")
+                    .prop("id");
+
+                if (e == "gg") {
+                    $("#ff").append($("#gg li")[a]);
+                } else if (e == "ff") {
+                    $("#gg").append($("#ff li")[a]);
+                }
+            });
+
+            //////////////////////////////////////////////////////
+
+            $("#kk li").click(function () {
+                console.log("----------------");
+                var temp_text = $(this).text();
+                var temp_idx = $(this).index();
+                var cnt = 0;
+
+                var length = $("#ll li").length;
+                console.log(length);
+
+                for (i = 0; i < length; i++) {
+                    if (
+                        $("#ll li")
+                            .eq(i)
+                            .text() == temp_text
+                    ) {
+                        cnt++;
+                    }
+                }
+
+                if (!(cnt > 0)) {
+                    $(this).css("color", "red");
+                    $("#ll").append("<li>" + temp_text + "</li>");
+                    $("#ll li").on("click", ll_click);
+                }
+            });
+
+            //////////////////////////////////////////////////////
+            function ll_click() {
+                var length = $("#ll li").length;
+                var idx = $(this).index();
+                var in_text = $(this).text();
+                // console.log("ll_click : " + idx + " " + length);
+
+                for (i = 0; i < $("#kk li").length; i++) {
+                    var temp = $("#kk li")
+                        .eq(i)
+                        .text();
+                    if (temp == in_text) {
+                        $("#kk li")
+                            .eq(i)
+                            .css("color", "yellow");
+                        $(this).remove();
+                    }
+                }
+            }
+            //////////////////////////////////////////////////////
+
+            $("li").click(function () {
+                var f = $(this)
+                    .parent()
+                    .attr("id");
+                var idv = $(this).index();
+                var temp = $(this).text();
+                console.log("li click : " + f + " " + idv + " " + temp);
+            });
+
+            $("#btn2").click(function () {
+                // 내용 싹지우기
+                $("#ll").empty();
+                // 왼쪽 css 되돌리기
+                $("#kk li").css("color", "yellow");
+            });
+
+            $("#btn3").click(function () {
+                // 마지막것만 지우기
+                var idx = $("#ll li").length;
+                console.log(idx);
+                $("#ll li").remove("li[idx]");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button id="btn">옮기기</button>
+
+    <div id="aa">목요일</div>
+    <hr />
+
+    <table>
+        <tr>
+            <td>
+                <div class="qq">1. 목록 맨뒤로 넘긴다.</div>
+                <ul id="dd">
+                    <li>0짜장면</li>
+                    <li>1우동</li>
+                    <li>2짬뽕</li>
+                    <li>3탕수육</li>
+                    <li>4팔보채</li>
+                    <li>5전가복</li>
+                </ul>
+                <div id="tt1"></div>
+            </td>
+            <td>
+                <div class="qq">2. 왼쪽 오른쪽...</div>
+                <ul id="gg">
+                    <li>짜장면</li>
+                    <li>우동</li>
+                    <li>짬뽕</li>
+                    <li>볶음밤</li>
+                    <li>탕수육</li>
+                    <li>유산슬</li>
+                </ul>
+                <div id="tt2"></div>
+            </td>
+            <td>
+                <div class="qq">번갈아 옮긴다</div>
+                <ul id="ff">
+                    <!-- <li></li> -->
+                </ul>
+                <div id="tt3"></div>
+            </td>
+            <td>
+                <div class="qq">3. 왼쪽>오른쪽 복제...</div>
+                <ul id="kk">
+                    <li>라면</li>
+                    <li>짬뽕</li>
+                    <li>짜장면</li>
+                    <li>울면</li>
+                    <li>우동</li>
+                    <li>모밀</li>
+                </ul>
+                <div id="tt4"></div>
+            </td>
+            <td>
+                <div class="qq">오른쪽에서는 클릭시 삭제</div>
+                <ul id="ll">
+                    <!-- <li></!-->
+                </ul>
+                <div id="tt5"></div>
+            </td>
+            <td>
+                <button id="btn2">내용 싹 지우기</button>
+                <p></p>
+                <button id="btn3">맨 마지막꺼 지우기</button>
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <a id="bb"> &nbsp;&nbsp; 진짜로</a>
+
+    <button onclick="body1()">소스보기</button>
+
+    <script>
+        function body1() {
+            var temp = $("body").html();
+            alert(temp);
+            console.log(temp);
+        }
+    </script>
+</body>
+
+</html>

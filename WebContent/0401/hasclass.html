@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            font-size: x-large;
+        }
+
+        .aa {
+            color: red;
+        }
+    </style>
+    <script>
+
+        $(function () {
+
+            $("#btn").click(function () {
+                $("#pkc").toggleClass("aa");
+
+                document.getElementById("pkc2").innerText = $("#pkc").hasClass("aa");
+            });
+
+            $("#btn2").click(function () {
+                alert($("#pkc").hasClass("aa"));
+            });
+
+        });
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <button id="btn">toggle</button>
+    <button id="btn2">확인</button>
+    <div id="pkc">안녕pkc</div>
+    <div id="pkc2"></div>
+</body>
+
+</html>

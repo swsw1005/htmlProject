@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function view_attr() {
+            var attr = document.getElementsByTagName("img")[0].src;
+            alert(attr);
+        }
+
+        $(function () {
+            $(".bb").click(function () {
+                var attr = $(".bb").attr("src");
+                alert(attr);
+            });
+
+            $(".cc").click(function () {
+                $(".bb").attr("src", "../c.jpg");
+            });
+
+            $(".dd").click(function () {
+                alert($("body").html());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../a.jpg" width="200" onclick="view_attr()" />
+    <hr />
+    <img src="../b.jpg" width="220" class="bb" />
+
+    <input type="button" class="cc" value="c.jpg 바꿈" />
+
+    <input type="button" class="dd" value="body html" />
+</body>
+
+</html>

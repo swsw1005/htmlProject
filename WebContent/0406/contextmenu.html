@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $(document).contextmenu(function () {
+                $("#msg").text("우클릭 금지(2초후 사라짐");
+                setTimeout(function () {
+                    $("#msg").text(" ");
+                }, 2000);
+
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+
+    <div id="msg"></div>
+</body>
+
+</html>

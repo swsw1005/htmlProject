@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+    #aa::after{
+        content:"안녕 !!";
+    }
+    #aa::before{
+        content:"정말 반가워!!";
+    }
+</style>
+<script>
+    $(function()
+    {  // after(), befoer()
+        $("#bb").before("올백머리 근육빵빵 난 ");
+        $("#bb").after(" 지구인의 친구 난 슈퍼맨");
+
+        var str=document.getElementById("cc").innerText;
+        str="안녕 !! "+ str + " 한잔할래 ?";
+        document.getElementById("cc").innerText=str;
+    });
+</script>
+</head>
+<body>
+    <span id="aa"> 홍길동 </span> <p></p>
+    <span id="bb"> 슈퍼맨 </span> <p></p>
+    <span id="cc"> 배트맨 </span>
+</body>
+ 
+</html>

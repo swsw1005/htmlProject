@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>제목</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        /* 스타일  */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: x-large;
+        }
+
+        #pkc {
+            width: 50%;
+            height: 50%;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(window).resize(function () {
+                console.log("ccc");
+                var w = $("#pkc").width();
+                var h = $("#pkc").height();
+                var w2 = $("#pkc").innerWidth();
+                var h2 = $("#pkc").innerHeight();
+                var w3 = $("#pkc").outerWidth();
+                var h3 = $("#pkc").outerHeight();
+
+                // document.getElementById("aa").innerText = w + " " + h;
+                // document.getElementById("bb").innerText = w2 + " " + h2;
+                // document.getElementById("cc").innerText = w3 + " " + h3;
+                $("#aa").text(w + " " + h);
+                $("#bb").text(w2 + " " + h2);
+                $("#cc").text(w3 + " " + h3);
+            });
+        });
+    </script>
+</head>
+<!--///-->
+
+<body>
+    <!--내용-->
+    <h1 id="pkc">a</h1>
+    <p>width height</p>
+    <div id="aa"></div>
+    <p>innerWidth innerHeight</p>
+    <div id="bb"></div>
+    <p>outerWidth outerHeight </p>
+    <div id="cc"></div>
+
+    <!--JS-->
+</body>
+
+</html>
+<!--///-->

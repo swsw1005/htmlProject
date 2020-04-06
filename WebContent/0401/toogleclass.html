@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>제목</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+
+
+        //1. 클래스 줬다 뺏었다....jQuery
+        $(function () {
+            $("#btn").click(function () {
+                $("#pkc").toggleClass("aa");
+            });
+        });
+
+        //2. 클래스 줬다 뺏었다....바닐라 JS
+        function aa_toggle() {
+
+            var aaa = document.getElementById("pkc");
+            if (aaa.classList.contains("aa")) {
+                aaa.classList.remove("aa");
+            } else {
+                aaa.classList.add("aa");
+            }
+        }
+
+        // 3. cnt 활용
+        var cnt = 0
+        function aa_toggle2() {
+            var aaa = document.getElementById("pkc");
+            cnt++;
+            if (cnt % 2 == 0) {
+                aaa.classList.remove("aa");
+            } else {
+                aaa.classList.add("aa");
+            }
+        }
+
+        // 3. cnt 활용
+        var cnt2 = 0
+        function aa_toggle3() {
+            var aaa = document.getElementById("pkc");
+            cnt2++;
+            if (cnt % 2 == 0) {
+                aaa.style.fontSize = "20px";
+            } else {
+                aaa.classList.add("aa");
+            }
+        }
+
+
+    </script>
+    <style>
+        /* 스타일  */
+        .aa {
+            width: 100px;
+            background: yellow;
+            height: 30px;
+        }
+
+        button {
+            width: 70px;
+            height: 40px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<!--///-->
+
+<body>
+    <!--내용-->
+    <button id="btn">클릭</button>
+    <button onclick="aa_toggle()">js클릭</button>
+    <button onclick="aa_toggle2()">js클릭2</button>
+    <hr>
+    <div id="pkc">안녕하세요</div>
+
+
+    <!--JS-->
+</body>
+
+</html>
+<!--///-->

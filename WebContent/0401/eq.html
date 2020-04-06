@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("li").click(function () {
+                var n = $(this).index();
+                console.log(n);
+                $("#pkc").text(n);
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+    <!-- 내용 -->
+    <ul>
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li>전가복</li>
+        <li>간짜장</li>
+    </ul>
+    <p id="pkc"></p>
+
+
+</body>
+
+</html>

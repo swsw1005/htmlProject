@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa{
+            width:100px;
+            height:30px;
+            border:1px solid red;
+            background:yellow;
+        }
+    </style>
+    <script>
+        $(function()
+        {
+            $("#btn").click(function()
+            {
+                $("#pkc").toggleClass("aa");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn"> 적용 </button>
+    <div id="pkc"> 안녕하세요 !! </div>
+</body>
+</html>

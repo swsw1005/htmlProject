@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>toDoList</title>
+    <link rel="stylesheet" href="todo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="todo.js"></script>
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+</head>
+
+<body onload="loadEvents()">
+    <div class="main">
+        <h1>TO-DO LIST</h1>
+        <form class="" action="index.html" method="post">
+            <a>&nbsp;</a>
+            <div>
+                <input id="task" type="text" placeholder="enter new Task" name=" task" />
+            </div>
+            <a></a>
+            <a id="add_btn">+</a>
+        </form>
+        <div id="tasksBoard" class="tasksBoard">
+            <div id="aa">
+                <ul class="ul">
+                    <!-- .. 
+     <li>
+        <div class="li">
+            <div class="content_wrap">
+                <input class="chkbox" type="checkbox">  
+            </div>
+            <div class="content_wrap">
+                <input class="content" type="text" value="${task}">
+            </div> 
+            <a></a>
+            <a class="delete"> × </a>
+        </div>
+    </li> -->
+                </ul>
+            </div>
+
+            <div id="bb">
+                <div id="clear" class="clear">Clear</div>
+                <div onclick="checked_del()" class="clear">check삭제</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

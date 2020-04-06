@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+
+            // 1. 커서 들어오기전 "로그인" 커서 들어오면 ""
+            $("#login").focus(function () {
+                console.log(this);
+                console.log(this.value);
+                this.value = " ";
+            });
+            $("#login").focusout(function () {
+                this.value = "로그인";
+            });
+
+            // 2. 글자입력후 나갈때 길이 6확인
+            $("#userid").blur(function () {
+
+                let leng = this.value.trim().length;
+                let leng2 = $(this).val().trim().length;
+                console.log(leng + " " + leng2);
+                if (leng < 6) {
+                    document.getElementById("msg").innerText = "6글자 이상 JS. 현재 " + leng + "글자...";
+                } else {
+                    document.getElementById("msg").innerText = "";
+                }
+                if (leng2 < 6) {
+                    $("#msg2").text("6글자 이상 jQuery. 현재 " + leng2 + "글자...");
+                } else {
+                    $("#msg2").text(" ");
+                }
+
+
+            });
+
+            // 3. select에서 사이트 선택하면 이동
+            $("#site").change(function () {
+                let addr = this.value;
+                console.log(addr);
+                window.open().location.href = addr;
+                window.open().location = $("#site").val();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <input type="text" name="" id="login" value="로그인">
+    <hr>
+    <input type="text" name="" id="userid">
+    <div id="msg"></div>
+    <div id="msg2"></div>
+    <hr>
+    <select id="site">
+        <option value=""> 선택 </option>
+        <option value="https://www.daum.net/"> 다음 </option>
+        <option value="https://www.naver.com/"> 네이버 </option>
+        <option value="http://www.kbs.co.kr/"> kbs </option>
+    </select>
+
+</body>
+
+</html>

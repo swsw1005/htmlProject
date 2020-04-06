@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $("#bb").after($("#aa"));
+        $("#bb2").before($("#cc2"));
+        $("#btn").click(function() {
+          alert($("body").html());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">소스보기</button>
+    <hr />
+    <div id="aa">홍길동</div>
+    <div id="bb">슈퍼맨</div>
+    <div id="cc">배트맨</div>
+    <hr />
+    <div id="aa2">홍길동</div>
+    <div id="bb2">슈퍼맨</div>
+    <div id="cc2">배트맨</div>
+  </body>
+</html>

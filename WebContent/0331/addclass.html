@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa {
+            width: fit-content;
+            height: 30px;
+            background: black;
+            color: yellow;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("#pkc").addClass("aa");
+            });
+            $("#del").click(function () {
+                $("#pkc").removeClass("aa");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn">클릭</button>
+    <button id="del">삭제</button>
+    <div id="pkc">클래스 추가했다가, 삭제했다가...</div>
+</body>
+
+</html>

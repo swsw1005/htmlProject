@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+        }
+
+        .bb {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            height: 35px;
+        }
+
+        #pkc {
+            width: 400px;
+        }
+    </style>
+    <script>
+        // 스크립트
+
+        $(function () {
+
+            $("#btn1").click(function () {
+                $("#pkc").slideUp(3000);
+            });
+            $("#btn2").click(function () {
+                $("#pkc").slideDown(3000);
+            });
+            $("#btn3").click(function () {
+                $("#pkc").slideToggle(3000);
+            });
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div class="aa">
+        <button class="bb" id="btn1">btn1</button>
+        <button class="bb" id="btn2">btn2</button>
+        <button class="bb" id="btn3">btn3</button>
+    </div>
+    <hr>
+    <img src="../img/a.jpg" id="pkc">
+
+
+</body>
+
+</html>

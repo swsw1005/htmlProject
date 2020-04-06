@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #pkc {
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            /* text-align: center; */
+            border: 1px solid red;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#pkc").click(function () {
+                console.log("mouse click");
+            });
+            $("#pkc").mouseover(function () {
+                console.log("mouse over");
+                $(this).css("background", "yellow");
+            });
+            $("#pkc").mouseleave(function () {
+                console.log("mouse leave");
+                $(this).css("background", "none");
+            })
+
+            $("#userid").keyup(function () {
+                console.log("user id key up");
+            });
+
+            $("#userid").focus(function () {
+                console.log("userid focus");
+            });
+
+            $("#userid").focusout(function () {
+                console.log("userid focusout");
+            });
+
+            $(window).scroll(function () {
+                let n = $(this).scrollTop();
+                console.log("window scroll " + n);
+            });
+
+            $("#top").click(function () {
+                //jQuery
+                $('html').scrollTop(0);
+                //JS
+                document.documentElement.scrollTop = 0;
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div id="pkc">
+        #pkc
+    </div>
+    <hr>
+    <input type="text" id="userid">
+
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+
+    <button id="top">top</button>
+
+</body>
+
+</html>

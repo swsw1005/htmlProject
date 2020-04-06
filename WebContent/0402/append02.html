@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 왼쪽 그대로,  오른쪽에 더했다가 뺐다가 >> 이것만 분리한것 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #aa {
+            background: cyan;
+            width: 95px;
+        }
+
+        #bb {
+            background: salmon;
+            width: 95px;
+        }
+    </style>
+    <script>
+        $(function () {
+            // aa 클릭하면, bb로 넘기는 로직
+            $("#aa li").click(function () {
+                var temp_text = $(this).text(); // 선택요소 텍스트
+                var cnt = 0;
+                var leng = $("#bb li").length; // bb 길이
+
+                console.log(leng);
+
+                for (i = 0; i < leng; i++) {
+                    var temp = $("#bb li").eq(i).text();
+                    // bb에 일치하는 글자 있으면, cnt++
+                    if (temp == temp_text) {
+                        cnt++;
+                    } //if end
+                } //for end
+
+                //cnt 올라가지 않으면, 요소 추가하고 리스너 추가
+                if (!(cnt > 0)) {
+                    $(this).css("color", "red");
+                    $("#bb").append("<li>" + temp_text + "</li>");
+                    $("#bb li").on("click", bb_click); // 이벤트 리스너 추가
+                } //if end
+            });
+
+            //////////////////////////////////////////////////////
+            // 이벤트 리스너로 실행하는 로직(bb에서 선택된 요소 remove + aa에서 색상 원래대로)
+            function bb_click() {
+                var length = $("#bb li").length;
+                var idx = $(this).index();
+                var in_text = $(this).text();
+                // console.log("ll_click : " + idx + " " + length);
+
+                for (i = 0; i < $("#aa li").length; i++) {
+                    var temp = $("#aa li").eq(i).text();
+                    if (temp == in_text) {
+                        $("#aa li").eq(i).css("color", "black");
+                        $(this).remove();
+                    }
+                }
+            }
+            /////////////////////////////////////////
+            $("#btn").click(function () {
+                // 내용 싹지우기
+                $("#bb").empty();
+                // 왼쪽 css 되돌리기
+                $("#aa li").css("color", "black");
+            });
+            /////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <a>aa</a>
+    <ul id="aa">
+        <li>라면</li>
+        <li>짬뽕</li>
+        <li>짜장면</li>
+        <li>울면</li>
+        <li>우동</li>
+        <li>모밀</li>
+    </ul>
+    <hr />
+    <a>bb</a>
+    <button id="btn">내용 싹 지우기</button>
+    <ul id="bb">
+        <!-- <li></!-->
+    </ul>
+
+    <hr style="border: 3px solid red;">
+
+
+</body>
+
+</html>

@@ -14,15 +14,22 @@
   margin: 0px;
   padding: 5px;
   background: green;
+  box-shadow: 5px black;
 }
 
 .date {
   display: flexbox;
   color: white;
-  margin: 3px;
-  padding: 5px 15px;
+  margin: 2px;
+  padding: 2px 5px;
   width: max-content;
   background: blue;
+}
+
+#date,
+#time,
+#str {
+  font-size: x-large;
 }
 
 .margin {
@@ -51,7 +58,7 @@
 
 .col2 {
   flex: 3;
-  width: fit-content;
+  /* width: fit-content; */
   margin: 2px;
   padding: 3px;
   text-align: center;

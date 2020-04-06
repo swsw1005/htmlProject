@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>제목</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        /* 스타일  */
+    </style>
+    <script>
+        $(function () {
+            // val() == form 태그 값(value)
+
+            $("#btn").click(function () {
+                var name = $("#name").val();
+                var age = $("#age").val();
+
+                document.getElementById("name2").innerText = name;
+                document.getElementById("age2").innerText = age;
+            });
+
+
+            $("#btn3").click(function () {
+                var name = "임성우";
+                var age = "29";
+
+                $("#name").val(name);
+                $("#age").val(age);
+            })
+
+            $("#btn4").click(function () {
+                $("#name").val("");
+                $("#age").val("");
+            })
+        });
+
+        function check() {
+            //form 객체 dom 접근
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+
+            document.getElementById("name2").innerText = name;
+            document.getElementById("age2").innerText = age;
+
+        }
+    </script>
+</head>
+<!--///-->
+
+<body>
+    <!--내용-->
+
+    <form name="pkc">
+        <strong>이름</strong>
+        <input type="text" name="name" id="name" />
+        <a id="name2"></a>
+        <p></p>
+        <strong>나이</strong>
+        <input type="text" name="age" id="age" />
+        <a id="age2"></a>
+        <p></p>
+        <input type="button" value="jQuery" id="btn" />
+        <input type="button" value="JS" onclick="check()" />
+        <input type="button" value="값주기" id="btn3" />
+        <input type="button" value="지우기" id="btn4" />
+        <p></p>
+    </form>
+
+    <!--JS-->
+</body>
+
+</html>
+<!--///-->

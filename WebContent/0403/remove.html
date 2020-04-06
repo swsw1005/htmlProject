@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // js스크립트
+        function view() {
+            alert($("body").html());
+        }
+        function hide1(my) {
+            my.style.display = "none";
+        }
+        function hide2(my) {
+            my.style.visibility = "hidden";
+        }
+        //jQuery
+        $(function () {
+            $("#cc").click(function () {
+                $("#cc").remove();
+            });
+
+            $("#dd").click(function () {
+                $("#dd").empty();
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button onclick="view()">소스 보기</button>
+    <hr>
+    <div id="aa" onclick="hide1(this)">안녕!</div>
+    <hr>
+    <div id="bb" onclick="hide2(this)">금요일</div>
+    <hr style="border: 2px solid red;">
+    <div id="cc">안녕</div>
+    <p>remove() 요소 자체를 지워버린다.(태그 같이 사라진다)</p>
+    <hr>
+    <div id="dd">금요일</div>
+    <p>empty() 요소 내부를 지워버린다.(태그는 남고 innerText, innerHTML 삭제)</p>
+    <hr>
+
+</body>
+
+</html>

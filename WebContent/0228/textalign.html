@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <style>   
-   div {
-      width:200px;
-      height:40px;  /* 영역의 가로크기, 세로크기 */
-      border:1px solid #123455; /* 외곽선 두께:1px, 종류:실선, 선색깔:빨강 */
-      border-radius:10px;
-      background:yellow;
-      text-align:center; /* left, center, right */
-      display:table-cell;
-      vertical-align:middle;    /* top, middle, bottom */
-   }
-   #aa {
-      display:inline-block;  /* 숙제 */
-      width:20px;
-      height:20px;
-      border:1px solid blue;
-      border-radius:12px;
-   }
-   p {
-     text-indent:100px;
-   }
- </style>
-  
-</head>
-<body>  
-  <div> 안녕하세요 </div>
-  <span id="aa"></span>
-  <p> 학교종이 땡땡댕 </p>
-</body>
-</html>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <style>
+    div {
+      width: 200px;
+      height: 40px;
+      /* 영역의 가로크기, 세로크기 */
+      border: 1px solid #123455;
+      /* 외곽선 두께:1px, 종류:실선, 선색깔:빨강 */
+      border-radius: 10px;
+      background: yellow;
+      text-align: center;
+      /* left, center, right */
+      display: table-cell;
+      vertical-align: middle;
+      /* top, middle, bottom */
+    }
+
+    #aa {
+      display: inline-block;
+      /* 숙제 */
+      width: max-content;
+      padding: 15px 5px 10px;
+      height: 20px;
+      border: 1px solid blue;
+      border-radius: 12px;
+    }
+
+    p {
+      text-indent: 100px;
+      border: 1px solid blue;
+      border-radius: 12px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div> div </div>
+  <span id="aa">span</span>
+  <p> ppp </p>
+</body>
+
+</html>

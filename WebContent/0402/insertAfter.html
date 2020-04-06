@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #bb {
+            width: 100px;
+            height: 23px;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+
+        #cc {
+            width: 100px;
+            height: 23px;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#aa li").click(function () {
+                var idx = $(this).index();
+                $("#aa li")
+                    .eq(idx)
+                    .insertAfter($("#aa li").eq(idx + 2));
+            });
+
+            $("#btn").click(function () {
+                $("#bb li")
+                    .eq(0)
+                    .insertAfter($("#bb li").eq(7));
+            });
+
+            setInterval(function () {
+                $("#cc li")
+                    .eq(0)
+                    .insertAfter($("#cc li").eq(7));
+            }, 2000);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+
+    <ul id="aa">
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬뽕</li>
+        <li>비빔밥</li>
+        <li>참이슬</li>
+        <li>테라</li>
+        <li>칼스버그</li>
+    </ul>
+    <hr />
+    <div id="bb">
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬뽕</li>
+        <li>비빔밥</li>
+        <li>참이슬</li>
+        <li>테라</li>
+        <li>칼스버그</li>
+        <li>와인</li>
+    </div>
+    <button id="btn">순환</button>
+    <hr />
+    <div id="cc">
+        <li>짜장면</li>
+        <li>우동</li>
+        <li>짬뽕</li>
+        <li>비빔밥</li>
+        <li>참이슬</li>
+        <li>테라</li>
+        <li>칼스버그</li>
+        <li>와인</li>
+    </div>
+</body>
+
+</html>

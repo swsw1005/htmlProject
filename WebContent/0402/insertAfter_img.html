@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #aa {
+            width: 400px;
+            height: 60px;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+
+        img {
+            width: 120px;
+            border: 1px solid blue;
+            margin: 3px;
+        }
+    </style>
+    <script>
+        // 스크립트
+
+        $(function () {
+            var m = $("#aa img").length;
+
+            $("#btn").click(function () {
+
+                console.log("버튼클릭으로 수동 이동");
+                $("#aa img").eq(0).insertAfter($("#aa img").eq(m - 1));
+
+            });
+
+            $("#aa img").click(function () {
+
+                console.log("이미지 클릭으로 수동 이동");
+                $("#aa img").eq(0).insertAfter($("#aa img").eq(m - 1));
+
+            });
+
+            setInterval(function () {
+                $("#aa img").eq(0).insertAfter($("#aa img").eq(m - 1));
+
+            }, 3000)
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <div id="aa">
+        <img src="../img/0.png">
+        <img src="../img/1.png">
+        <img src="../img/2.png">
+        <img src="../img/3.png">
+        <img src="../img/4.png">
+        <img src="../img/5.png">
+        <img src="../img/6.png">
+        <img src="../img/7.png">
+        <img src="../img/8.png">
+        <img src="../img/9.png">
+    </div>
+
+    <button id="btn">1111</button>
+
+</body>
+
+</html>

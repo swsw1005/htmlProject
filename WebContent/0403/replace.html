@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // 스크립트
+        function view() {
+            alert($("body").html());
+        }
+
+        $(function () {
+            $("#aa").click(function () {
+                $("#aa").replaceWith("<span> 호호호 </span>")
+            });
+
+            $("#bb").click(function () {
+                $("<span> 헤 </span>").replaceAll("h2")
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button onclick="view()">소스보기</button>
+
+    <b id="aa">하하하</b>
+    <h2 id="bb">크크크</h2>
+</body>
+
+</html>
