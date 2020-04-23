@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .aa {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            opacity: 0;
+        }
+    </style>
+    <script>
+        // 스크립트
+        var j = 0
+
+        function aa(e) {
+            j++;
+
+            switch (j % 2) {
+                case 0:
+                    document.getElementById("a1").style.opacity = "1";
+                    document.getElementById("a2").style.opacity = "0";
+                    break;
+                case 1:
+                    document.getElementById("a1").style.opacity = "0";
+                    document.getElementById("a2").style.opacity = "1";
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+
+    <img src="../img/a.jpg" class="aa" id="a1">
+    <img src="../img/b.jpg" class="aa" id="a2">
+    <button onclick="aa(this)" id="btn">버튼</button>
+
+</body>
+
+</html>

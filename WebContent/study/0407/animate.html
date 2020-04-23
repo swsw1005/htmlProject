@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        #aa {
+            width: 20px;
+            height: 20px;
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        // 스크립트
+        $(function () {
+            $("#btn").click(function () {
+                $("#aa").animate({
+                    width: "200px",
+                    height: "400px",
+                    position: "absolute",
+                    left: "50%"
+                }, 3000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button id="btn">크기변경</button>
+    <div id="aa">aa</div>
+</body>
+
+</html>

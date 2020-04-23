@@ -11,6 +11,8 @@
   background: #344955;
   color: white;
   transition: 0.3s;
+  position: sticky;
+  top: 0;
 }
 
 .header a {
@@ -46,7 +48,7 @@
   flex: 50%;
   padding: 5px;
   max-width: 450px;
-  min-width: 400px;
+  min-width: 380px;
   box-sizing: border-box;
   /* -------------dev option---------------- */
   background: cyan;
@@ -54,15 +56,14 @@
 }
 
 .bar {
-  width: 100%;
+  width: 150%;
   height: 10px;
-  min-width: 800000px;
   /* -------------dev option---------------- */
   background: violet;
 }
 
 input {
-  padding: 8px;
+  padding: 7px;
   height: auto;
   margin: auto;
   font-size: medium;
@@ -72,17 +73,20 @@ input {
   border: 2px solid gray;
 }
 
-input[type="button"]:hover,
-input[type="submit"]:hover {
+input[type="submit"],
+input[type="button"] {
+  width: max-content;
+  height: 100%;
+  border: 2px solid gray;
+  border-radius: 12px;
+  transition: 0.35s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
   border: 2px solid yellow;
   background: black;
   color: yellow;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="num"]:hover {
-  border: 2px solid yellow;
 }
 
 input[type="text"]:focus,
@@ -135,16 +139,9 @@ input[type="num"]:focus {
   width: 25%;
 } */
 
-.flex_box input[type="submit"],
-.flex_box input[type="button"] {
-  width: 130px;
-  border: 2px solid gray;
-  border-radius: 24px;
-  transition: 0.35s;
-}
-
 .text_center {
   text-align: center;
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
   border: 1px solid red;
@@ -152,6 +149,7 @@ input[type="num"]:focus {
 
 .text_left {
   text-align: left;
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
   border: 1px solid red;
@@ -159,6 +157,7 @@ input[type="num"]:focus {
 
 .text_right {
   text-align: right;
+  padding: 0px;
   /* -------------dev option---------------- */
   background: green;
   border: 1px solid red;

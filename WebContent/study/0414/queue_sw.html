@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        // 스크립트
+
+        $(function () {
+
+
+            $("#btn1").click(function () {
+                $(".aa").queue(function () {
+
+                    setTimeout(() => {
+                        aa();
+                    }, 3000);
+                    setTimeout(() => {
+                        bb();
+                    }, 3000);
+                    setTimeout(() => {
+                        cc();
+                    }, 3000);
+                    setTimeout(() => {
+                        dd();
+                    }, 3000);
+
+
+                });
+            });
+
+            $("#btn2").click(function () {
+                $(".aa").dequeue();
+            });
+        });
+
+        function aa() {
+            document.getElementById("aa").innerText = "aa";
+        }
+        function bb() {
+            document.getElementById("bb").innerText = "bb";
+        }
+        function cc() {
+            document.getElementById("cc").innerText = "cc";
+        }
+        function dd() {
+            document.getElementById("dd").innerText = "dd";
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 내용 -->
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+    <button id="btn3">btn3</button>
+    <hr>
+    <div class="aa" id="aa"></div>
+    <hr>
+    <div class="aa" id="bb"></div>
+    <hr>
+    <div class="aa" id="cc"></div>
+    <hr>
+    <div class="aa" id="dd"></div>
+
+</body>
+
+</html>

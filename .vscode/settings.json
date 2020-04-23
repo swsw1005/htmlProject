@@ -1,7 +1,3 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "htmlProject",
-    "maven.view": "hierarchical",
-    "liveServer.settings.port": 5502,
-    "java.dependency.syncWithFolderExplorer": true,
-    
+    "liveServer.settings.port": 5582
 }

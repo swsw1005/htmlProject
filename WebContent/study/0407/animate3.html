@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+ <style>
+   #aa {
+     width:30px;
+     height:30px;
+     border:1px solid red;
+     position:absolute;
+     left:100px;
+     top:100px;
+   }
+ </style>
+ <script>
+   $(function() 
+   {
+	  // $(선택자).animate({타겟},시간); 
+	  $("#btn").click(function() 
+	  {
+		  $("#aa").animate(
+		  {
+			  rotate:"360deg"
+		  },3000); 
+	  });
+   });
+ </script>
+</head>
+<body>
+  <button id="btn"> 회전 </button>
+  <hr>
+  <div id="aa"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #aa {
+            width: 30px;
+            height: 30px;
+            border: 1px solid red;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () //btn1이 클릭
+            {
+                $("#aa").queue(function () // id = aa 가 해야할일을 queue에 담는다.
+                {
+                    $("#aa").animate({ left: "400px" }, 3000);
+                    $("#aa").animate({ width: "100px" }, 3000);
+                    $("#aa").animate({ top: "300px" }, 3000);
+                    $("#aa").animate({ height: "100px" }, 3000);
+                }); // id=aa queue() -> 실행내용 저장
+            });
+
+            $("#btn").click(function () {
+                alert($("#aa").queue());
+            });
+
+            $("#btn2").click(function () {
+                $("#aa").dequeue();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn">queue 확인</button>
+    <button id="btn1">queue에 담기</button>
+    <button id="btn2">queue 실행</button>
+    <div id="aa"></div>
+</body>
+
+</html>

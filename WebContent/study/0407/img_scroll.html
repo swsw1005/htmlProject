@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-animate-css-rotate-scale.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #main {
+            width: 204px;
+            height: 102px;
+            border: 3px solid red;
+            /* display: table-cell; */
+            vertical-align: middle;
+            text-align: center;
+            /* overflow: hidden; */
+        }
+
+        #sub {
+            width: 200px;
+            height: 730px;
+            background: rgba(0, 255, 255, 0.199);
+        }
+
+        .slide_img {
+            width: 200px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+    </style>
+    <script>
+        $(function () {
+            var ss = setInterval(function () {
+                $("#sub").animate(
+                    {
+                        marginTop: "-103px"
+                    }, 2000, "swing", function () {
+                        $("#sub").css("marginTop", "0px");
+                        $(".slide_img").eq(0).insertAfter($(".slide_img").eq(9));
+                    });
+                //   clearInterval(ss);
+            }, 1000);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="sub">
+            <img class="slide_img" src="../img/0.png">
+            <img class="slide_img" src="../img/1.png">
+            <img class="slide_img" src="../img/2.png">
+            <img class="slide_img" src="../img/3.png">
+            <img class="slide_img" src="../img/4.png">
+            <img class="slide_img" src="../img/5.png">
+            <img class="slide_img" src="../img/6.png">
+            <img class="slide_img" src="../img/7.png">
+            <img class="slide_img" src="../img/8.png">
+            <img class="slide_img" src="../img/9.png">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #aaa {
+            width: 600px;
+            background: #5c0080;
+            margin: auto;
+        }
+
+        .aa {
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 110px 1fr 110px;
+        }
+
+        .bb {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr;
+        }
+
+        .cc {
+            width: 90%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="aaa">
+        <li class="aa">
+            <div>아이디*</div>
+            <div>
+                <input type="text" name="input_id">
+            </div>
+            <div>
+                <input type="button" value="중복확인">
+            </div>
+        </li>
+        <li class="aa">
+            <div>비밀번호*</div> <a> <input class="cc" type="text" name="input_pw">
+            </a>
+            <div>&nbsp;</div>
+        </li>
+        <li class="aa">
+            <div>비밀번호확인*</div> <a> <input class="cc" type="text" name="input_pw2">
+            </a>
+            <div>&nbsp;</div>
+        </li>
+        <li class="aa">
+            <div>이메일*</div> <a> <input class="cc" type="text" name="input_email">
+            </a>
+            <div>
+                <input class="cc" type="button" value="중복확인">
+            </div>
+        </li>
+        <li class="aa">
+            <div>휴대폰*</div> <a> <input class="cc" type="text" name="input_tel">
+            </a>
+            <div>
+                <input class="cc" type="button" value="인증번호받기">
+            </div>
+        </li>
+        <li class="aa">
+            <div>&nbsp;</div> <a> <input class="cc" type="number" name="input_id">
+            </a>
+            <div>
+                <input class="cc" type="button" value="인증확인">
+            </div>
+        </li>
+        <li class="aa">
+            <div>배송주소*</div> <a> <input class="cc" type="text" name="input_id">
+            </a>
+            <div>
+                <input class="cc" type="button" value="주소검색">
+            </div>
+        </li>
+        <li class="aa">
+            <div>&nbsp;</div> <a> <input type="text" name="input_id">
+            </a>
+            <div>&nbsp;</div>
+        </li>
+        <li class="aa">
+            <div>성별</div> <a class="bb"> <input type="radio" name="sex">
+                <span>남자 </span> <input type="radio" name="sex"><span>여자
+                </span> <input type="radio" name="sex"> <span>선택안함 </span>
+            </a>
+            <div>
+                <input class="cc" type="button" value="중복확인">
+            </div>
+        </li>
+        <li class="aa">
+            <div>생년월일</div> <a> <input class="cc" type="text" name="input_id">
+            </a>
+            <div>
+                <input class="cc" type="button" value="중복확인">
+            </div>
+        </li>
+        <li class="aa">
+            <div>추가입력사항</div> <a> <input class="cc" type="text" name="input_id">
+            </a>
+            <div>
+                <input class="cc" type="button" value="중복확인">
+            </div>
+        </li>
+    </ul>
+
+
+
+</body>
+
+</html>

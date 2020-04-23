@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+#first {
+  width: 1000px;
+  height: 40px;
+  background: #5c0080;
+  margin: auto;
+  color: white;
+}
+#first #left {
+  width: 970px;
+  height: 40px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#first #right {
+  width: 30px;
+  height: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#second {
+  width: 1000px;
+  height: 30px;
+  margin: auto;
+}
+#second #left {
+  float: left;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+#second #left #left_in {
+  width: 180px;
+  height: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+#second #right {
+  height: 30px;
+  float: right;
+  font-size: 12px;
+  /* display:flex;
+  align-items:center; */
+}
+#second #right > ul > li {
+  list-style-type: none;
+  float: left;
+  width: 80px;
+}
+#second #right #sub {
+  /*   고객센터 메뉴 ul */
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  border: 1px solid black;
+  background: white;
+  display: none;
+}
+#second #right #sub li {
+  list-style-type: none;
+  margin-top: 4px;
+}
+#second #aa {
+  color: purple;
+}
+#third {
+  width: 1000px;
+  height: 60px;
+  margin: auto;
+  text-align: center;
+}
+#fourth {
+  width: 1000px;
+  height: 60px;
+  margin: auto;
+  padding-top: 10px;
+  background: white;
+  top: 0px;
+  position: sticky;
+}
+#fourth ul {
+  padding-left: 0px;
+}
+#fourth ul li {
+  float: left;
+  list-style-type: none;
+  width: 140px;
+  height: 60px;
+}
+#fourth ul li:last-child {
+  width: 20px;
+}
+#fourth ul li:first-child {
+  width: 180px;
+}
+#fourth ul li:nth-child(6) {
+  width: 235px;
+}
+#fourth ul li #search {
+  width: 210px;
+  height: 26px;
+  border: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background: #eeeeee;
+}
+#fourth ul li #search input {
+  border: none;
+  background: #eeeeee;
+}
+#fifth {
+  margin-top: 15px;
+  width: 1000px;
+  height: 352px;
+  background: pink;
+  margin: auto;
+}
+#sixth {
+  width: 1000px;
+  height: 490px;
+  margin: auto;
+}
+#sixth #aa {
+  color: #dddddd;
+  text-decoration: line-through;
+}
